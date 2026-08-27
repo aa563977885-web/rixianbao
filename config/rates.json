@@ -1,0 +1,16 @@
+{
+  "category_rates": {
+    "球鞋": 0.12,
+    "服饰": 0.1,
+    "户外": 0.1,
+    "美妆": 0.08,
+    "潮玩": 0.12,
+    "数码": 0.06,
+    "其他": 0.1
+  },
+  "transfer_rate": 0.01,
+  "fixed_fee": 15,
+  "target_profit": 50,
+  "min_net_profit": 50,
+  "cold_pick_threshold": 80
+}
