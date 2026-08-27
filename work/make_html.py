@@ -13,7 +13,7 @@ import os
 import re
 import sys
 import time as _time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = os.path.join(ROOT, "work")
@@ -27,6 +27,12 @@ sys.path.insert(0, WORK)
 import scoring  # noqa: E402  复用 age_hours/time_factor
 
 VERDICT_RANK = {"冷门优选": 0, "普通": 1, "黑名单": 2, "过期": 3}
+BEIJING = timezone(timedelta(hours=8))
+
+
+def beijing_now():
+    """页面时间戳统一用北京时间，避免 Actions runner 显示 UTC。"""
+    return datetime.now(timezone.utc).astimezone(BEIJING)
 
 
 def load_scored():
@@ -200,7 +206,7 @@ def main():
     n_cold = sum(1 for x in scored if x.get("verdict") == "冷门优选")
     n_ok = sum(1 for x in scored if x.get("net_profit") is not None and x["net_profit"] >= 50)
     n = len(scored)
-    stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    stamp = beijing_now().strftime("%Y-%m-%d %H:%M")
 
     html_doc = TEMPLATE
     html_doc = html_doc.replace("__TS__", str(ts))
