@@ -178,6 +178,8 @@ def parse(text, html):
         sales = g(r"销量[:：]?\s*(\d+)")
     time_str = g(r"(\d+月\d+日\s*\d+:\d+)\s*发布")
     color = g(r"颜色[:：]\s*([^\n]{1,24})") or g(r"配色[:：]\s*([^\n]{1,24})")
+    if color:
+        color = re.sub(r"\s*尺码[:：].*$", "", color).strip()
     size = g(r"尺码[:：]\s*([^\n]{1,24})")
 
     def num(x):
