@@ -47,17 +47,18 @@ jobs:
           python work/scoring.py
           python work/make_html.py
 
-      - name: 组装 Pages 目录
+      - name: 组装 Pages 目录并同步根页面
         run: |
           mkdir -p site
           cp outputs/site/index.html site/index.html
           cp outputs/site/.nojekyll site/.nojekyll 2>/dev/null || touch site/.nojekyll
+          cp outputs/site/index.html index.html
 
       - name: 提交数据快照
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: 每日线报自动更新 $(date -u +'%Y-%m-%d %H:%M')"
-          file_pattern: 'data/ config/ site/ crawl_mendao.py work/ requirements.txt DIFF_STRATEGY.md'
+          file_pattern: 'data/ config/ site/ index.html crawl_mendao.py work/ requirements.txt DIFF_STRATEGY.md'
           skip_dirty_check: false
 
       - name: 上传 Pages 产物
