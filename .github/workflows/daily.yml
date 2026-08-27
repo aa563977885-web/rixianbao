@@ -1,0 +1,69 @@
+name: 每日线报自动更新
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # UTC 0 点 = 北京早 8 点
+    - cron: '0 12 * * *'  # UTC 12 点 = 北京晚 8 点
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 校验 SEED_ID Secret
+        env:
+          SEED_ID: ${{ secrets.SEED_ID }}
+        run: |
+          if [ -z "$SEED_ID" ]; then
+            echo "::error::缺少 SEED_ID Secret：请在仓库 Settings → Secrets and variables → Actions 添加 SEED_ID（任一门道商机 carryId，例如 11610567）"
+            exit 1
+          fi
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 爬取 + 打分 + 渲染
+        env:
+          SEED_ID: ${{ secrets.SEED_ID }}
+        run: |
+          python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5
+          python work/scoring.py
+          python work/make_html.py
+
+      - name: 组装 Pages 目录
+        run: |
+          mkdir -p site
+          cp outputs/site/index.html site/index.html
+          cp outputs/site/.nojekyll site/.nojekyll 2>/dev/null || touch site/.nojekyll
+
+      - name: 提交数据快照
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: 每日线报自动更新 $(date -u +'%Y-%m-%d %H:%M')"
+          file_pattern: 'data/ config/ site/ crawl_mendao.py work/ requirements.txt DIFF_STRATEGY.md'
+          skip_dirty_check: false
+
+      - name: 上传 Pages 产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: 部署 GitHub Pages
+        uses: actions/deploy-pages@v4
