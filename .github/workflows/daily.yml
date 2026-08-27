@@ -43,7 +43,7 @@ jobs:
         env:
           SEED_ID: ${{ secrets.SEED_ID }}
         run: |
-          python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5
+          python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5 --fallback-snapshot
           python work/scoring.py
           python work/make_html.py
 
@@ -57,7 +57,7 @@ jobs:
       - name: 提交数据快照
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: 每日线报自动更新 $(date -u +'%Y-%m-%d %H:%M')"
+          commit_message: "chore: 每日线报自动更新"
           file_pattern: 'data/ config/ site/ index.html crawl_mendao.py work/ requirements.txt DIFF_STRATEGY.md'
           skip_dirty_check: false
 
