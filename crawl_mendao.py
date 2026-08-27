@@ -28,12 +28,18 @@ CONFIG = os.path.join(ROOT, "config", "rates.json")
 DATA = os.path.join(ROOT, "data")
 EXPOSURE = os.path.join(DATA, "exposure.json")
 POOL = os.path.join(DATA, "pool.json")
-SNAPSHOT = os.path.join(ROOT, "outputs", "交接包", "今日线报_20条快照.json")
+SNAPSHOT = os.path.join(ROOT, "data", "snapshot.json")
 
 BASE = "https://deal.mendaoapp.com/page/carry-referee?carryId={}"
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
     "Referer": "https://deal.mendaoapp.com/",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
 }
 SLEEP = 1.2
 
@@ -133,6 +139,20 @@ def fetch_page(carry_id, use_browser=False):
         except Exception as e:
             print("  [warn] requests 失败，尝试 playwright:", str(e)[:100])
     return fetch_browser(carry_id)
+
+
+def fetch_and_parse(carry_id, use_browser=False):
+    """抓取并解析；requests 模式解析为空时自动降级 playwright 重试一次。"""
+    text, html = fetch_page(carry_id, use_browser=use_browser)
+    parsed = parse(text, html)
+    if not use_browser and not parsed.get("title") and not parsed.get("article_no"):
+        print("  [warn] requests 解析为空，改用 playwright 重试")
+        try:
+            text, html = fetch_browser(carry_id)
+            parsed = parse(text, html)
+        except Exception as e:
+            print("  [warn] playwright 也失败:", str(e)[:100])
+    return parsed, text, html
 
 
 # ---------- 解析 ----------
@@ -323,6 +343,7 @@ def main():
     ap.add_argument("--avoid-hot", type=int, default=0, help="seen_count>=N 的 ID 跳过")
     ap.add_argument("--since-hours", type=float, default=None, help="只保留发布 N 小时内的商机")
     ap.add_argument("--from-snapshot", action="store_true", help="无网时用历史快照建候选池")
+    ap.add_argument("--fallback-snapshot", action="store_true", help="实时抓取 0 条成功时自动回退快照建池")
     ap.add_argument("--snapshot", default=SNAPSHOT, help="快照 JSON 路径")
     ap.add_argument("--browser", action="store_true", help="强制用无头浏览器")
     ap.add_argument("--sleep", type=float, default=SLEEP, help="请求间隔秒数")
@@ -344,6 +365,7 @@ def main():
     seen_queue = set()
     hot_skip = 0
     failed = 0
+    parsed_count = 0
     new_count = 0
 
     for _ in range(args.depth):
@@ -359,18 +381,18 @@ def main():
                 print(f"[HOT_SKIPPED] {cid} 已见 {prev} 次，跳过")
                 continue
             try:
-                text, html = fetch_page(cid, use_browser=args.browser)
-                parsed = parse(text, html)
-                exp = touch_exposure(exposure, cid, ts)
+                parsed, text, html = fetch_and_parse(cid, use_browser=args.browser)
                 if not parsed.get("title") and not parsed.get("article_no"):
                     failed += 1
                     print(f"[{cid}] 解析失败")
                 else:
+                    exp = touch_exposure(exposure, cid, ts)
                     item = to_pool_item(cid, parsed, rates, exp, ts)
                     is_new = cid not in pool
                     pool[cid] = item
                     if is_new:
                         new_count += 1
+                    parsed_count += 1
                     print(f"[{cid}] {item['title'] or '?'} 净利{item['net_profit']}")
                 nxt.extend(parsed.get("sub_carry_ids", []) or [])
             except Exception as e:
@@ -378,6 +400,11 @@ def main():
                 print(f"[{cid}] 抓取失败: {str(e)[:100]}")
             time.sleep(args.sleep)
         queue = [str(x) for x in dict.fromkeys(nxt)][:20]
+
+    if args.fallback_snapshot and parsed_count == 0:
+        print("[fallback] 实时抓取 0 条成功，回退快照建池")
+        build_from_snapshot(rates, args.snapshot)
+        return
 
     # --since-hours 过滤
     if args.since_hours:
