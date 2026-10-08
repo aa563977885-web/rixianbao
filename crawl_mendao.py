@@ -28,6 +28,7 @@ CONFIG = os.path.join(ROOT, "config", "rates.json")
 DATA = os.path.join(ROOT, "data")
 EXPOSURE = os.path.join(DATA, "exposure.json")
 POOL = os.path.join(DATA, "pool.json")
+PRICE_HISTORY = os.path.join(DATA, "price_history.json")
 SNAPSHOT = os.path.join(ROOT, "data", "snapshot.json")
 
 BASE = "https://deal.mendaoapp.com/page/carry-referee?carryId={}"
@@ -80,6 +81,44 @@ def save_json(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
+
+
+def load_price_history():
+    try:
+        with open(PRICE_HISTORY, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def record_price(history, carry_id, du_price, cost, ts, max_len=60, min_gap_hours=6):
+    """追加价格轨迹；价格未变且距上次记录不足 min_gap_hours 则跳过，防止膨胀。"""
+    if du_price is None and cost is None:
+        return
+    seq = history.setdefault(str(carry_id), [])
+    try:
+        last = datetime.fromisoformat(seq[-1][0])
+        last_price = seq[-1][1]
+    except (IndexError, ValueError, TypeError):
+        last, last_price = None, None
+    now = datetime.fromisoformat(ts)
+    same_price = (du_price == last_price)
+    if last is not None and same_price and (now - last).total_seconds() < min_gap_hours * 3600:
+        return
+    seq.append([ts, du_price, cost])
+    history[str(carry_id)] = seq[-max_len:]
+
+
+def split_color_size(color, size):
+    """颜色字段尾部的尺码 token 拆出去：'奶茶棕 L' -> ('奶茶棕', 'L')，'白玉鎏金 xs码' -> ('白玉鎏金', 'xs码')。"""
+    if not color:
+        return color, size
+    if size:
+        return color, size
+    m = re.search(r"^(.*?)[\s]+([0-9]{2,3}(?:\.\d)?|[A-Za-z]{1,4}(?:\d)?|均码|男款|女款)码?$", color.strip())
+    if m and m.group(1).strip():
+        return m.group(1).strip(), m.group(2) + "码" if m.group(2) not in ("均码", "男款", "女款") else m.group(2)
+    return color.strip(), size
 
 
 def now_iso():
@@ -241,12 +280,13 @@ def touch_exposure(exposure, carry_id, ts):
 
 
 def to_pool_item(carry_id, parsed, rates, exp, ts):
+    color, size = split_color_size(parsed.get("color"), parsed.get("size"))
     item = {
         "carry_id": carry_id,
         "title": parsed.get("title"),
         "article_no": parsed.get("article_no"),
-        "color": parsed.get("color"),
-        "size": parsed.get("size"),
+        "color": color,
+        "size": size,
         "gross_profit": parsed.get("gross_profit"),
         "du_price": parsed.get("du_price"),
         "cost": parsed.get("cost"),
@@ -348,6 +388,10 @@ def main():
     ap.add_argument("--fallback-snapshot", action="store_true", help="实时抓取 0 条成功时自动回退快照建池")
     ap.add_argument("--snapshot", default=SNAPSHOT, help="快照 JSON 路径")
     ap.add_argument("--browser", action="store_true", help="强制用无头浏览器")
+    ap.add_argument("--discover-hot", action="store_true", default=True,
+                    help="热页面转为「只发现新链接」模式（v2 默认开，解冻发现机制）")
+    ap.add_argument("--no-discover-hot", dest="discover_hot", action="store_false",
+                    help="关闭热页面发现模式，恢复 v1 跳过行为")
     ap.add_argument("--sleep", type=float, default=SLEEP, help="请求间隔秒数")
     args = ap.parse_args()
 
@@ -358,6 +402,7 @@ def main():
 
     exposure = load_exposure()
     pool = load_pool_map()
+    history = load_price_history()
     ts = now_iso()
 
     # 决定要爬的 ID 队列（BFS 顺藤摸瓜）
@@ -366,6 +411,7 @@ def main():
         queue = [args.seed]
     seen_queue = set()
     hot_skip = 0
+    hot_discovered = 0
     failed = 0
     parsed_count = 0
     new_count = 0
@@ -378,7 +424,8 @@ def main():
                 continue
             seen_queue.add(cid)
             prev = exposure.get(cid, {}).get("seen_count", 0)
-            if args.avoid_hot and prev >= args.avoid_hot:
+            discover_only = bool(args.avoid_hot and prev >= args.avoid_hot)
+            if discover_only and not args.discover_hot:
                 hot_skip += 1
                 print(f"[HOT_SKIPPED] {cid} 已见 {prev} 次，跳过")
                 continue
@@ -387,6 +434,19 @@ def main():
                 if not parsed.get("title") and not parsed.get("article_no"):
                     failed += 1
                     print(f"[{cid}] 解析失败")
+                elif discover_only:
+                    # 热页面只做「链接发现」：提取新 carryId 继续排队，不计曝光不入池
+                    sub = [str(x) for x in (parsed.get("sub_carry_ids") or [])]
+                    fresh = [x for x in sub if x not in exposure and x not in seen_queue]
+                    hot_discovered += len(sub)
+                    nxt.extend(sub)
+                    # 只刷新 last_seen（证明仍在售），不涨 seen_count
+                    e = exposure.setdefault(cid, {})
+                    e.setdefault("first_seen", ts)
+                    e["last_seen"] = ts
+                    if cid in pool:
+                        pool[cid]["last_seen"] = ts
+                    print(f"[{cid}] 发现模式：提取 {len(sub)} 个链接（新 {len(fresh)}），不计曝光")
                 else:
                     exp = touch_exposure(exposure, cid, ts)
                     item = to_pool_item(cid, parsed, rates, exp, ts)
@@ -395,8 +455,9 @@ def main():
                     if is_new:
                         new_count += 1
                     parsed_count += 1
+                    record_price(history, cid, item.get("du_price"), item.get("cost"), ts)
                     print(f"[{cid}] {item['title'] or '?'} 净利{item['net_profit']}")
-                nxt.extend(parsed.get("sub_carry_ids", []) or [])
+                    nxt.extend(parsed.get("sub_carry_ids", []) or [])
             except Exception as e:
                 failed += 1
                 print(f"[{cid}] 抓取失败: {str(e)[:100]}")
@@ -414,12 +475,14 @@ def main():
 
     save_json(EXPOSURE, exposure)
     save_json(POOL, list(pool.values()))
+    save_json(PRICE_HISTORY, history)
 
     total = len(pool)
     print("-" * 50)
-    print(f"汇总：总 {total} 条 | 本次新增 {new_count} | HOT跳过 {hot_skip} | 解析/抓取失败 {failed}")
+    print(f"汇总：总 {total} 条 | 本次新增 {new_count} | 热页发现 {hot_discovered} 链接 | HOT跳过 {hot_skip} | 解析/抓取失败 {failed}")
     print("exposure:", EXPOSURE)
     print("pool:", POOL)
+    print("price_history:", PRICE_HISTORY)
 
 
 if __name__ == "__main__":

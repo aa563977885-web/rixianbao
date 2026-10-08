@@ -26,7 +26,7 @@ SITE_OUT = os.path.join(BASE, "site", "index.html")
 sys.path.insert(0, WORK)
 import scoring  # noqa: E402  复用 age_hours/time_factor
 
-VERDICT_RANK = {"冷门优选": 0, "普通": 1, "黑名单": 2, "过期": 3}
+VERDICT_RANK = {"冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}
 BEIJING = timezone(timedelta(hours=8))
 
 
@@ -115,6 +115,8 @@ def build_cards(scored, excel, ts):
         badges.append(f'<span class="badge cat">{H.escape(str(c.get("category") or "其他"))}</span>')
         if verdict == "冷门优选":
             badges.append('<span class="badge cold">⭐ 冷门优选</span>')
+        elif verdict in ("可蹲", "可蹲·降价中"):
+            badges.append('<span class="badge watch">👀 盯款</span>')
         elif net is not None and net >= 50:
             badges.append('<span class="badge normal">普通</span>')
         badges.append(f'<span class="badge time">{H.escape(str(c.get("time_label") or "时效未知"))}</span>')
@@ -128,16 +130,23 @@ def build_cards(scored, excel, ts):
         rows.append(("<tr><td>到手价</td><td>¥" + fmt(c.get("cost")) + "</td></tr>"))
         rows.append(("<tr><td>得物价</td><td>¥" + fmt(c.get("du_price")) + "</td></tr>"))
         rows.append(("<tr><td>净利</td><td>¥" + fmt(net) + "</td></tr>"))
-        rows.append(("<tr><td>稀缺分</td><td>" + (str(score) if score is not None else "—") + "</td></tr>"))
+        if verdict not in ("过期", "黑名单"):
+            rows.append(("<tr><td>稀缺分</td><td>" + (str(score) if score is not None else "—") + "</td></tr>"))
+        tr = c.get("price_trend")
+        if tr and verdict in ("可蹲", "可蹲·降价中"):
+            arrow = "📉" if tr["pct"] < 0 else ("📈" if tr["pct"] > 0 else "➖")
+            rows.append(("<tr><td>价格轨迹</td><td>" + arrow + " ¥" + fmt(tr["first"]) + " → ¥" + fmt(tr["last"])
+                         + "（" + ("+" if tr["pct"] >= 0 else "") + str(tr["pct"]) + "%，" + str(tr["n"]) + "次记录）</td></tr>"))
         rows.append(("<tr><td>想买人数</td><td>" + (str(c.get("want_count")) if c.get("want_count") is not None else "—") + "</td></tr>"))
         sales = c.get("sales_7d")
         if sales is None:
             sales = (c.get("excel_sales") or "—")
         rows.append(("<tr><td>得物7天销量</td><td>" + H.escape(str(sales)) + "</td></tr>"))
-        rows.append(("<tr><td>曝光次数</td><td>" + str(c.get("seen_count") or 0) + " 次</td></tr>"))
+        if verdict not in ("过期", "黑名单"):
+            rows.append(("<tr><td>曝光次数</td><td>" + str(c.get("seen_count") or 0) + " 次</td></tr>"))
         size_txt = c.get("size") or (c.get("excel_sizes") or "")
         color_txt = c.get("color") or ""
-        if size_txt and color_txt:
+        if size_txt and color_txt and str(size_txt) != str(color_txt):
             rows.append(("<tr><td>码数/配色</td><td>" + H.escape(str(color_txt)) + " " + H.escape(str(size_txt)) + "</td></tr>"))
         elif size_txt or color_txt:
             rows.append(("<tr><td>码数/配色</td><td>" + H.escape(str(size_txt or color_txt)) + "</td></tr>"))
@@ -172,10 +181,14 @@ def verdict_banner(verdict, net):
     net_txt = ("+" + fmt(net)) if net is not None else "—"
     if verdict == "冷门优选":
         return '<div class="profit coldline">⭐ 冷门优选　净利 <b>' + net_txt + '</b> 元</div>'
+    if verdict == "可蹲·降价中":
+        return '<div class="profit watchline">👀 可蹲·降价中　当前净利 <b>' + net_txt + '</b> 元，仍在跌，蹲到心理价再入</div>'
+    if verdict == "可蹲":
+        return '<div class="profit watchline">👀 可蹲　热度已过仍在售，净利 <b>' + net_txt + '</b> 元，无人跟你抢</div>'
     if verdict == "过期":
         return '<div class="profit redline">⏰ 已过期　净利 <b>' + net_txt + '</b> 元</div>'
     if verdict == "黑名单":
-        return '<div class="profit redline">🚫 全网皆知·黑名单　净利 <b>' + net_txt + '</b> 元</div>'
+        return '<div class="profit redline">🚫 全网皆知·避坑　净利 <b>' + net_txt + '</b> 元</div>'
     if net is not None and net >= 50:
         return '<div class="profit greenline">✅ 可做　净利 <b>' + net_txt + '</b> 元</div>'
     return '<div class="profit">⚠️ 核对费率　净利 <b>' + net_txt + '</b> 元</div>'
@@ -189,21 +202,57 @@ def main():
     excel = load_excel_extra()
     ts = int(_time.time())
 
-    def sort_key(item):
-        return (VERDICT_RANK.get(item.get("verdict"), 1), -(item.get("scarcity_score") or 0))
+    # 分区：今日机会 / 盯款雷达 / 避坑区(黑名单) / 过期归档
+    def group_of(item):
+        v = item.get("verdict")
+        if v in ("冷门优选", "普通"):
+            return "picks"
+        if v in ("可蹲", "可蹲·降价中"):
+            return "radar"
+        if v == "黑名单":
+            return "black"
+        return "expired"
 
-    scored = sorted(scored, key=sort_key)
-    cards = build_cards(scored, excel, ts)
-    cards_html = chr(10).join(cards)
+    groups = {"picks": [], "radar": [], "black": [], "expired": []}
+    for item in scored:
+        groups[group_of(item)].append(item)
+    for key in groups:
+        groups[key].sort(key=lambda x: -(x.get("scarcity_score") or 0))
+
+    section_titles = {
+        "picks": "📋 今日机会",
+        "radar": "👀 盯款雷达（热度已过、仍有利润——别人抢完剩下的确定性）",
+    }
+    cards_by_group = {}
+    for key, items in groups.items():
+        cards_by_group[key] = build_cards(items, excel, ts)
+
+    parts = []
+    if cards_by_group["picks"]:
+        parts.append('<div class="sec">' + section_titles["picks"] + '</div>')
+        parts.extend(cards_by_group["picks"])
+    if cards_by_group["radar"]:
+        parts.append('<div class="sec">' + section_titles["radar"] + '</div>')
+        parts.extend(cards_by_group["radar"])
+    if cards_by_group["black"]:
+        parts.append('<details class="fold"><summary>🚫 避坑区（黑名单 ' + str(len(cards_by_group["black"])) + ' 条，点开查看）</summary>')
+        parts.extend(cards_by_group["black"])
+        parts.append('</details>')
+    if cards_by_group["expired"]:
+        parts.append('<details class="fold"><summary>⏰ 已过期归档（' + str(len(cards_by_group["expired"])) + ' 条，点开查看）</summary>')
+        parts.extend(cards_by_group["expired"])
+        parts.append('</details>')
+    cards_html = chr(10).join(parts)
 
     live_links = []
     for item in scored:
         url = item.get("url")
-        if url:
+        if url and group_of(item) in ("picks", "radar"):
             live_links.append('<a class="chip" href="' + H.escape(with_ts(url, ts)) + '" target="_blank" rel="noopener">🛒 ' + H.escape(str(item.get("title") or "?")) + '</a>')
     live_html = '<div class="chips">' + "".join(live_links) + '</div>'
 
     n_cold = sum(1 for x in scored if x.get("verdict") == "冷门优选")
+    n_watch = len(cards_by_group["radar"])
     n_ok = sum(1 for x in scored if x.get("net_profit") is not None and x["net_profit"] >= 50)
     n = len(scored)
     stamp = beijing_now().strftime("%Y-%m-%d %H:%M")
@@ -213,6 +262,7 @@ def main():
     html_doc = html_doc.replace("__STAMP__", stamp)
     html_doc = html_doc.replace("__N__", str(n))
     html_doc = html_doc.replace("__COLD__", str(n_cold))
+    html_doc = html_doc.replace("__WATCH__", str(n_watch))
     html_doc = html_doc.replace("__OK__", str(n_ok))
     html_doc = html_doc.replace("__CARDS__", cards_html)
     html_doc = html_doc.replace("__LIVE_LINKS__", live_html)
@@ -221,7 +271,7 @@ def main():
     for path in (OUT, SITE_OUT):
         with open(path, "w", encoding="utf-8") as f:
             f.write(html_doc)
-        print("OK:", path, os.path.getsize(path), "bytes, cards:", len(cards))
+        print("OK:", path, os.path.getsize(path), "bytes, cards:", sum(len(v) for v in cards_by_group.values()))
 
 
 TEMPLATE = """<!DOCTYPE html>
@@ -244,10 +294,14 @@ TEMPLATE = """<!DOCTYPE html>
   .tab { flex: 1; padding: 10px; border: 1px solid #d9dee5; background: #fff; color: #444;
          border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; }
   .tab.on { background: #1f4e79; border-color: #1f4e79; color: #fff; }
-  .stat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+  .stat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
   .stat > div { background: #fff; border-radius: 10px; padding: 10px; text-align: center; }
   .stat .n { font-size: 20px; font-weight: 700; color: #1f4e79; }
   .stat .t { font-size: 11px; color: #888; }
+  .sec { font-size: 14px; font-weight: 700; color: #1f4e79; background: #e8f0fb;
+         border-radius: 10px; padding: 10px 12px; margin: 14px 0 10px; }
+  .fold { background: #fff; border-radius: 10px; padding: 4px 12px; margin-bottom: 12px; }
+  .fold > summary { font-size: 13px; font-weight: 600; color: #888; padding: 10px 0; cursor: pointer; }
   .card { background: #fff; border-radius: 10px; padding: 12px; margin-bottom: 12px;
           box-shadow: 0 1px 3px rgba(0,0,0,.06); }
   .head { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; margin-bottom: 8px; }
@@ -258,11 +312,13 @@ TEMPLATE = """<!DOCTYPE html>
   .badge.cold { background: #c0392b; color: #fff; font-weight: 700; }
   .badge.normal { background: #e8f0fb; color: #1f4e79; }
   .badge.time { background: #fff4e0; color: #b26a00; }
+  .badge.watch { background: #e6f6ec; color: #1e7e45; font-weight: 600; }
   .badge.dead { background: #e5e7eb; color: #888; text-decoration: line-through; }
   .profit { font-size: 13px; background: #fdf6ec; color: #8a5a00; border-radius: 8px;
             padding: 8px 10px; margin-bottom: 8px; }
   .profit b { font-size: 17px; }
   .profit.coldline { background: #fdeaea; color: #c0392b; }
+  .profit.watchline { background: #e6f6ec; color: #1e7e45; }
   .profit.greenline { background: #e6f6ec; color: #1e7e45; }
   .profit.redline { background: #f4f4f5; color: #999; }
   table.info { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
@@ -292,15 +348,18 @@ TEMPLATE = """<!DOCTYPE html>
 <body>
 <div class="wrap">
   <header>
-    <h1>📦 得物搬砖 · 差异化线报</h1>
-    <p>数据更新于 __STAMP__ ｜ 共 __N__ 条 ｜ ⭐冷门优选 __COLD__ 条 ｜ 净利≥50 __OK__ 条<br>稀缺分 = 净利×时效×供需×类目×(1−曝光)，冷门优选排最前。下单前请核对到手价 &amp; 得物实时卖价。</p>
+    <h1>📦 得物搬砖 · 差异化线报 v2</h1>
+    <p>数据更新于 __STAMP__ ｜ 共 __N__ 条 ｜ ⭐冷门优选 __COLD__ ｜ 👀可蹲 __WATCH__ ｜ 净利≥50 __OK__<br>
+    新品看「今日机会」；被抢烂的款交给「盯款雷达」等降价；黑名单/过期收进折叠区。<br>
+    稀缺分 = 净利×时效×供需×类目×(1−曝光)，类目分已接入你的账单先验。下单前自行核价。</p>
   </header>
   <div class="tabs">
-    <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 今日线报</button>
-    <button class="tab" id="tabbtn-live" onclick="showTab('live')">🔴 实时线报</button>
+    <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 线报</button>
+    <button class="tab" id="tabbtn-live" onclick="showTab('live')">🔴 实时入口</button>
   </div>
   <div class="stat">
     <div><div class="n">__COLD__</div><div class="t">冷门优选</div></div>
+    <div><div class="n">__WATCH__</div><div class="t">盯款可蹲</div></div>
     <div><div class="n">__OK__</div><div class="t">净利≥50</div></div>
     <div><div class="n">__N__</div><div class="t">候选总数</div></div>
   </div>
@@ -309,12 +368,12 @@ TEMPLATE = """<!DOCTYPE html>
   </div>
   <div id="tab-live" style="display:none">
     <div class="livebox">
-      <div class="liveintro">🔴 得物官方“门道商机”直达入口（点开看得物实时数据，每次更新换成最新商机）</div>
+      <div class="liveintro">🔴 得物官方“门道商机”直达入口（今日机会与盯款雷达里的商品，点开看得物实时数据）</div>
       __LIVE_LINKS__
-      <div class="liveintro" style="margin-top:10px;padding-top:10px;border-top:1px dashed #e3e6ea;">❗ 全部是得物可售品类（门道商机原始数据）。⭐冷门优选优先看，普通条目标“核对费率”。</div>
+      <div class="liveintro" style="margin-top:10px;padding-top:10px;border-top:1px dashed #e3e6ea;">❗ 下单前自行核对到手价与得物实时卖价；盯款雷达的款建议等降价再入。</div>
     </div>
   </div>
-  <footer>数据来源：门道商机（得物官方搬砖工具）自动抓取 ｜ 仅为信息整理，下单前自行核实<br>© 得物搬砖工具箱 · __STAMP__</footer>
+  <footer>数据来源：门道商机自动抓取 + 自有价格轨迹追踪（data/price_history.json）+ 个人账单类目先验<br>仅为信息整理，不构成投资建议；下单前自行核实　© 得物搬砖工具箱 · __STAMP__</footer>
 </div>
 <script>
 function showTab(name){

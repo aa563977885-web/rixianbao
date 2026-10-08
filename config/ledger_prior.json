@@ -1,0 +1,46 @@
+{
+  "_note": "由 work/ledger_prior.py 从个人账单生成，账单更新后重跑；因子含义见 DIFF_STRATEGY.md v2",
+  "generated_at": "2026-10-08T16:39:45",
+  "prior": {
+    "其他": {
+      "factor": 0.75,
+      "roi": 0.0621,
+      "samples": 36
+    },
+    "户外": {
+      "factor": 0.75,
+      "roi": 0.0735,
+      "samples": 7
+    },
+    "数码": {
+      "factor": 0.75,
+      "roi": 0.0544,
+      "samples": 3
+    },
+    "服饰": {
+      "factor": 1.0,
+      "roi": 0.0975,
+      "samples": 12
+    },
+    "球鞋": {
+      "factor": 0.75,
+      "roi": 0.0701,
+      "samples": 27
+    },
+    "美妆": {
+      "factor": 1.4,
+      "roi": 0.2993,
+      "samples": 67
+    },
+    "配饰": {
+      "factor": 0.75,
+      "roi": 0.0633,
+      "samples": 7
+    },
+    "香水": {
+      "factor": 1.0,
+      "roi": 0.0928,
+      "samples": 30
+    }
+  }
+}

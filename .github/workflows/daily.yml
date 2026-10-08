@@ -42,13 +42,16 @@ jobs:
           pip install playwright
           python -m playwright install --with-deps chromium
 
-      - name: 爬取 + 打分 + 渲染
+      - name: 爬取 + 打分 + 渲染 + 推送
         env:
           SEED_ID: ${{ secrets.SEED_ID }}
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+          BARK_KEY: ${{ secrets.BARK_KEY }}
         run: |
           python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5 --fallback-snapshot
           python work/scoring.py
           python work/make_html.py
+          python work/notify.py || echo "[notify] 推送失败/未配置密钥，跳过"
 
       - name: 组装 Pages 目录并同步根页面
         run: |
