@@ -267,6 +267,13 @@ def main():
     html_doc = html_doc.replace("__CARDS__", cards_html)
     html_doc = html_doc.replace("__LIVE_LINKS__", live_html)
 
+    checklist_html = ""
+    if os.path.exists(os.path.join(BASE, "site", "checklist.xlsx")):
+        checklist_html = ('<p style="margin-top:6px">📥 <a href="checklist.xlsx?ts=' + str(ts) + '" '
+                          'style="color:#1f4e79;font-weight:600">下载今日待核价清单</a>'
+                          '（冷门优选+可蹲，配「选品追踪表」试销用）</p>')
+    html_doc = html_doc.replace("__CHECKLIST__", checklist_html)
+
     os.makedirs(os.path.dirname(SITE_OUT), exist_ok=True)
     for path in (OUT, SITE_OUT):
         with open(path, "w", encoding="utf-8") as f:
@@ -351,7 +358,8 @@ TEMPLATE = """<!DOCTYPE html>
     <h1>📦 得物搬砖 · 差异化线报 v2</h1>
     <p>数据更新于 __STAMP__ ｜ 共 __N__ 条 ｜ ⭐冷门优选 __COLD__ ｜ 👀可蹲 __WATCH__ ｜ 净利≥50 __OK__<br>
     新品看「今日机会」；被抢烂的款交给「盯款雷达」等降价；黑名单/过期收进折叠区。<br>
-    稀缺分 = 净利×时效×供需×类目×(1−曝光)，类目分已接入你的账单先验。下单前自行核价。</p>
+    稀缺分 = 净利×时效×供需×类目×(1−曝光)，类目分已接入你的账单先验。下单前自行核价。
+    __CHECKLIST__</p>
   </header>
   <div class="tabs">
     <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 线报</button>

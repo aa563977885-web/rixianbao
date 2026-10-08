@@ -50,6 +50,7 @@ jobs:
         run: |
           python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5 --fallback-snapshot
           python work/scoring.py
+          python work/export_tracker.py
           python work/make_html.py
           python work/notify.py || echo "[notify] 推送失败/未配置密钥，跳过"
 
@@ -57,6 +58,7 @@ jobs:
         run: |
           mkdir -p site
           cp outputs/site/index.html site/index.html
+          cp outputs/site/checklist.xlsx site/checklist.xlsx
           cp outputs/site/.nojekyll site/.nojekyll 2>/dev/null || touch site/.nojekyll
           cp outputs/site/index.html index.html
 
