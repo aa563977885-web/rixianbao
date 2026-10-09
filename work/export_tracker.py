@@ -30,11 +30,11 @@ LINE = "E3E6EA"
 HEADERS = ["候选品", "试销日期", "货源价(元)", "得物核价(元)", "核价后价差率", "试销件数",
            "已卖出件数", "卖出均价(元)", "平台费率", "快递费(元/件)", "单均净利(元)",
            "满3单？", "加仓决策", "得物价参考", "参考净利(元)", "标签", "门道链接"]
-ORDER = {"冷门优选": 0, "可蹲·降价中": 1, "可蹲": 2}
+ORDER = {"待核价": 0, "冷门优选": 1, "可蹲·降价中": 2, "可蹲": 3}
 
 
 def pick(scored, max_rows):
-    """冷门优先 -> 降价中 -> 可蹲，各标签内按稀缺分降序。"""
+    """待核价(联盟新券) -> 冷门优选 -> 降价中 -> 可蹲，各标签内按稀缺分降序。"""
     items = [x for x in scored if x.get("verdict") in ORDER]
     items.sort(key=lambda x: (ORDER[x["verdict"]], -(x.get("scarcity_score") or 0)))
     return items[:max_rows]

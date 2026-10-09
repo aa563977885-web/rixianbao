@@ -42,13 +42,18 @@ jobs:
           pip install playwright
           python -m playwright install --with-deps chromium
 
-      - name: 爬取 + 打分 + 渲染 + 推送
+      - name: 爬取 + 联盟券价 + 打分 + 渲染 + 推送
         env:
           SEED_ID: ${{ secrets.SEED_ID }}
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           BARK_KEY: ${{ secrets.BARK_KEY }}
+          TBK_APPKEY: ${{ secrets.TBK_APPKEY }}
+          TBK_APPSECRET: ${{ secrets.TBK_APPSECRET }}
+          JD_UNION_APPKEY: ${{ secrets.JD_UNION_APPKEY }}
+          JD_UNION_APPSECRET: ${{ secrets.JD_UNION_APPSECRET }}
         run: |
           python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5 --fallback-snapshot
+          python work/source_allies.py || echo "[allies] 联盟源拉取失败/未配密钥，跳过"
           python work/scoring.py
           python work/export_tracker.py
           python work/make_html.py

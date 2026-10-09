@@ -154,6 +154,23 @@ def compute_net(item, rates):
 
 
 def score_item(item, rates, boost, cut, prior, history, now=None):
+    # 联盟源（tbk/jd）条目：得物价未知，不参与稀缺分，归「待核价」由 App 核价
+    if item.get("source") in ("tbk", "jd") and item.get("du_price") is None:
+        trend = price_trend(item.get("carry_id"), history)
+        out = {
+            "net_profit": None,
+            "scarcity_score": None,
+            "verdict": "待核价",
+            "time_label": "待App核价",
+            "w_time": None,
+            "w_supply_demand": None,
+            "w_category": None,
+            "exposure_coeff": 0.0,
+        }
+        if trend:
+            out["price_trend"] = trend
+        return out
+
     net = item.get("net_profit")
     if net is None:
         net = compute_net(item, rates)
@@ -215,7 +232,7 @@ def main():
 
     # 排序：verdict 分组内按分数降序；组间 今日机会 > 可蹲 > 黑名单 > 过期 > 其他
     def verdict_rank(v):
-        return {"冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}.get(v, 6)
+        return {"待核价": -1, "冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}.get(v, 6)
 
     items.sort(key=lambda x: (verdict_rank(x["verdict"]), -(x["scarcity_score"] or 0)))
     out = items
@@ -226,9 +243,10 @@ def main():
 
     cold = sum(1 for x in out if x["verdict"] == "冷门优选")
     watch = sum(1 for x in out if x["verdict"] in ("可蹲", "可蹲·降价中"))
+    verify = sum(1 for x in out if x["verdict"] == "待核价")
     expired = sum(1 for x in out if x["verdict"] == "过期")
     black = sum(1 for x in out if x["verdict"] == "黑名单")
-    print(f"scored: {len(out)} 条 | 冷门优选 {cold} | 可蹲 {watch} | 黑名单 {black} | 过期 {expired} | 普通 {len(out)-cold-watch-expired-black}")
+    print(f"scored: {len(out)} 条 | 待核价 {verify} | 冷门优选 {cold} | 可蹲 {watch} | 黑名单 {black} | 过期 {expired} | 普通 {len(out)-verify-cold-watch-expired-black}")
     print("saved:", SCORED)
 
 

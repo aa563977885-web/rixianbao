@@ -26,7 +26,7 @@ SITE_OUT = os.path.join(BASE, "site", "index.html")
 sys.path.insert(0, WORK)
 import scoring  # noqa: E402  复用 age_hours/time_factor
 
-VERDICT_RANK = {"冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}
+VERDICT_RANK = {"待核价": -1, "冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}
 BEIJING = timezone(timedelta(hours=8))
 
 
@@ -115,6 +115,8 @@ def build_cards(scored, excel, ts):
         badges.append(f'<span class="badge cat">{H.escape(str(c.get("category") or "其他"))}</span>')
         if verdict == "冷门优选":
             badges.append('<span class="badge cold">⭐ 冷门优选</span>')
+        elif verdict == "待核价":
+            badges.append('<span class="badge verify">🆕 待核价</span>')
         elif verdict in ("可蹲", "可蹲·降价中"):
             badges.append('<span class="badge watch">👀 盯款</span>')
         elif net is not None and net >= 50:
@@ -154,7 +156,7 @@ def build_cards(scored, excel, ts):
         p = ['<div class="card">']
         p.append('<div class="head"><span class="name">🔥 ' + H.escape(str(c.get("title") or "未知品")) + '</span>')
         p.append('<span class="badges">' + "".join(badges) + '</span></div>')
-        p.append('<div class="profit">' + verdict_banner(verdict, net) + '</div>')
+        p.append('<div class="profit">' + verdict_banner(verdict, net, c) + '</div>')
         p.append('<table class="info">' + "".join(rows) + '</table>')
         if c.get("expect"):
             p.append('<div class="exp">📈 ' + H.escape(str(c["expect"])) + '</div>')
@@ -177,8 +179,12 @@ def build_cards(scored, excel, ts):
     return cards
 
 
-def verdict_banner(verdict, net):
+def verdict_banner(verdict, net, item=None):
     net_txt = ("+" + fmt(net)) if net is not None else "—"
+    if verdict == "待核价":
+        cost = (item or {}).get("cost")
+        return ('<div class="profit verifyline">🆕 联盟新券 · 券后 <b>¥' + fmt(cost) +
+                '</b>｜打开得物App搜同款核价，价差≥15%就回填清单试销</div>')
     if verdict == "冷门优选":
         return '<div class="profit coldline">⭐ 冷门优选　净利 <b>' + net_txt + '</b> 元</div>'
     if verdict == "可蹲·降价中":
@@ -202,9 +208,11 @@ def main():
     excel = load_excel_extra()
     ts = int(_time.time())
 
-    # 分区：今日机会 / 盯款雷达 / 避坑区(黑名单) / 过期归档
+    # 分区：联盟新券待核价 / 今日机会 / 盯款雷达 / 避坑区(黑名单) / 过期归档
     def group_of(item):
         v = item.get("verdict")
+        if v == "待核价":
+            return "verify"
         if v in ("冷门优选", "普通"):
             return "picks"
         if v in ("可蹲", "可蹲·降价中"):
@@ -213,13 +221,14 @@ def main():
             return "black"
         return "expired"
 
-    groups = {"picks": [], "radar": [], "black": [], "expired": []}
+    groups = {"verify": [], "picks": [], "radar": [], "black": [], "expired": []}
     for item in scored:
         groups[group_of(item)].append(item)
     for key in groups:
         groups[key].sort(key=lambda x: -(x.get("scarcity_score") or 0))
 
     section_titles = {
+        "verify": "🆕 联盟新券 · 待App核价（券后价已知，查得物价后回填试销清单）",
         "picks": "📋 今日机会",
         "radar": "👀 盯款雷达（热度已过、仍有利润——别人抢完剩下的确定性）",
     }
@@ -228,6 +237,9 @@ def main():
         cards_by_group[key] = build_cards(items, excel, ts)
 
     parts = []
+    if cards_by_group["verify"]:
+        parts.append('<div class="sec">' + section_titles["verify"] + '</div>')
+        parts.extend(cards_by_group["verify"])
     if cards_by_group["picks"]:
         parts.append('<div class="sec">' + section_titles["picks"] + '</div>')
         parts.extend(cards_by_group["picks"])
@@ -247,12 +259,13 @@ def main():
     live_links = []
     for item in scored:
         url = item.get("url")
-        if url and group_of(item) in ("picks", "radar"):
+        if url and group_of(item) in ("verify", "picks", "radar"):
             live_links.append('<a class="chip" href="' + H.escape(with_ts(url, ts)) + '" target="_blank" rel="noopener">🛒 ' + H.escape(str(item.get("title") or "?")) + '</a>')
     live_html = '<div class="chips">' + "".join(live_links) + '</div>'
 
     n_cold = sum(1 for x in scored if x.get("verdict") == "冷门优选")
     n_watch = len(cards_by_group["radar"])
+    n_verify = len(cards_by_group["verify"])
     n_ok = sum(1 for x in scored if x.get("net_profit") is not None and x["net_profit"] >= 50)
     n = len(scored)
     stamp = beijing_now().strftime("%Y-%m-%d %H:%M")
@@ -263,6 +276,7 @@ def main():
     html_doc = html_doc.replace("__N__", str(n))
     html_doc = html_doc.replace("__COLD__", str(n_cold))
     html_doc = html_doc.replace("__WATCH__", str(n_watch))
+    html_doc = html_doc.replace("__VERIFY__", str(n_verify))
     html_doc = html_doc.replace("__OK__", str(n_ok))
     html_doc = html_doc.replace("__CARDS__", cards_html)
     html_doc = html_doc.replace("__LIVE_LINKS__", live_html)
@@ -319,6 +333,7 @@ TEMPLATE = """<!DOCTYPE html>
   .badge.cold { background: #c0392b; color: #fff; font-weight: 700; }
   .badge.normal { background: #e8f0fb; color: #1f4e79; }
   .badge.time { background: #fff4e0; color: #b26a00; }
+  .badge.verify { background: #fdeaea; color: #c0392b; font-weight: 600; }
   .badge.watch { background: #e6f6ec; color: #1e7e45; font-weight: 600; }
   .badge.dead { background: #e5e7eb; color: #888; text-decoration: line-through; }
   .profit { font-size: 13px; background: #fdf6ec; color: #8a5a00; border-radius: 8px;
@@ -326,6 +341,7 @@ TEMPLATE = """<!DOCTYPE html>
   .profit b { font-size: 17px; }
   .profit.coldline { background: #fdeaea; color: #c0392b; }
   .profit.watchline { background: #e6f6ec; color: #1e7e45; }
+  .profit.verifyline { background: #fdeaea; color: #c0392b; }
   .profit.greenline { background: #e6f6ec; color: #1e7e45; }
   .profit.redline { background: #f4f4f5; color: #999; }
   table.info { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
@@ -366,9 +382,9 @@ TEMPLATE = """<!DOCTYPE html>
     <button class="tab" id="tabbtn-live" onclick="showTab('live')">🔴 实时入口</button>
   </div>
   <div class="stat">
+    <div><div class="n">__VERIFY__</div><div class="t">联盟新券</div></div>
     <div><div class="n">__COLD__</div><div class="t">冷门优选</div></div>
     <div><div class="n">__WATCH__</div><div class="t">盯款可蹲</div></div>
-    <div><div class="n">__OK__</div><div class="t">净利≥50</div></div>
     <div><div class="n">__N__</div><div class="t">候选总数</div></div>
   </div>
   <div id="tab-main">
