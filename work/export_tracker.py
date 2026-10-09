@@ -27,9 +27,13 @@ BLUE = "1F4E79"
 ALT = "F7F9FB"
 LINE = "E3E6EA"
 
-HEADERS = ["候选品", "试销日期", "货源价(元)", "得物核价(元)", "核价后价差率", "试销件数",
-           "已卖出件数", "卖出均价(元)", "平台费率", "快递费(元/件)", "单均净利(元)",
+HEADERS = ["ID", "候选品", "试销日期", "购入日期", "货源价(元)", "得物核价(元)", "核价后价差率",
+           "试销件数", "已卖出件数", "卖出均价(元)", "平台费率", "快递费(元/件)", "单均净利(元)",
            "满3单？", "加仓决策", "得物价参考", "参考净利(元)", "标签", "门道链接"]
+COL = {"ID": "B", "候选品": "C", "试销日期": "D", "购入日期": "E", "货源价": "F", "核价": "G",
+       "价差率": "H", "试销件数": "I", "已卖出": "J", "卖出均价": "K", "平台费率": "L",
+       "快递费": "M", "单均净利": "N", "满3单": "O", "加仓决策": "P", "得物价参考": "Q",
+       "参考净利": "R", "标签": "S", "链接": "T"}
 ORDER = {"待核价": 0, "冷门优选": 1, "可蹲·降价中": 2, "可蹲": 3}
 
 
@@ -60,9 +64,9 @@ def build(items, path, stamp):
         hc.font = Font(size=11, bold=True, color="FFFFFF")
         hc.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
     ws.row_dimensions[4].height = 28
-    for col, w in [("B", 34), ("C", 12), ("D", 11), ("E", 11), ("F", 12), ("G", 9), ("H", 10),
-                   ("I", 12), ("J", 10), ("K", 12), ("L", 12), ("M", 9), ("N", 10),
-                   ("O", 12), ("P", 12), ("Q", 12), ("R", 40)]:
+    for col, w in [("B", 14), ("C", 32), ("D", 11), ("E", 11), ("F", 11), ("G", 11), ("H", 12),
+                   ("I", 9), ("J", 10), ("K", 12), ("L", 10), ("M", 12), ("N", 12), ("O", 9),
+                   ("P", 10), ("Q", 12), ("R", 12), ("S", 14), ("T", 36)]:
         ws.column_dimensions[col].width = w
 
     for idx, it in enumerate(items):
@@ -73,22 +77,23 @@ def build(items, path, stamp):
         if tr:
             trend_txt = f"¥{tr.get('first')}→¥{tr.get('last')} ({tr.get('pct'):+}%)"
         values = {
-            "B": it.get("title"),
-            "D": it.get("cost"),
-            "J": 0.05,
-            "K": 3,
-            "O": it.get("du_price"),
-            "P": it.get("net_profit"),
-            "Q": it.get("verdict") + (f"·{trend_txt}" if trend_txt else ""),
-            "R": it.get("url"),
+            "B": str(it.get("carry_id") or ""),
+            "C": it.get("title"),
+            "F": it.get("cost"),
+            "L": 0.05,
+            "M": 3,
+            "Q": it.get("du_price"),
+            "R": it.get("net_profit"),
+            "S": (it.get("verdict") or "") + (f"·{trend_txt}" if trend_txt else ""),
+            "T": it.get("url"),
         }
         formulas = {
-            "F": f'=IFERROR(IF(OR(D{r}="",E{r}=""),"",(E{r}-D{r})/D{r}),"")',
-            "L": f'=IF(OR(D{r}="",I{r}=""),"",I{r}*(1-J{r})-D{r}-K{r})',
-            "M": f'=IF(H{r}="","",IF(H{r}>=3,"是","否"))',
-            "N": f'=IF(OR(D{r}="",E{r}=""),"",IF(F{r}<0.15,"放弃",IF(AND(H{r}>=3,L{r}>=25),"加仓","观察")))',
+            "H": f'=IFERROR(IF(OR(F{r}="",G{r}=""),"",(G{r}-F{r})/F{r}),"")',
+            "N": f'=IF(OR(F{r}="",K{r}=""),"",K{r}*(1-L{r})-F{r}-M{r})',
+            "O": f'=IF(J{r}="","",IF(J{r}>=3,"是","否"))',
+            "P": f'=IF(OR(F{r}="",G{r}=""),"",IF(H{r}<0.15,"放弃",IF(AND(J{r}>=3,N{r}>=25),"加仓","观察")))',
         }
-        for col_letter in "BCDEFGHIJKLMNOPQR":
+        for col_letter in "BCDEFGHIJKLMNOPQRST":
             cell = ws[f"{col_letter}{r}"]
             if col_letter in values:
                 cell.value = values[col_letter]
@@ -97,24 +102,23 @@ def build(items, path, stamp):
             cell.fill = row_fill
             cell.font = Font(size=11, color="37352F")
             cell.alignment = Alignment(
-                horizontal="left" if col_letter in ("B", "Q", "R") else "right",
-                vertical="center", wrap_text=col_letter in ("B", "Q", "R"))
-        ws[f"J{r}"].number_format = "0.0%"
-        ws[f"F{r}"].number_format = "0.0%"
-        for col_letter in ("D", "E", "I", "K", "L", "O", "P"):
+                horizontal="left" if col_letter in ("C", "S", "T") else "right",
+                vertical="center", wrap_text=col_letter in ("C", "S", "T"))
+        ws[f"L{r}"].number_format = "0.0%"
+        ws[f"H{r}"].number_format = "0.0%"
+        for col_letter in ("F", "G", "K", "M", "N", "Q", "R"):
             ws[f"{col_letter}{r}"].number_format = "#,##0.00"
         ws.row_dimensions[r].height = 22
 
     note_row = 5 + len(items) + 1
     ws.merge_cells(start_row=note_row, start_column=2, end_row=note_row, end_column=last_col)
     nc = ws.cell(row=note_row, column=2,
-                 value="用法：得物App核价填E列 -> 买1-2件 -> 卖出后补G/H/I列；「加仓」条件=价差率≥15%且满3单且单均净利≥25元，公式自动判定。"
-                       "D列货源价来自门道到手价，下单前自行复核。")
+                 value="用法：①B列ID勿删（核价结果回传就靠它）②得物App核价填G列、购买当天E列记购入日期（月底誊到账单）③卖出后补I/J/K列；「加仓」=价差率≥15%且满3单且单均净利≥25元，公式自动判定。F列券后价来自联盟API，下单前自行复核。核完价把文件交回给助手回传，站点即自动算净利排序。")
     nc.font = Font(size=9, color="8C8A84")
     nc.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
-    ws.row_dimensions[note_row].height = 30
+    ws.row_dimensions[note_row].height = 42
 
-    ws.freeze_panes = "C5"
+    ws.freeze_panes = "D5"
     os.makedirs(os.path.dirname(path), exist_ok=True)
     wb.save(path)
     print("OK:", path, os.path.getsize(path), "bytes,", len(items), "rows")

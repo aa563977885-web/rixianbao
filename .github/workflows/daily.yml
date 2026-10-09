@@ -42,6 +42,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: 爬取 + 联盟券价 + 打分 + 渲染 + 推送
+        id: pipeline
         env:
           SEED_ID: ${{ secrets.SEED_ID }}
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
@@ -57,6 +58,13 @@ jobs:
           python work/export_tracker.py
           python work/make_html.py
           python work/notify.py || echo "[notify] 推送失败/未配置密钥，跳过"
+
+      - name: 失败告警（推微信/iOS）
+        if: failure()
+        env:
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+          BARK_KEY: ${{ secrets.BARK_KEY }}
+        run: python work/alert_failure.py --step="${{ steps.pipeline.outcome }}" || true
 
       - name: 组装 Pages 目录并同步根页面
         run: |

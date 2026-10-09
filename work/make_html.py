@@ -153,7 +153,7 @@ def build_cards(scored, excel, ts):
         elif size_txt or color_txt:
             rows.append(("<tr><td>码数/配色</td><td>" + H.escape(str(size_txt or color_txt)) + "</td></tr>"))
 
-        p = ['<div class="card">']
+        p = ['<div class="card" data-v="' + H.escape(str(c.get("verdict") or "普通")) + '">']
         p.append('<div class="head"><span class="name">🔥 ' + H.escape(str(c.get("title") or "未知品")) + '</span>')
         p.append('<span class="badges">' + "".join(badges) + '</span></div>')
         p.append('<div class="profit">' + verdict_banner(verdict, net, c) + '</div>')
@@ -238,20 +238,23 @@ def main():
 
     parts = []
     if cards_by_group["verify"]:
-        parts.append('<div class="sec">' + section_titles["verify"] + '</div>')
+        parts.append('<div class="group" id="g-verify"><div class="sec">' + section_titles["verify"] + '</div>')
         parts.extend(cards_by_group["verify"])
+        parts.append('</div>')
     if cards_by_group["picks"]:
-        parts.append('<div class="sec">' + section_titles["picks"] + '</div>')
+        parts.append('<div class="group" id="g-picks"><div class="sec">' + section_titles["picks"] + '</div>')
         parts.extend(cards_by_group["picks"])
+        parts.append('</div>')
     if cards_by_group["radar"]:
-        parts.append('<div class="sec">' + section_titles["radar"] + '</div>')
+        parts.append('<div class="group" id="g-radar"><div class="sec">' + section_titles["radar"] + '</div>')
         parts.extend(cards_by_group["radar"])
+        parts.append('</div>')
     if cards_by_group["black"]:
-        parts.append('<details class="fold"><summary>🚫 避坑区（黑名单 ' + str(len(cards_by_group["black"])) + ' 条，点开查看）</summary>')
+        parts.append('<details class="fold group" id="g-black"><summary>🚫 避坑区（黑名单 ' + str(len(cards_by_group["black"])) + ' 条，点开查看）</summary>')
         parts.extend(cards_by_group["black"])
         parts.append('</details>')
     if cards_by_group["expired"]:
-        parts.append('<details class="fold"><summary>⏰ 已过期归档（' + str(len(cards_by_group["expired"])) + ' 条，点开查看）</summary>')
+        parts.append('<details class="fold group" id="g-expired"><summary>⏰ 已过期归档（' + str(len(cards_by_group["expired"])) + ' 条，点开查看）</summary>')
         parts.extend(cards_by_group["expired"])
         parts.append('</details>')
     cards_html = chr(10).join(parts)
@@ -316,7 +319,9 @@ TEMPLATE = """<!DOCTYPE html>
          border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; }
   .tab.on { background: #1f4e79; border-color: #1f4e79; color: #fff; }
   .stat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
-  .stat > div { background: #fff; border-radius: 10px; padding: 10px; text-align: center; }
+  .stat > div { background: #fff; border-radius: 10px; padding: 10px; text-align: center; cursor: pointer;
+                border: 2px solid transparent; }
+  .stat > div.on { border-color: #1f4e79; background: #e8f0fb; }
   .stat .n { font-size: 20px; font-weight: 700; color: #1f4e79; }
   .stat .t { font-size: 11px; color: #888; }
   .sec { font-size: 14px; font-weight: 700; color: #1f4e79; background: #e8f0fb;
@@ -382,10 +387,10 @@ TEMPLATE = """<!DOCTYPE html>
     <button class="tab" id="tabbtn-live" onclick="showTab('live')">🔴 实时入口</button>
   </div>
   <div class="stat">
-    <div><div class="n">__VERIFY__</div><div class="t">联盟新券</div></div>
-    <div><div class="n">__COLD__</div><div class="t">冷门优选</div></div>
-    <div><div class="n">__WATCH__</div><div class="t">盯款可蹲</div></div>
-    <div><div class="n">__N__</div><div class="t">候选总数</div></div>
+    <div id="st-verify" onclick="filterCards('verify')"><div class="n">__VERIFY__</div><div class="t">联盟新券</div></div>
+    <div id="st-cold" onclick="filterCards('cold')"><div class="n">__COLD__</div><div class="t">冷门优选</div></div>
+    <div id="st-watch" onclick="filterCards('watch')"><div class="n">__WATCH__</div><div class="t">盯款可蹲</div></div>
+    <div id="st-all" class="on" onclick="filterCards('all')"><div class="n">__N__</div><div class="t">全部</div></div>
   </div>
   <div id="tab-main">
   __CARDS__
@@ -405,6 +410,30 @@ function showTab(name){
   document.getElementById("tab-live").style.display = (name === "live") ? "" : "none";
   document.getElementById("tabbtn-main").className = "tab" + (name === "main" ? " on" : "");
   document.getElementById("tabbtn-live").className = "tab" + (name === "live" ? " on" : "");
+}
+var FILTER_MAP = { verify: ["待核价"], cold: ["冷门优选"], watch: ["可蹲", "可蹲·降价中"] };
+function filterCards(key){
+  var groups = document.querySelectorAll(".group");
+  var cards = document.querySelectorAll("#tab-main .card");
+  var statIds = ["st-verify", "st-cold", "st-watch", "st-all"];
+  var same = document.getElementById("st-" + key).classList.contains("on");
+  statIds.forEach(function(id){
+    document.getElementById(id).classList.toggle("on", (!same && id === "st-" + key));
+  });
+  if (same) key = "all";
+  var show = FILTER_MAP[key] || null;
+  cards.forEach(function(c){
+    c.style.display = (!show || show.indexOf(c.getAttribute("data-v")) >= 0) ? "" : "none";
+  });
+  groups.forEach(function(g){
+    if (key === "all") { g.style.display = ""; return; }
+    var hasVisible = g.querySelectorAll(".card:not([style*='none'])").length > 0;
+    g.style.display = hasVisible ? "" : "none";
+  });
+  document.getElementById("tab-main").style.display = "";
+  document.getElementById("tabbtn-main").className = "tab on";
+  document.getElementById("tabbtn-live").className = "tab";
+  document.getElementById("tab-live").style.display = "none";
 }
 function copyDewu(btn, kw){
   var done = function(){ btn.textContent = "✅ 已复制货号"; setTimeout(function(){ btn.textContent = "🔍 得物查价"; }, 2600); };

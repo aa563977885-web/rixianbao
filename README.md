@@ -1,6 +1,6 @@
 # 得物搬砖 · 差异化线报 v2
 
-自动盯「门道商机」（得物官方搬砖工具），按稀缺分筛选，每 4 小时自动更新到 GitHub Pages。
+自动盯「门道商机」（得物官方搬砖工具），按稀缺分筛选，每 4 小时自动更新（失败自动推微信告警）。
 
 **线上地址**：https://aa563977885-web.github.io/rixianbao/
 
@@ -22,6 +22,7 @@ python work/make_html.py                            # 渲染到 outputs/
 python work/ledger_prior.py --bill "得物 账单.xlsx"  # 账单回流：用真实成交数据校准类目分
 python work/export_tracker.py                       # 回路A：导出待核价清单 -> outputs/site/checklist.xlsx
 python work/source_allies.py                        # v3：双联盟券价源（淘宝关键词+京东热销榜）
+python work/import_verified.py --file 核完的清单.xlsx  # 核价回流：得物价回写池子
 python work/test_scoring.py                         # 单测
 ```
 

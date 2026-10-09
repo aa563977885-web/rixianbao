@@ -213,9 +213,10 @@ def score_item(item, rates, boost, cut, prior, history, now=None):
             out["price_trend"] = trend
         return out
 
-    net = item.get("net_profit")
+    # 净利强制按当前价格重算（核价回流后 du_price 会变，不能信爬取时存的旧值）
+    net = compute_net(item, rates)
     if net is None:
-        net = compute_net(item, rates)
+        net = item.get("net_profit")
     age = effective_age_hours(item, now)
     w_time, label = time_factor(age)
     w_sup = supply_demand_factor(item.get("want_count"), item.get("sales_7d"))

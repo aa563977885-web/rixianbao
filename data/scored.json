@@ -17,14 +17,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 115.3,
+    "scarcity_score": 105.7,
     "verdict": "冷门优选",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8962,
     "w_category": 1.0,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12213547",
@@ -44,68 +44,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 92.1,
+    "scarcity_score": 84.5,
     "verdict": "冷门优选",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.5503,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
-  },
-  {
-    "carry_id": "12213857",
-    "title": "Anta安踏 马力2 心跳 专业竞训回弹包裹性 低帮 氮科技 全掌碳板 马拉松训练长跑竞速跑步鞋 男款 白红",
-    "article_no": "912545560-2",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 140.31,
-    "du_price": 332.31,
-    "cost": 192.0,
-    "want_count": 97,
-    "sales_7d": 37,
-    "published_at": "2026-10-08T09:59",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213857",
-    "net_profit": 82.11,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": 34.4,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.6195,
-    "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
-  },
-  {
-    "carry_id": "12214553",
-    "title": "Nike Maxfly 2 舒适耐穿 橙红紫色 田径鞋 男女同款 低帮",
-    "article_no": "FD8395-601",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 235.0,
-    "du_price": 905.0,
-    "cost": 670.0,
-    "want_count": 48,
-    "sales_7d": 37,
-    "published_at": "2026-10-08T15:46",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214553",
-    "net_profit": 102.35,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": 28.2,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.4076,
-    "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12216206",
@@ -125,14 +71,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 25.1,
+    "scarcity_score": 50.1,
     "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
+    "time_label": "冷静期中",
+    "w_time": 1.0,
     "w_supply_demand": 1.0,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 433.62,
       "last": 432.7,
@@ -158,14 +104,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 23.2,
+    "scarcity_score": 46.4,
     "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
+    "time_label": "冷静期中",
+    "w_time": 1.0,
     "w_supply_demand": 0.6267,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 818.5,
       "last": 814.7,
@@ -191,20 +137,74 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 22.8,
+    "scarcity_score": 45.7,
     "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
+    "time_label": "冷静期中",
+    "w_time": 1.0,
     "w_supply_demand": 0.7042,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 488.89,
       "last": 485.25,
       "pct": -0.7,
       "n": 2
     }
+  },
+  {
+    "carry_id": "12213857",
+    "title": "Anta安踏 马力2 心跳 专业竞训回弹包裹性 低帮 氮科技 全掌碳板 马拉松训练长跑竞速跑步鞋 男款 白红",
+    "article_no": "912545560-2",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 140.31,
+    "du_price": 332.31,
+    "cost": 192.0,
+    "want_count": 97,
+    "sales_7d": 37,
+    "published_at": "2026-10-08T09:59",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213857",
+    "net_profit": 82.11,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": 31.5,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.6195,
+    "w_category": 0.725,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
+  },
+  {
+    "carry_id": "12214553",
+    "title": "Nike Maxfly 2 舒适耐穿 橙红紫色 田径鞋 男女同款 低帮",
+    "article_no": "FD8395-601",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 235.0,
+    "du_price": 905.0,
+    "cost": 670.0,
+    "want_count": 48,
+    "sales_7d": 37,
+    "published_at": "2026-10-08T15:46",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214553",
+    "net_profit": 102.35,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": 25.8,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.4076,
+    "w_category": 0.725,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12215204",
@@ -231,7 +231,40 @@
     "w_supply_demand": 0.3891,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64
+    "seen_days": 0.8
+  },
+  {
+    "carry_id": "12216175",
+    "title": "Anta安踏 马力2 心跳 专业竞训回弹包裹性 低帮 氮科技 全掌碳板 马拉松训练长跑竞速跑步鞋 男款 白红",
+    "article_no": "912545560-2",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 95.47,
+    "du_price": 273.47,
+    "cost": 178.0,
+    "want_count": 69,
+    "sales_7d": 33,
+    "published_at": "2026-10-09T10:13",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12216175",
+    "net_profit": 44.92,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": 17.4,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.5345,
+    "w_category": 0.725,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.8,
+    "price_trend": {
+      "first": 297.75,
+      "last": 273.47,
+      "pct": -8.2,
+      "n": 2
+    }
   },
   {
     "carry_id": "12215295",
@@ -258,7 +291,7 @@
     "w_supply_demand": 0.3697,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 466.67,
       "last": 442.6,
@@ -291,67 +324,13 @@
     "w_supply_demand": 0.4715,
     "w_category": 1.025,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 325.57,
       "last": 314.36,
       "pct": -3.4,
       "n": 2
     }
-  },
-  {
-    "carry_id": "12214217",
-    "title": "CAMEL骆驼 王者凯甲系列 撞色防风防雨透湿拒油蓄热抓绒内胆三合一 防水防泼水冲锋衣 男款",
-    "article_no": "735CA45003",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 97.99,
-    "du_price": 406.99,
-    "cost": 309.0,
-    "want_count": 30,
-    "sales_7d": 37,
-    "published_at": "2026-10-08T12:20",
-    "category": "户外",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214217",
-    "net_profit": 38.22,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": 12.0,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.3297,
-    "w_category": 1.025,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
-  },
-  {
-    "carry_id": "12213982",
-    "title": "UGG DISCO 加绒 舒适保暖半拖 时尚拖鞋 女款 栗色",
-    "article_no": "1121550-CHE",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 114.85,
-    "du_price": 432.85,
-    "cost": 318.0,
-    "want_count": 48,
-    "sales_7d": 37,
-    "published_at": "2026-10-08T10:37",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213982",
-    "net_profit": 43.58,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": 12.0,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.4076,
-    "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
   },
   {
     "carry_id": "12215301",
@@ -378,13 +357,67 @@
     "w_supply_demand": 0.3988,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 207.43,
       "last": 210.4,
       "pct": 1.4,
       "n": 2
     }
+  },
+  {
+    "carry_id": "12214217",
+    "title": "CAMEL骆驼 王者凯甲系列 撞色防风防雨透湿拒油蓄热抓绒内胆三合一 防水防泼水冲锋衣 男款",
+    "article_no": "735CA45003",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 97.99,
+    "du_price": 406.99,
+    "cost": 309.0,
+    "want_count": 30,
+    "sales_7d": 37,
+    "published_at": "2026-10-08T12:20",
+    "category": "户外",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214217",
+    "net_profit": 38.22,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": 11.0,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.3297,
+    "w_category": 1.025,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
+  },
+  {
+    "carry_id": "12213982",
+    "title": "UGG DISCO 加绒 舒适保暖半拖 时尚拖鞋 女款 栗色",
+    "article_no": "1121550-CHE",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 114.85,
+    "du_price": 432.85,
+    "cost": 318.0,
+    "want_count": 48,
+    "sales_7d": 37,
+    "published_at": "2026-10-08T10:37",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213982",
+    "net_profit": 43.58,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": 11.0,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.4076,
+    "w_category": 0.725,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214530",
@@ -404,14 +437,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 9.8,
+    "scarcity_score": 9.0,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.2173,
     "w_category": 0.875,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214602",
@@ -431,47 +464,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 9.0,
+    "scarcity_score": 8.2,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3686,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
-  },
-  {
-    "carry_id": "12216175",
-    "title": "Anta安踏 马力2 心跳 专业竞训回弹包裹性 低帮 氮科技 全掌碳板 马拉松训练长跑竞速跑步鞋 男款 白红",
-    "article_no": "912545560-2",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 95.47,
-    "du_price": 273.47,
-    "cost": 178.0,
-    "want_count": 69,
-    "sales_7d": 33,
-    "published_at": "2026-10-09T10:13",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12216175",
-    "net_profit": 44.92,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": 8.7,
-    "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
-    "w_supply_demand": 0.5345,
-    "w_category": 0.725,
-    "exposure_coeff": 0.0,
-    "seen_days": 0.64,
-    "price_trend": {
-      "first": 297.75,
-      "last": 273.47,
-      "pct": -8.2,
-      "n": 2
-    }
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12216515",
@@ -498,7 +498,7 @@
     "w_supply_demand": 0.3358,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 217.33,
       "last": 213.37,
@@ -524,14 +524,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 6.8,
+    "scarcity_score": 6.2,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3686,
     "w_category": 0.875,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12213701",
@@ -551,41 +551,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 6.4,
+    "scarcity_score": 5.8,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3384,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
-  },
-  {
-    "carry_id": "12214417",
-    "title": "LiNing李宁 轻速3mid 䨻科技 包裹升级稳定支撑轻便舒适 减震防滑耐磨透气回弹抗扭抓地 中帮 篮球鞋 男款 黑紫色",
-    "article_no": "ABPV019-1",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 64.22,
-    "du_price": 208.22,
-    "cost": 144.0,
-    "want_count": 25,
-    "sales_7d": 37,
-    "published_at": "2026-10-08T14:37",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214417",
-    "net_profit": 22.15,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": 4.6,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.3081,
-    "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12216904",
@@ -612,7 +585,34 @@
     "w_supply_demand": 0.3018,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.39
+    "seen_days": 0.55
+  },
+  {
+    "carry_id": "12214417",
+    "title": "LiNing李宁 轻速3mid 䨻科技 包裹升级稳定支撑轻便舒适 减震防滑耐磨透气回弹抗扭抓地 中帮 篮球鞋 男款 黑紫色",
+    "article_no": "ABPV019-1",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 64.22,
+    "du_price": 208.22,
+    "cost": 144.0,
+    "want_count": 25,
+    "sales_7d": 37,
+    "published_at": "2026-10-08T14:37",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214417",
+    "net_profit": 22.15,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": 4.2,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.3081,
+    "w_category": 0.725,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12215189",
@@ -639,7 +639,7 @@
     "w_supply_demand": 0.2776,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.39
+    "seen_days": 0.55
   },
   {
     "carry_id": "12214623",
@@ -659,14 +659,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 3,
-    "scarcity_score": 3.3,
+    "scarcity_score": 3.0,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.4327,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29,
     "price_trend": {
       "first": 224.1,
       "last": 217.56,
@@ -699,7 +699,7 @@
     "w_supply_demand": 0.3115,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.39
+    "seen_days": 0.55
   },
   {
     "carry_id": "12214843",
@@ -726,13 +726,40 @@
     "w_supply_demand": 0.2873,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 458.86,
       "last": 451.58,
       "pct": -1.6,
       "n": 2
     }
+  },
+  {
+    "carry_id": "12213344",
+    "title": "adidas originals Adimatic 时尚百搭鲨鱼面包鞋 防滑 低帮 板鞋 男女同款 黑色",
+    "article_no": "ID3938",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 63.95,
+    "du_price": 335.95,
+    "cost": 272.0,
+    "want_count": 37,
+    "sales_7d": 37,
+    "published_at": "2026-10-07T23:42",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213344",
+    "net_profit": 5.28,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": 1.5,
+    "verdict": "普通",
+    "time_label": "真需求确认",
+    "w_time": 1.3,
+    "w_supply_demand": 0.36,
+    "w_category": 0.725,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214671",
@@ -759,40 +786,13 @@
     "w_supply_demand": 0.3212,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 351.48,
       "last": 334.19,
       "pct": -4.9,
       "n": 2
     }
-  },
-  {
-    "carry_id": "12213344",
-    "title": "adidas originals Adimatic 时尚百搭鲨鱼面包鞋 防滑 低帮 板鞋 男女同款 黑色",
-    "article_no": "ID3938",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 63.95,
-    "du_price": 335.95,
-    "cost": 272.0,
-    "want_count": 37,
-    "sales_7d": 37,
-    "published_at": "2026-10-07T23:42",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213344",
-    "net_profit": 5.28,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": 1.3,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.36,
-    "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
   },
   {
     "carry_id": "12216915",
@@ -819,7 +819,7 @@
     "w_supply_demand": 0.456,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.39
+    "seen_days": 0.55
   },
   {
     "carry_id": "12214840",
@@ -846,7 +846,7 @@
     "w_supply_demand": 0.3358,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 432.47,
       "last": 425.19,
@@ -878,8 +878,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.2995,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214171",
@@ -905,8 +905,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.3384,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214318",
@@ -926,14 +926,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": -0.6,
+    "scarcity_score": -0.5,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.5286,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214138",
@@ -953,14 +953,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": -0.9,
+    "scarcity_score": -0.8,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3211,
     "w_category": 0.875,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12216492",
@@ -987,13 +987,40 @@
     "w_supply_demand": 0.3358,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 636.15,
       "last": 619.05,
       "pct": -2.7,
       "n": 2
     }
+  },
+  {
+    "carry_id": "12213927",
+    "title": "UGG Classic Dipper 时尚百搭 绒面革 短靴 女款 棕色",
+    "article_no": "1168170-CHE",
+    "color": "标准白",
+    "size": "42",
+    "gross_profit": 54.45,
+    "du_price": 478.45,
+    "cost": 424.0,
+    "want_count": 207,
+    "sales_7d": 37,
+    "published_at": "2026-10-08T10:24",
+    "category": "其他",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213927",
+    "net_profit": -13.18,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-08T16:44:45+08:00",
+    "seen_count": 1,
+    "scarcity_score": -9.9,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 1.0,
+    "w_category": 0.875,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29
   },
   {
     "carry_id": "12214730",
@@ -1020,34 +1047,7 @@
     "w_supply_demand": 0.4629,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64
-  },
-  {
-    "carry_id": "12213927",
-    "title": "UGG Classic Dipper 时尚百搭 绒面革 短靴 女款 棕色",
-    "article_no": "1168170-CHE",
-    "color": "标准白",
-    "size": "42",
-    "gross_profit": 54.45,
-    "du_price": 478.45,
-    "cost": 424.0,
-    "want_count": 207,
-    "sales_7d": 37,
-    "published_at": "2026-10-08T10:24",
-    "category": "其他",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213927",
-    "net_profit": -13.18,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-08T16:44:45+08:00",
-    "seen_count": 1,
-    "scarcity_score": -10.7,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 1.0,
-    "w_category": 0.875,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14
+    "seen_days": 0.8
   },
   {
     "carry_id": "12214630",
@@ -1067,14 +1067,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-09T04:38:26+00:00",
     "seen_count": 2,
-    "scarcity_score": -14.0,
+    "scarcity_score": -12.9,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 1.0,
     "w_category": 0.725,
-    "exposure_coeff": 0.068,
-    "seen_days": 1.14,
+    "exposure_coeff": 0.146,
+    "seen_days": 1.29,
     "price_trend": {
       "first": 531.25,
       "last": 446.26,
@@ -1107,7 +1107,7 @@
     "w_supply_demand": 0.4715,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.64,
+    "seen_days": 0.8,
     "price_trend": {
       "first": 865.1,
       "last": 849.9,
@@ -1140,7 +1140,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11611203",
@@ -1167,7 +1167,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11611098",
@@ -1194,7 +1194,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11583953",
@@ -1221,7 +1221,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11610520",
@@ -1248,7 +1248,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11584234",
@@ -1275,7 +1275,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11610465",
@@ -1302,7 +1302,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11584908",
@@ -1329,7 +1329,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11593882",
@@ -1356,7 +1356,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11583908",
@@ -1383,7 +1383,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11610234",
@@ -1410,7 +1410,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11584890",
@@ -1437,7 +1437,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11584124",
@@ -1464,7 +1464,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11611326",
@@ -1491,7 +1491,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11608028",
@@ -1518,7 +1518,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11610242",
@@ -1545,7 +1545,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11610220",
@@ -1572,7 +1572,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11609965",
@@ -1599,7 +1599,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11609753",
@@ -1626,7 +1626,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11584967",
@@ -1653,7 +1653,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.1
+    "seen_days": 43.26
   },
   {
     "carry_id": "11612871",
@@ -1680,7 +1680,7 @@
     "w_supply_demand": 0.3119,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11612707",
@@ -1707,7 +1707,7 @@
     "w_supply_demand": 1.0,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11612459",
@@ -1734,7 +1734,7 @@
     "w_supply_demand": 0.9153,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11612423",
@@ -1761,7 +1761,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11612367",
@@ -1788,7 +1788,7 @@
     "w_supply_demand": 0.5671,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611919",
@@ -1815,7 +1815,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611899",
@@ -1842,7 +1842,7 @@
     "w_supply_demand": 0.3318,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611892",
@@ -1869,7 +1869,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611831",
@@ -1896,7 +1896,7 @@
     "w_supply_demand": 0.7647,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611815",
@@ -1923,7 +1923,7 @@
     "w_supply_demand": 0.5012,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611735",
@@ -1950,7 +1950,7 @@
     "w_supply_demand": 0.2847,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611500",
@@ -1977,7 +1977,7 @@
     "w_supply_demand": 0.7835,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   },
   {
     "carry_id": "11611345",
@@ -2004,6 +2004,6 @@
     "w_supply_demand": 0.4635,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 43.24
+    "seen_days": 43.4
   }
 ]

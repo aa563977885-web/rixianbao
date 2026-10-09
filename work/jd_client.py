@@ -64,9 +64,11 @@ def jd_call(method, req=None, timeout=15):
 
 
 def goods_rank(rank_id, page=1, page_size=20):
-    """热销榜商品（已开通）。返回归一化列表。"""
+    """热销榜商品（已开通）。返回归一化列表；无效榜单ID返回空。"""
     data = jd_call("jd.union.open.goods.rank.query", {"rankId": int(rank_id), "pageIndex": page, "pageSize": page_size})
     qr = (data.get("queryResult") or {})
+    if not isinstance(qr, dict):
+        return []
     data_list = qr.get("data") or []
     out = []
     for it in data_list:
