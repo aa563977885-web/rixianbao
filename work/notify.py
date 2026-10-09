@@ -106,8 +106,13 @@ def main():
         return
     notified_ids = set(load_json(NOTIFIED, []))
     title, body, new_ids = build_digest(scored, notified_ids)
-    stamp = datetime.now(BEIJING).strftime("%m-%d %H:%M")
-    title = f"{stamp} {title}"
+    now_bj = datetime.now(BEIJING)
+    # 节流（Server酱免费5条/天）：无新内容时只在早8点这轮发心跳
+    has_content = bool(new_ids) or "降价" in title
+    if not has_content and now_bj.hour != 8:
+        print("[skip] 无新机会且非早报时段，不推送")
+        return
+    title = f"{now_bj.strftime('%m-%d %H:%M')} {title}"
 
     print("标题:", title)
     print("正文:\n" + body)

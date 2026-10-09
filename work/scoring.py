@@ -17,8 +17,8 @@ v2 新增：
           >168h=过期（分数置0，保留观察） 缺发布时间=1.0
   W供需   min(想买人数/max(7日销量,1),5)/5 映射到 [0.2,1.0]；缺想买人数=0.8
   W类目   tiers.json 冷热门分 与 ledger_prior.json 账单分取均值
-  曝光系数 min(seen_count/10,1)：被抓10次以上视为全网皆知（冷门线路上分数归零，
-          但满足条件的会转入「可蹲」赛道重新评估）
+  曝光系数 min(首发至今天数/3, 1)：天数制与爬取频率解耦（v3.1），
+          满3天=全网皆知（冷门线路上分数归零，满足条件的转入「可蹲」赛道）
 边界：净利<=min_net_profit 的条目不参与排序但仍输出；所有除法防除零。
 """
 import json
@@ -70,6 +70,26 @@ def age_hours(published_at, now=None):
     now = now or datetime.now()
     if dt.tzinfo is not None and now.tzinfo is None:
         dt = dt.replace(tzinfo=None)
+    return (now - dt).total_seconds() / 3600.0
+
+
+def effective_age_hours(item, now=None):
+    """时效基准：优先发布时间，缺失用首次发现时间（爬取频率无关，天数制）。"""
+    h = age_hours(item.get("published_at"), now)
+    if h is not None:
+        return h
+    fs = item.get("first_seen")
+    if not fs:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(fs))
+    except (ValueError, TypeError):
+        return None
+    if dt.tzinfo is not None:
+        dt = dt.replace(tzinfo=None)
+    now = now or datetime.now()
+    if now.tzinfo is not None:
+        now = now.replace(tzinfo=None)
     return (now - dt).total_seconds() / 3600.0
 
 
@@ -139,8 +159,30 @@ def last_seen_fresh(item, hours=72, now=None):
     return (now - dt).total_seconds() <= hours * 3600
 
 
-def exposure_factor(seen_count):
-    return min(int(seen_count or 0) / 10.0, 1.0)
+def first_seen_days(item, now=None):
+    """首次发现至今的天数（热度判定基准，与爬取频率解耦）。"""
+    fs = item.get("first_seen")
+    if not fs:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(fs))
+    except (ValueError, TypeError):
+        return None
+    if dt.tzinfo is not None:
+        dt = dt.replace(tzinfo=None)
+    now = now or datetime.now()
+    if now.tzinfo is not None:
+        now = now.replace(tzinfo=None)
+    return (now - dt).total_seconds() / 86400.0
+
+
+def heat_days_factor(item, now=None):
+    """(曝光系数, 天数)：首日全网未知(0)，第2-3天线性升温，≥3天=1（全网皆知）。
+    与爬取频率解耦；≥3天的条目转入盯款雷达/黑名单赛道。"""
+    d = first_seen_days(item, now)
+    if d is None:
+        return 0.0, 0.0
+    return min(max((d - 1.0) / 2.0, 0.0), 1.0), d
 
 
 def compute_net(item, rates):
@@ -174,12 +216,11 @@ def score_item(item, rates, boost, cut, prior, history, now=None):
     net = item.get("net_profit")
     if net is None:
         net = compute_net(item, rates)
-    age = age_hours(item.get("published_at"), now)
+    age = effective_age_hours(item, now)
     w_time, label = time_factor(age)
     w_sup = supply_demand_factor(item.get("want_count"), item.get("sales_7d"))
     w_cat = blended_category_factor(item.get("category"), boost, cut, prior)
-    exp = exposure_factor(item.get("seen_count"))
-    seen = int(item.get("seen_count") or 0)
+    exp, seen_days = heat_days_factor(item, now)
     trend = price_trend(item.get("carry_id"), history)
 
     score = None
@@ -190,8 +231,8 @@ def score_item(item, rates, boost, cut, prior, history, now=None):
     if age is not None and age > 168:
         verdict = "过期"
         score = 0
-    elif seen >= 10:
-        # 热度已过：仍然在售且仍有达标净利 -> 「可蹲」（反向打法）；否则黑名单
+    elif seen_days is not None and seen_days >= 3:
+        # 首发满3天=热度已过：仍在售且仍有达标净利 -> 「可蹲」；否则黑名单
         if net is not None and net >= rates["min_net_profit"] and last_seen_fresh(item, now=now):
             verdict = "可蹲·降价中" if (trend and trend["pct"] <= -3) else "可蹲"
             # 盯款雷达排序用：热度中性分 = 净利 × 类目分
@@ -211,6 +252,7 @@ def score_item(item, rates, boost, cut, prior, history, now=None):
         "w_supply_demand": w_sup,
         "w_category": w_cat,
         "exposure_coeff": round(exp, 3),
+        "seen_days": round(seen_days, 2) if seen_days is not None else None,
     }
     if trend:
         out["price_trend"] = trend

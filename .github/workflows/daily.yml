@@ -2,8 +2,7 @@ name: 每日线报自动更新
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # UTC 0 点 = 北京早 8 点
-    - cron: '0 12 * * *'  # UTC 12 点 = 北京晚 8 点
+    - cron: '0 16,20,0,4,8,12 * * *'   # UTC，对应北京 0/4/8/12/16/20 点，每 4 小时一轮
   workflow_dispatch:
 
 permissions:

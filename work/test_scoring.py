@@ -75,27 +75,32 @@ class TestScoring(unittest.TestCase):
         self.assertEqual(score(base(category="球鞋"), prior=prior)["w_category"], 0.7)
 
     def test_exposure_coeff_and_blacklist(self):
+        # 无 first_seen（老数据）无曝光系数
         self.assertEqual(score(base(seen_count=0))["exposure_coeff"], 0.0)
-        self.assertEqual(score(base(seen_count=5))["exposure_coeff"], 0.5)
-        # seen>=12 且无 last_seen（平台下架/无证据） -> 黑名单
-        r = score(base(seen_count=12))
+        # 首发满3天=全网皆知（天数制，与爬取频率解耦）
+        it5 = base(seen_count=0, first_seen=iso(5 * 24))
+        self.assertEqual(score(it5)["exposure_coeff"], 1.0)
+        # 首日曝光系数为 0（保护首发窗口之外的冷静期得分）
+        self.assertEqual(score(base(seen_count=0, first_seen=iso(12)))["exposure_coeff"], 0.0)
+        # 满3天 且 无 last_seen（平台下架/无证据） -> 黑名单
+        r = score(base(seen_count=0, first_seen=iso(5 * 24)))
         self.assertEqual(r["verdict"], "黑名单")
         self.assertEqual(r["scarcity_score"], 0)
 
     def test_watch_verdict_keek(self):
-        # v2: seen>=10 但仍在售(last_seen新鲜) 且净利达标 -> 可蹲，不再判死
-        it = base(seen_count=12, last_seen=iso(5))
+        # v3.1: 首发满3天（热度已过）但仍在售(last_seen新鲜)且净利达标 -> 可蹲
+        it = base(seen_count=0, first_seen=iso(5 * 24), last_seen=iso(5))
         r = score(it)
         self.assertEqual(r["verdict"], "可蹲")
         # 价格轨迹在跌 >=3% -> 可蹲·降价中
-        hist = {it["article_no"]: [], "1": [["2026-08-20T10:00:00", 500.0, 300.0],
-                                             ["2026-08-27T10:00:00", 470.0, 300.0]]}
+        hist = {"1": [["2026-08-20T10:00:00", 500.0, 300.0],
+                      ["2026-08-27T10:00:00", 470.0, 300.0]]}
         it2 = dict(it, carry_id="1")
         r2 = score(it2, history=hist)
         self.assertEqual(r2["verdict"], "可蹲·降价中")
         self.assertAlmostEqual(r2["price_trend"]["pct"], -6.0, places=1)
         # 净利不达标的热款仍是黑名单
-        r3 = score(base(du_price=320, cost=300, seen_count=12, last_seen=iso(5)))
+        r3 = score(base(du_price=320, cost=300, first_seen=iso(5 * 24), last_seen=iso(5)))
         self.assertEqual(r3["verdict"], "黑名单")
 
     def test_cold_pick_verdict(self):
@@ -116,10 +121,11 @@ class TestScoring(unittest.TestCase):
         self.assertEqual(r["time_label"], "时效未知")
 
     def test_score_formula_exact(self):
-        it = base(du_price=1851.5, cost=1349, want_count=None, seen_count=3)
+        # seen_count 已废弃；曝光按 first_seen 天数：首日系数 0
+        it = base(du_price=1851.5, cost=1349, want_count=None, seen_count=3, first_seen=iso(12))
         r = score(it)
         self.assertAlmostEqual(r["net_profit"], 283.84, places=2)
-        self.assertEqual(r["scarcity_score"], round(283.84 * 1.0 * 0.8 * 1.0 * 0.7, 1))
+        self.assertEqual(r["scarcity_score"], round(283.84 * 1.0 * 0.8 * 1.0 * 1.0, 1))
 
 
 if __name__ == "__main__":

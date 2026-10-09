@@ -17,13 +17,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 111.4,
+    "scarcity_score": 115.3,
     "verdict": "冷门优选",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8962,
     "w_category": 1.0,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12213547",
@@ -43,13 +44,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 89.0,
+    "scarcity_score": 92.1,
     "verdict": "冷门优选",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.5503,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12213857",
@@ -69,13 +71,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 33.2,
+    "scarcity_score": 34.4,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.6195,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214553",
@@ -95,13 +98,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 27.2,
+    "scarcity_score": 28.2,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.4076,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12216206",
@@ -121,13 +125,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 20.0,
+    "scarcity_score": 25.1,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 1.0,
     "w_category": 1.0,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 433.62,
       "last": 432.7,
@@ -153,13 +158,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 18.6,
+    "scarcity_score": 23.2,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.6267,
     "w_category": 1.0,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 818.5,
       "last": 814.7,
@@ -185,13 +191,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 18.3,
+    "scarcity_score": 22.8,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.7042,
     "w_category": 1.0,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 488.89,
       "last": 485.25,
@@ -217,13 +224,47 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 15.9,
+    "scarcity_score": 19.9,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3891,
     "w_category": 0.725,
-    "exposure_coeff": 0.2
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64
+  },
+  {
+    "carry_id": "12215295",
+    "title": "adidas 舒适休闲保暖长袖面包羽绒服 男女同款 黑色",
+    "article_no": "JX1808",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 108.6,
+    "du_price": 442.6,
+    "cost": 334.0,
+    "want_count": 35,
+    "sales_7d": 33,
+    "published_at": "2026-10-09T00:14",
+    "category": "服饰",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12215295",
+    "net_profit": 44.91,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": 16.6,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.3697,
+    "w_category": 1.0,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
+    "price_trend": {
+      "first": 466.67,
+      "last": 442.6,
+      "pct": -5.2,
+      "n": 2
+    }
   },
   {
     "carry_id": "12216422",
@@ -243,13 +284,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 12.5,
+    "scarcity_score": 15.7,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.4715,
     "w_category": 1.025,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 325.57,
       "last": 314.36,
@@ -275,13 +317,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 11.6,
+    "scarcity_score": 12.0,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3297,
     "w_category": 1.025,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12213982",
@@ -301,13 +344,47 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 11.6,
+    "scarcity_score": 12.0,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.4076,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
+  },
+  {
+    "carry_id": "12215301",
+    "title": "Vans Caldrone 经典 美式复古面包胖胖鞋 耐磨 低帮 帆布鞋 男女同款 黑白",
+    "article_no": "VN0A5JM2BA2",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 83.4,
+    "du_price": 210.4,
+    "cost": 127.0,
+    "want_count": 41,
+    "sales_7d": 33,
+    "published_at": "2026-10-09T00:17",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12215301",
+    "net_profit": 41.05,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": 11.9,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.3988,
+    "w_category": 0.725,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
+    "price_trend": {
+      "first": 207.43,
+      "last": 210.4,
+      "pct": 1.4,
+      "n": 2
+    }
   },
   {
     "carry_id": "12214530",
@@ -327,13 +404,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 9.5,
+    "scarcity_score": 9.8,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.2173,
     "w_category": 0.875,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214602",
@@ -353,13 +431,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 8.7,
+    "scarcity_score": 9.0,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3686,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12216175",
@@ -379,17 +458,51 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 7.0,
+    "scarcity_score": 8.7,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.5345,
     "w_category": 0.725,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 297.75,
       "last": 273.47,
       "pct": -8.2,
+      "n": 2
+    }
+  },
+  {
+    "carry_id": "12216515",
+    "title": "Skechers斯凯奇 D'LITES 1.0 熊猫鞋 奶茶熊2代 椰乳大理石 厚底学生校园青春日常高颜值百搭时尚耐穿 低帮 老爹鞋 男款 黑灰",
+    "article_no": "237153-BKGY",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 100.37,
+    "du_price": 213.37,
+    "cost": 113.0,
+    "want_count": 28,
+    "sales_7d": 33,
+    "published_at": "2026-10-09T12:35",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12216515",
+    "net_profit": 57.63,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": 7.0,
+    "verdict": "普通",
+    "time_label": "首发窗口·避让",
+    "w_time": 0.5,
+    "w_supply_demand": 0.3358,
+    "w_category": 0.725,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
+    "price_trend": {
+      "first": 217.33,
+      "last": 213.37,
+      "pct": -1.8,
       "n": 2
     }
   },
@@ -411,45 +524,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 6.6,
+    "scarcity_score": 6.8,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3686,
     "w_category": 0.875,
-    "exposure_coeff": 0.1
-  },
-  {
-    "carry_id": "12215295",
-    "title": "adidas 舒适休闲保暖长袖面包羽绒服 男女同款 黑色",
-    "article_no": "JX1808",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 108.6,
-    "du_price": 442.6,
-    "cost": 334.0,
-    "want_count": 35,
-    "sales_7d": 33,
-    "published_at": "2026-10-09T00:14",
-    "category": "服饰",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12215295",
-    "net_profit": 44.91,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": 6.6,
-    "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
-    "w_supply_demand": 0.3697,
-    "w_category": 1.0,
-    "exposure_coeff": 0.2,
-    "price_trend": {
-      "first": 466.67,
-      "last": 442.6,
-      "pct": -5.2,
-      "n": 2
-    }
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12213701",
@@ -469,77 +551,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 6.2,
+    "scarcity_score": 6.4,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3384,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
-  },
-  {
-    "carry_id": "12216515",
-    "title": "Skechers斯凯奇 D'LITES 1.0 熊猫鞋 奶茶熊2代 椰乳大理石 厚底学生校园青春日常高颜值百搭时尚耐穿 低帮 老爹鞋 男款 黑灰",
-    "article_no": "237153-BKGY",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 100.37,
-    "du_price": 213.37,
-    "cost": 113.0,
-    "want_count": 28,
-    "sales_7d": 33,
-    "published_at": "2026-10-09T12:35",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12216515",
-    "net_profit": 57.63,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": 5.6,
-    "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
-    "w_supply_demand": 0.3358,
-    "w_category": 0.725,
-    "exposure_coeff": 0.2,
-    "price_trend": {
-      "first": 217.33,
-      "last": 213.37,
-      "pct": -1.8,
-      "n": 2
-    }
-  },
-  {
-    "carry_id": "12215301",
-    "title": "Vans Caldrone 经典 美式复古面包胖胖鞋 耐磨 低帮 帆布鞋 男女同款 黑白",
-    "article_no": "VN0A5JM2BA2",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 83.4,
-    "du_price": 210.4,
-    "cost": 127.0,
-    "want_count": 41,
-    "sales_7d": 33,
-    "published_at": "2026-10-09T00:17",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12215301",
-    "net_profit": 41.05,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": 4.7,
-    "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
-    "w_supply_demand": 0.3988,
-    "w_category": 0.725,
-    "exposure_coeff": 0.2,
-    "price_trend": {
-      "first": 207.43,
-      "last": 210.4,
-      "pct": 1.4,
-      "n": 2
-    }
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214417",
@@ -559,13 +578,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 4.5,
+    "scarcity_score": 4.6,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3081,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12216904",
@@ -585,13 +605,14 @@
     "first_seen": "2026-10-09T10:38:03+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 1,
-    "scarcity_score": 3.8,
+    "scarcity_score": 4.3,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.3018,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.0,
+    "seen_days": 0.39
   },
   {
     "carry_id": "12215189",
@@ -611,39 +632,14 @@
     "first_seen": "2026-10-09T10:38:03+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 1,
-    "scarcity_score": 3.1,
+    "scarcity_score": 3.5,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.2776,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
-  },
-  {
-    "carry_id": "12216622",
-    "title": "adidas originals WINDBREAKER BLOCK 宽松百搭舒适条纹运动长袖夹克 男款 暗绿/黑色",
-    "article_no": "KC3125",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 72.94,
-    "du_price": 357.94,
-    "cost": 285.0,
-    "want_count": 23,
-    "sales_7d": 33,
-    "published_at": "2026-10-09T13:45",
-    "category": "服饰",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12216622",
-    "net_profit": 18.57,
-    "first_seen": "2026-10-09T10:38:03+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 1,
-    "scarcity_score": 2.6,
-    "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
-    "w_supply_demand": 0.3115,
-    "w_category": 1.0,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.0,
+    "seen_days": 0.39
   },
   {
     "carry_id": "12214623",
@@ -663,19 +659,47 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 3,
-    "scarcity_score": 2.5,
+    "scarcity_score": 3.3,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.4327,
     "w_category": 0.725,
-    "exposure_coeff": 0.3,
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14,
     "price_trend": {
       "first": 224.1,
       "last": 217.56,
       "pct": -2.9,
       "n": 2
     }
+  },
+  {
+    "carry_id": "12216622",
+    "title": "adidas originals WINDBREAKER BLOCK 宽松百搭舒适条纹运动长袖夹克 男款 暗绿/黑色",
+    "article_no": "KC3125",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 72.94,
+    "du_price": 357.94,
+    "cost": 285.0,
+    "want_count": 23,
+    "sales_7d": 33,
+    "published_at": "2026-10-09T13:45",
+    "category": "服饰",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12216622",
+    "net_profit": 18.57,
+    "first_seen": "2026-10-09T10:38:03+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 1,
+    "scarcity_score": 2.9,
+    "verdict": "普通",
+    "time_label": "首发窗口·避让",
+    "w_time": 0.5,
+    "w_supply_demand": 0.3115,
+    "w_category": 1.0,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.39
   },
   {
     "carry_id": "12214843",
@@ -695,17 +719,51 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 1.8,
+    "scarcity_score": 2.3,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.2873,
     "w_category": 1.0,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 458.86,
       "last": 451.58,
       "pct": -1.6,
+      "n": 2
+    }
+  },
+  {
+    "carry_id": "12214671",
+    "title": "CAMEL骆驼 暖绒系列 防风立领加厚保暖防寒面包服运动火炉羽绒服 男女同款",
+    "article_no": "C36CW10100",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 56.19,
+    "du_price": 334.19,
+    "cost": 278.0,
+    "want_count": 25,
+    "sales_7d": 33,
+    "published_at": "2026-10-08T16:52",
+    "category": "服饰",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214671",
+    "net_profit": 4.43,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": 1.4,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.3212,
+    "w_category": 1.0,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
+    "price_trend": {
+      "first": 351.48,
+      "last": 334.19,
+      "pct": -4.9,
       "n": 2
     }
   },
@@ -727,13 +785,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": 1.2,
+    "scarcity_score": 1.3,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.36,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12216915",
@@ -753,45 +812,14 @@
     "first_seen": "2026-10-09T10:38:03+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 1,
-    "scarcity_score": 1.2,
+    "scarcity_score": 1.3,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.456,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
-  },
-  {
-    "carry_id": "12214671",
-    "title": "CAMEL骆驼 暖绒系列 防风立领加厚保暖防寒面包服运动火炉羽绒服 男女同款",
-    "article_no": "C36CW10100",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 56.19,
-    "du_price": 334.19,
-    "cost": 278.0,
-    "want_count": 25,
-    "sales_7d": 33,
-    "published_at": "2026-10-08T16:52",
-    "category": "服饰",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214671",
-    "net_profit": 4.43,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": 1.1,
-    "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
-    "w_supply_demand": 0.3212,
-    "w_category": 1.0,
-    "exposure_coeff": 0.2,
-    "price_trend": {
-      "first": 351.48,
-      "last": 334.19,
-      "pct": -4.9,
-      "n": 2
-    }
+    "exposure_coeff": 0.0,
+    "seen_days": 0.39
   },
   {
     "carry_id": "12214840",
@@ -811,13 +839,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": 0.9,
+    "scarcity_score": 1.1,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.3358,
     "w_category": 1.0,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 432.47,
       "last": 425.19,
@@ -849,7 +878,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.2995,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214171",
@@ -875,7 +905,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.3384,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214318",
@@ -895,13 +926,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": -0.5,
+    "scarcity_score": -0.6,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.5286,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214138",
@@ -927,7 +959,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.3211,
     "w_category": 0.875,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12216492",
@@ -947,49 +980,18 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 2,
-    "scarcity_score": -2.0,
+    "scarcity_score": -2.5,
     "verdict": "普通",
     "time_label": "首发窗口·避让",
     "w_time": 0.5,
     "w_supply_demand": 0.3358,
     "w_category": 0.725,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
     "price_trend": {
       "first": 636.15,
       "last": 619.05,
       "pct": -2.7,
-      "n": 2
-    }
-  },
-  {
-    "carry_id": "12215312",
-    "title": "Nike Maxfly 2 舒适耐穿 橙红紫色 田径鞋 男女同款 低帮",
-    "article_no": "FD8395-601",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 69.9,
-    "du_price": 849.9,
-    "cost": 780.0,
-    "want_count": 56,
-    "sales_7d": 33,
-    "published_at": "2026-10-09T00:28",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12215312",
-    "net_profit": -55.59,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": -7.6,
-    "verdict": "普通",
-    "time_label": "首发窗口·避让",
-    "w_time": 0.5,
-    "w_supply_demand": 0.4715,
-    "w_category": 0.725,
-    "exposure_coeff": 0.2,
-    "price_trend": {
-      "first": 865.1,
-      "last": 849.9,
-      "pct": -1.8,
       "n": 2
     }
   },
@@ -1011,13 +1013,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T04:38:26+00:00",
     "seen_count": 1,
-    "scarcity_score": -8.9,
+    "scarcity_score": -9.9,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.4629,
     "w_category": 0.725,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64
   },
   {
     "carry_id": "12213927",
@@ -1037,13 +1040,14 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "scarcity_score": -10.4,
+    "scarcity_score": -10.7,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 1.0,
     "w_category": 0.875,
-    "exposure_coeff": 0.1
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14
   },
   {
     "carry_id": "12214630",
@@ -1063,17 +1067,51 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-09T04:38:26+00:00",
     "seen_count": 2,
-    "scarcity_score": -12.0,
+    "scarcity_score": -14.0,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 1.0,
     "w_category": 0.725,
-    "exposure_coeff": 0.2,
+    "exposure_coeff": 0.068,
+    "seen_days": 1.14,
     "price_trend": {
       "first": 531.25,
       "last": 446.26,
       "pct": -16.0,
+      "n": 2
+    }
+  },
+  {
+    "carry_id": "12215312",
+    "title": "Nike Maxfly 2 舒适耐穿 橙红紫色 田径鞋 男女同款 低帮",
+    "article_no": "FD8395-601",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 69.9,
+    "du_price": 849.9,
+    "cost": 780.0,
+    "want_count": 56,
+    "sales_7d": 33,
+    "published_at": "2026-10-09T00:28",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12215312",
+    "net_profit": -55.59,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": -19.0,
+    "verdict": "普通",
+    "time_label": "冷静期中",
+    "w_time": 1.0,
+    "w_supply_demand": 0.4715,
+    "w_category": 0.725,
+    "exposure_coeff": 0.0,
+    "seen_days": 0.64,
+    "price_trend": {
+      "first": 865.1,
+      "last": 849.9,
+      "pct": -1.8,
       "n": 2
     }
   },
@@ -1095,13 +1133,14 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 89,
-    "scarcity_score": 248.4,
-    "verdict": "可蹲",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "scarcity_score": 0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11611203",
@@ -1121,13 +1160,14 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 89,
-    "scarcity_score": 38.8,
-    "verdict": "可蹲",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "scarcity_score": 0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11611098",
@@ -1148,12 +1188,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 89,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11583953",
@@ -1174,12 +1215,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11610520",
@@ -1200,12 +1242,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 89,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11584234",
@@ -1226,12 +1269,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11610465",
@@ -1252,12 +1296,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11584908",
@@ -1278,12 +1323,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11593882",
@@ -1304,12 +1350,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11583908",
@@ -1330,12 +1377,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11610234",
@@ -1356,12 +1404,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 89,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11584890",
@@ -1382,12 +1431,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11584124",
@@ -1408,12 +1458,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11611326",
@@ -1434,12 +1485,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 89,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11608028",
@@ -1460,12 +1512,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11610242",
@@ -1486,12 +1539,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 89,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11610220",
@@ -1512,12 +1566,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11609965",
@@ -1538,12 +1593,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11609753",
@@ -1564,12 +1620,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11584967",
@@ -1590,12 +1647,13 @@
     "last_seen": "2026-10-08T18:50:02+00:00",
     "seen_count": 86,
     "scarcity_score": 0,
-    "verdict": "黑名单",
-    "time_label": "时效未知",
-    "w_time": 1.0,
+    "verdict": "过期",
+    "time_label": "过期",
+    "w_time": 0.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 1.0
+    "exposure_coeff": 1.0,
+    "seen_days": 43.1
   },
   {
     "carry_id": "11612871",
@@ -1621,7 +1679,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.3119,
     "w_category": 1.0,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11612707",
@@ -1647,7 +1706,8 @@
     "w_time": 0.0,
     "w_supply_demand": 1.0,
     "w_category": 1.0,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11612459",
@@ -1673,7 +1733,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.9153,
     "w_category": 1.025,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11612423",
@@ -1699,7 +1760,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.5859,
     "w_category": 1.025,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11612367",
@@ -1725,7 +1787,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.5671,
     "w_category": 0.725,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611919",
@@ -1751,7 +1814,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
-    "exposure_coeff": 0.2
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611899",
@@ -1777,7 +1841,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.3318,
     "w_category": 0.725,
-    "exposure_coeff": 0.2
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611892",
@@ -1803,7 +1868,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611831",
@@ -1829,7 +1895,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.7647,
     "w_category": 0.725,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611815",
@@ -1855,7 +1922,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.5012,
     "w_category": 0.725,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611735",
@@ -1881,7 +1949,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.2847,
     "w_category": 1.0,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611500",
@@ -1907,7 +1976,8 @@
     "w_time": 0.0,
     "w_supply_demand": 0.7835,
     "w_category": 0.725,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   },
   {
     "carry_id": "11611345",
@@ -1933,6 +2003,7 @@
     "w_time": 0.0,
     "w_supply_demand": 0.4635,
     "w_category": 1.0,
-    "exposure_coeff": 0.3
+    "exposure_coeff": 1.0,
+    "seen_days": 43.24
   }
 ]
