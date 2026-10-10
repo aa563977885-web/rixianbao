@@ -63,26 +63,39 @@ def jd_call(method, req=None, timeout=15):
     return resp
 
 
+# 榜单ID枚举：200000 全部 / 200001 食品酒水 / 200002 家庭清洁 / 200003 个护美妆 /
+# 200004 医药保健 / 200005 生鲜 / 200006 数码家电 / 200007 家居日用 / 200008 时尚生活
 def goods_rank(rank_id, page=1, page_size=20):
-    """热销榜商品（已开通）。返回归一化列表；无效榜单ID返回空。"""
-    data = jd_call("jd.union.open.goods.rank.query", {"rankId": int(rank_id), "pageIndex": page, "pageSize": page_size})
+    """热销榜商品。注意：入参包装键是字面量 RankGoodsReq（首字母大写，
+    与官方文档页/PHP SDK 示例一致；小写 rankGoodsReq 会报 400 参数错误）。"""
+    data = jd_call("jd.union.open.goods.rank.query", {
+        "RankGoodsReq": {"rankId": int(rank_id), "sortType": 3,
+                         "pageIndex": page, "pageSize": page_size},
+    })
     qr = (data.get("queryResult") or {})
+    if isinstance(qr, str):
+        try:
+            qr = json.loads(qr)
+        except ValueError:
+            return []
     if not isinstance(qr, dict):
         return []
-    data_list = qr.get("data") or []
     out = []
-    for it in data_list:
-        base = it.get("baseInfo") or {}
-        price_info = it.get("priceInfo") or {}
-        price = float((price_info.get("price") or 0))
+    for it in qr.get("data") or []:
+        g = it.get("rankGoodsResp") or it
+        pid = g.get("purchasePriceInfo") or {}
+        wl = float(g.get("wlprice") or 0)
+        purchase = float(pid.get("purchasePrice") or wl)
+        coupon = max([float(c.get("discount") or 0) for c in (pid.get("couponList") or [])] or [0])
+        sku = str(g.get("skuId") or g.get("itemId") or "")
         out.append({
-            "sku_id": str(base.get("skuId") or it.get("skuId") or ""),
-            "title": base.get("skuName", ""),
-            "price": price,
-            "lowest_price": float((price_info.get("lowestPrice") or price) or 0),
-            "shop": (it.get("shopInfo") or {}).get("shopName", ""),
-            "commission": float(((it.get("commissionInfo") or {}).get("commission") or 0)),
-            "url": f"https://item.jd.com/{base.get('skuId') or it.get('skuId')}.html",
+            "sku_id": sku,
+            "title": g.get("skuName", ""),
+            "price": wl,
+            "lowest_price": round(max(purchase - coupon, 0), 2),
+            "shop": "",
+            "commission": round(wl * float(g.get("commissionShare") or 0) / 100, 2),
+            "url": f"https://item.jd.com/{sku}.html" if sku else "",
         })
     return out
 
