@@ -57,6 +57,12 @@ def classify(title):
     return "其他"
 
 
+def brand_hit(title, brands):
+    """得物可核价商品必然是品牌货；白名单放 config/allies.json 的 dewu_brands。"""
+    t = str(title or "").lower()
+    return any(b.lower() in t for b in (brands or []))
+
+
 def now_iso():
     return datetime.now().astimezone().isoformat(timespec="seconds")
 
@@ -66,6 +72,7 @@ def collect(conf, extra_keyword=None):
     ts = now_iso()
     items = []
     notes = []
+    brands = conf.get("dewu_brands") or []
 
     # 淘宝：关键词券后物料（需权限包16516，未批时降级跳过）
     try:
@@ -83,8 +90,8 @@ def collect(conf, extra_keyword=None):
                 notes.append(f"[tbk] {kw} 失败: {str(e)[:60]}")
                 continue
             for it in found:
-                if classify(it["title"]) == "其他":
-                    continue  # 归不出得物类目的商品核不了价，不进池
+                if brands and not brand_hit(it["title"], brands):
+                    continue  # 非品牌白名单商品得物上核不了价
                 items.append({
                     "carry_id": f"tbk-{it['num_iid']}",
                     "title": it["title"],
@@ -114,8 +121,8 @@ def collect(conf, extra_keyword=None):
                 notes.append(f"[jd] 榜单{rid} 失败: {str(e)[:60]}")
                 continue
             for it in found:
-                if classify(it["title"]) == "其他":
-                    continue  # 榜单杂货（家居/食品等）得物核不了价，跳过
+                if brands and not brand_hit(it["title"], brands):
+                    continue  # 榜单杂货（裤夹/食品/家居等）得物上没有，跳过
                 items.append({
                     "carry_id": f"jd-{it['sku_id']}",
                     "title": it["title"],
@@ -137,8 +144,8 @@ def collect(conf, extra_keyword=None):
                     notes.append("[jd] 关键词搜索需V1等级，跳过")
                     break
                 for it in found:
-                    if classify(it["title"]) == "其他":
-                        continue  # 同上：杂类目不进池
+                    if brands and not brand_hit(it["title"], brands):
+                        continue  # 同上：非品牌货不进池
                     items.append({
                         "carry_id": f"jd-{it['sku_id']}",
                         "title": it["title"],
