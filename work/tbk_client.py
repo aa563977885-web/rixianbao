@@ -26,6 +26,17 @@ def _creds():
     key = os.environ.get("TBK_APPKEY") or ""
     secret = os.environ.get("TBK_APPSECRET") or ""
     if not key or not secret:
+        # 本机定时任务兜底：config/local_secrets.json（已 gitignore，不进仓库）
+        import json
+        try:
+            with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                   "config", "local_secrets.json"), encoding="utf-8") as f:
+                s = json.load(f)
+            key = key or s.get("TBK_APPKEY", "")
+            secret = secret or s.get("TBK_APPSECRET", "")
+        except (OSError, ValueError):
+            pass
+    if not key or not secret:
         raise RuntimeError("缺少 TBK_APPKEY / TBK_APPSECRET 环境变量")
     return key, secret
 

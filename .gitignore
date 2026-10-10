@@ -2,3 +2,5 @@ outputs/
 __pycache__/
 *.pyc
 data_backup/
+config/local_secrets.json
+data/local_pull.log

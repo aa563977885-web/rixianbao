@@ -26,6 +26,16 @@ def _creds():
     key = os.environ.get("JD_UNION_APPKEY") or ""
     secret = os.environ.get("JD_UNION_APPSECRET") or ""
     if not key or not secret:
+        # 本机定时任务兜底：config/local_secrets.json（已 gitignore，不进仓库）
+        try:
+            with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                   "config", "local_secrets.json"), encoding="utf-8") as f:
+                s = json.load(f)
+            key = key or s.get("JD_UNION_APPKEY", "")
+            secret = secret or s.get("JD_UNION_APPSECRET", "")
+        except (OSError, ValueError):
+            pass
+    if not key or not secret:
         raise RuntimeError("缺少 JD_UNION_APPKEY / JD_UNION_APPSECRET 环境变量")
     return key, secret
 
