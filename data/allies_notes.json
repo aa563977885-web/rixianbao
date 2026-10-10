@@ -1,11 +1,7 @@
 {
-  "updated": "2026-10-10T10:09:39+00:00",
+  "updated": "2026-10-10T19:32:45+08:00",
   "notes": [
-    "[tbk] 阿迪达斯 失败: taobao.tbk.dg.material.optional: 网关连接超时（重试3次）",
-    "[tbk] 耐克 失败: taobao.tbk.dg.material.optional: 网关连接超时（重试3次）",
-    "[tbk] 波司登 羽绒服 失败: taobao.tbk.dg.material.optional: 网关连接超时（重试3次）",
-    "[tbk] 香水 失败: taobao.tbk.dg.material.optional: 网关连接超时（重试3次）",
-    "[tbk] 爱敬气垫 失败: taobao.tbk.dg.material.optional: 网关连接超时（重试3次）",
+    "[tbk] 物料搜索权限未开通，关键词扫描跳过（taobao.tbk.dg.material.optional: isv.permission-api-package-）",
     "[jd] 榜单200003: 20 条",
     "[jd] 榜单200006: 20 条",
     "[jd] 榜单200008: 20 条",
