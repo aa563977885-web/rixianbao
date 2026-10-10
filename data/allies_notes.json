@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T08:25:43+00:00",
+  "updated": "2026-10-10T08:34:34+00:00",
   "notes": [
     "[tbk] 跳过: ConnectTimeout HTTPSConnectionPool(host='gw.api.taobao.com', port=443): Max",
     "[jd] 榜单200003 失败: jd.union.open.goods.rank.query: code=8 时间戳参数与服务器时间差异大于设定值tim",
