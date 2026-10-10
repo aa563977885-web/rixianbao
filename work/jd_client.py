@@ -30,13 +30,19 @@ def _creds():
     return key, secret
 
 
+def _bj_now():
+    """京东路由按北京时间校验 timestamp；GitHub runner 是 UTC，必须显式取东八区。"""
+    from datetime import datetime, timezone, timedelta
+    return datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
+
+
 def jd_call(method, req=None, timeout=15):
     key, secret = _creds()
     params = {
         "method": method,
         "app_key": key,
         "access_token": "",
-        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "timestamp": _bj_now(),
         "format": "json",
         "v": "1.0",
         "sign_method": "md5",

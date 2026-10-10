@@ -77,6 +77,14 @@ def fmt(x):
     return ("%.1f" % x) if isinstance(x, (int, float)) else str(x)
 
 
+def search_keyword(title):
+    """联盟商品没有得物货号，把营销化标题压成可搜索的商品词。"""
+    t = str(title or "")
+    t = re.sub(r"【[^】]*】|\[[^\]]*\]|（[^）]*）|\([^\)]*\)", " ", t)
+    t = re.split(r"男女|官方|正品|旗舰|特价|包邮|新款|2026|2025", t)[0]
+    return t.strip()[:24]
+
+
 def with_ts(url, ts):
     if not url:
         return url
@@ -151,8 +159,10 @@ def build_cards(scored, excel, ts):
             try:
                 from datetime import datetime as _dt
                 ldt = _dt.fromisoformat(str(ls)).replace(tzinfo=None)
+                note = ("联盟券后价随活动变动" if c.get("source") in ("tbk", "jd")
+                        else "门道最低价实时波动")
                 rows.append(("<tr><td>数据时间</td><td>" + ldt.strftime("%m-%d %H:%M") +
-                             " 抓取｜门道最低价实时波动，下单前以App为准</td></tr>"))
+                             " 抓取｜" + note + "，下单前以App为准</td></tr>"))
             except ValueError:
                 pass
         size_txt = c.get("size") or (c.get("excel_sizes") or "")
@@ -172,11 +182,11 @@ def build_cards(scored, excel, ts):
         if c.get("url"):
             p.append('<div class="btn-row">')
             p.append('<a class="btn" href="' + H.escape(c["url"]) + '" target="_blank" rel="noopener">🛒 打开下单页</a>')
-            kw = c.get("article_no") or c.get("title") or ""
+            kw = c.get("article_no") or search_keyword(c.get("title")) or ""
             p.append('<button class="btn dewu" onclick="copyDewu(this,\'' + H.escape(str(kw)).replace("'", "\\'") + '\')">🔍 得物查价</button>')
             p.append('<button class="btn copy" onclick="copyLink(this,\'' + H.escape(c["url"]).replace("'", "\\'") + '\')">📋 复制链接</button>')
             p.append('</div>')
-            p.append('<div class="hint">🔍得物查价：点一下复制货号，去得物App顶部搜索框粘贴即可；📋复制链接：粘到🍑🐶 App 下单更快</div>')
+            p.append('<div class="hint">🔍得物查价：点一下复制货号或商品词，去得物App顶部搜索框粘贴即可；📋复制链接：粘到🍑🐶 App 下单更快</div>')
         if c.get("tut"):
             p.append('<details><summary>📖 下单教程</summary><div class="tut">' + H.escape(str(c["tut"])).replace("\n", "<br>") + '</div></details>')
         if c.get("cal"):

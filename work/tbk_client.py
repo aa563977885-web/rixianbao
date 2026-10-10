@@ -43,8 +43,16 @@ def tbk_call(method, extra=None, timeout=15):
     params.update(extra or {})
     concat = "".join(f"{k}{v}" for k, v in sorted(params.items()))
     params["sign"] = hashlib.md5((secret + concat + secret).encode()).hexdigest().upper()
-    r = requests.get(GATEWAY, params=params, timeout=timeout)
-    data = r.json()
+    # GitHub 海外 runner 到淘宝网关常超时，重试两次拉一把
+    data = None
+    for attempt in range(3):
+        try:
+            r = requests.get(GATEWAY, params=params, timeout=timeout + attempt * 10)
+            data = r.json()
+            break
+        except (requests.Timeout, requests.ConnectionError):
+            if attempt == 2:
+                raise RuntimeError(f"{method}: 网关连接超时（重试3次）")
     if "error_response" in data:
         err = data["error_response"]
         msg = str(err.get("msg", "")) + str(err.get("sub_msg", ""))
