@@ -146,6 +146,15 @@ def build_cards(scored, excel, ts):
         rows.append(("<tr><td>得物7天销量</td><td>" + H.escape(str(sales)) + "</td></tr>"))
         if verdict not in ("过期", "黑名单"):
             rows.append(("<tr><td>曝光次数</td><td>" + str(c.get("seen_count") or 0) + " 次</td></tr>"))
+        ls = c.get("last_seen")
+        if ls:
+            try:
+                from datetime import datetime as _dt
+                ldt = _dt.fromisoformat(str(ls)).replace(tzinfo=None)
+                rows.append(("<tr><td>数据时间</td><td>" + ldt.strftime("%m-%d %H:%M") +
+                             " 抓取｜门道最低价实时波动，下单前以App为准</td></tr>"))
+            except ValueError:
+                pass
         size_txt = c.get("size") or (c.get("excel_sizes") or "")
         color_txt = c.get("color") or ""
         if size_txt and color_txt and str(size_txt) != str(color_txt):

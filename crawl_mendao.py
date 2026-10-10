@@ -197,15 +197,22 @@ def fetch_and_parse(carry_id, use_browser=False):
 # ---------- 解析 ----------
 
 def parse(text, html):
+    # 主商品区 = "该商机"起，至第一个"点击立即购买"止；之后的都是相似推荐品
+    # （推荐品也带 颜色/尺码/利润差/7日销量，全文搜索会误抓——曾把李宁的"标准白 39"当成羽绒服的配色）
+    anchors = [m.start() for m in (re.search(r"该商机", text), re.search(r"货号[:：]", text)) if m]
+    anchor = min(anchors) if anchors else 0
+    stop = text.find("点击立即购买", anchor)
+    block = text[anchor: stop if stop > anchor else anchor + 1500]
+
     def g(regex):
-        m = re.search(regex, text)
+        m = re.search(regex, block)
         return m.group(1).strip() if m else None
 
     ids = list(dict.fromkeys(re.findall(r'carryId["\\]?\s*:\s*"?(\d+)', html)))
 
     name = g(r"该商机\s*\n?\s*([^\n]{4,80})")
     if not name:
-        m = re.search(r"([^\n]{4,80}?)\s*\n\s*货号[:：]", text)
+        m = re.search(r"([^\n]{4,80}?)\s*\n\s*货号[:：]", block)
         name = m.group(1).strip() if m else None
 
     profit = g(r"利润\s*[¥￥]\s*([\d.]+)")
