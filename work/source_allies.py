@@ -26,6 +26,7 @@ CONF = os.path.join(ROOT, "config", "allies.json")
 POOL = os.path.join(ROOT, "data", "pool.json")
 EXPOSURE = os.path.join(ROOT, "data", "exposure.json")
 PRICE_HISTORY = os.path.join(ROOT, "data", "price_history.json")
+NOTES = os.path.join(ROOT, "data", "allies_notes.json")
 
 
 def load_json(path, default):
@@ -95,8 +96,8 @@ def collect(conf, extra_keyword=None):
                     "published_at": ts,
                 })
             notes.append(f"[tbk] {kw}: {len(found)} 条")
-    except RuntimeError as e:
-        notes.append(f"[tbk] 跳过: {str(e)[:60]}")
+    except Exception as e:  # 网络异常等非 RuntimeError 也不能炸掉整个采集
+        notes.append(f"[tbk] 跳过: {type(e).__name__} {str(e)[:60]}")
 
     # 京东：热销榜（已开通）+ 关键词（V1解锁前自动跳过）
     try:
@@ -145,8 +146,8 @@ def collect(conf, extra_keyword=None):
                         "published_at": ts,
                     })
                 notes.append(f"[jd] {kw}: {len(found)} 条")
-    except RuntimeError as e:
-        notes.append(f"[jd] 跳过: {str(e)[:60]}")
+    except Exception as e:  # 同上：网络异常降级为 note，不炸整个采集
+        notes.append(f"[jd] 跳过: {type(e).__name__} {str(e)[:60]}")
 
     return items, notes
 
@@ -160,6 +161,7 @@ def main():
     items, notes = collect(conf, args.keyword)
     for n in notes:
         print(n)
+    save_json(NOTES, {"updated": now_iso(), "notes": notes})
 
     pool = load_json(POOL, [])
     if isinstance(pool, list):

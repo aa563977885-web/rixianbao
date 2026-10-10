@@ -1,0 +1,14 @@
+{
+  "updated": "2026-10-10T15:16:07+08:00",
+  "notes": [
+    "[tbk] 阿迪达斯 失败: 缺少 TBK_APPKEY / TBK_APPSECRET 环境变量",
+    "[tbk] 耐克 失败: 缺少 TBK_APPKEY / TBK_APPSECRET 环境变量",
+    "[tbk] 波司登 羽绒服 失败: 缺少 TBK_APPKEY / TBK_APPSECRET 环境变量",
+    "[tbk] 香水 失败: 缺少 TBK_APPKEY / TBK_APPSECRET 环境变量",
+    "[tbk] 爱敬气垫 失败: 缺少 TBK_APPKEY / TBK_APPSECRET 环境变量",
+    "[jd] 榜单200003: 20 条",
+    "[jd] 榜单200006: 20 条",
+    "[jd] 榜单200008: 20 条",
+    "[jd] 跳过: RuntimeError jd.union.open.goods.query: code=2000 已达接口调用上限，请0点后再试（解决方案参考:"
+  ]
+}
