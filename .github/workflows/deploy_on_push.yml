@@ -6,7 +6,10 @@ on:
   push:
     paths:
       - 'data/**'
-      - 'config/allies.json'
+      - 'config/**'
+      - 'work/**'
+      - 'crawl_mendao.py'
+      - 'requirements.txt'
     branches: [main]
   workflow_dispatch:
 

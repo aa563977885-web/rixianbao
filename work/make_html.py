@@ -136,24 +136,33 @@ def build_cards(scored, excel, ts):
             badges.append('<span class="badge dead">黑名单</span>')
 
         rows = []
-        rows.append(("<tr><td>货号</td><td>" + H.escape(str(c.get("article_no") or "—")) + "</td></tr>"))
-        rows.append(("<tr><td>到手价</td><td>¥" + fmt(c.get("cost")) + "</td></tr>"))
-        rows.append(("<tr><td>得物价</td><td>¥" + fmt(c.get("du_price")) + "</td></tr>"))
-        rows.append(("<tr><td>净利</td><td>¥" + fmt(net) + "</td></tr>"))
-        if verdict not in ("过期", "黑名单"):
-            rows.append(("<tr><td>稀缺分</td><td>" + (str(score) if score is not None else "—") + "</td></tr>"))
-        tr = c.get("price_trend")
-        if tr and verdict in ("可蹲", "可蹲·降价中"):
-            arrow = "📉" if tr["pct"] < 0 else ("📈" if tr["pct"] > 0 else "➖")
-            rows.append(("<tr><td>价格轨迹</td><td>" + arrow + " ¥" + fmt(tr["first"]) + " → ¥" + fmt(tr["last"])
-                         + "（" + ("+" if tr["pct"] >= 0 else "") + str(tr["pct"]) + "%，" + str(tr["n"]) + "次记录）</td></tr>"))
-        rows.append(("<tr><td>想买人数</td><td>" + (str(c.get("want_count")) if c.get("want_count") is not None else "—") + "</td></tr>"))
-        sales = c.get("sales_7d")
-        if sales is None:
-            sales = (c.get("excel_sales") or "—")
-        rows.append(("<tr><td>得物7天销量</td><td>" + H.escape(str(sales)) + "</td></tr>"))
-        if verdict not in ("过期", "黑名单"):
-            rows.append(("<tr><td>曝光次数</td><td>" + str(c.get("seen_count") or 0) + " 次</td></tr>"))
+        if verdict == "待核价":
+            # 联盟新券：得物侧数据（货号/得物价/净利/稀缺分/销量）只有核价后才有，
+            # 不渲染空行，只给到手价 + 联盟佣金（高佣金=商家冲量推广，真实信号）
+            rows.append(("<tr><td>到手价</td><td>¥" + fmt(c.get("cost")) + "</td></tr>"))
+            if c.get("commission_amt") is not None and c.get("commission_amt") != 0:
+                pct = c.get("commission_pct")
+                pct_txt = f"（{fmt(pct)}%）" if pct else ""
+                rows.append(("<tr><td>联盟佣金</td><td>¥" + fmt(c.get("commission_amt")) + pct_txt + "</td></tr>"))
+        else:
+            rows.append(("<tr><td>货号</td><td>" + H.escape(str(c.get("article_no") or "—")) + "</td></tr>"))
+            rows.append(("<tr><td>到手价</td><td>¥" + fmt(c.get("cost")) + "</td></tr>"))
+            rows.append(("<tr><td>得物价</td><td>¥" + fmt(c.get("du_price")) + "</td></tr>"))
+            rows.append(("<tr><td>净利</td><td>¥" + fmt(net) + "</td></tr>"))
+            if verdict not in ("过期", "黑名单"):
+                rows.append(("<tr><td>稀缺分</td><td>" + (str(score) if score is not None else "—") + "</td></tr>"))
+            tr = c.get("price_trend")
+            if tr and verdict in ("可蹲", "可蹲·降价中"):
+                arrow = "📉" if tr["pct"] < 0 else ("📈" if tr["pct"] > 0 else "➖")
+                rows.append(("<tr><td>价格轨迹</td><td>" + arrow + " ¥" + fmt(tr["first"]) + " → ¥" + fmt(tr["last"])
+                             + "（" + ("+" if tr["pct"] >= 0 else "") + str(tr["pct"]) + "%，" + str(tr["n"]) + "次记录）</td></tr>"))
+            rows.append(("<tr><td>想买人数</td><td>" + (str(c.get("want_count")) if c.get("want_count") is not None else "—") + "</td></tr>"))
+            sales = c.get("sales_7d")
+            if sales is None:
+                sales = (c.get("excel_sales") or "—")
+            rows.append(("<tr><td>得物7天销量</td><td>" + H.escape(str(sales)) + "</td></tr>"))
+            if verdict not in ("过期", "黑名单"):
+                rows.append(("<tr><td>曝光次数</td><td>" + str(c.get("seen_count") or 0) + " 次</td></tr>"))
         ls = c.get("last_seen")
         if ls:
             try:

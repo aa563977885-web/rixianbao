@@ -111,6 +111,7 @@ def goods_rank(rank_id, page=1, page_size=20):
             "lowest_price": round(max(purchase - coupon, 0), 2),
             "shop": "",
             "commission": round(wl * float(g.get("commissionShare") or 0) / 100, 2),
+            "commission_pct": float(g.get("commissionShare") or 0),
             "url": f"https://item.jd.com/{sku}.html" if sku else "",
         })
     return out

@@ -102,7 +102,7 @@ def material_search(keyword, page=1, page_size=20, require_coupon=True):
         "q": keyword,
         "page_no": page,
         "page_size": page_size,
-        "fields": "num_iid,title,pict_url,zk_final_price,coupon_info,coupon_start_fee,coupon_amount,volume,shop_title,user_type,click_url",
+        "fields": "num_iid,title,pict_url,zk_final_price,coupon_info,coupon_start_fee,coupon_amount,volume,shop_title,user_type,click_url,commission_rate",
     }
     if require_coupon:
         extra["has_coupon"] = "true"
@@ -119,6 +119,7 @@ def material_search(keyword, page=1, page_size=20, require_coupon=True):
             "coupon": coupon,
             "net_price": net,
             "volume": int(it.get("volume") or 0),
+            "commission_rate": float(it.get("commission_rate") or 0),
             "shop": it.get("shop_title", ""),
             "url": f"https://item.taobao.com/item.htm?id={it.get('num_iid')}",
             "click_url": it.get("click_url", ""),
@@ -141,6 +142,7 @@ def item_info(num_iids):
             "coupon": coupon,
             "net_price": net,
             "volume": int(it.get("volume") or 0),
+            "commission_rate": float(it.get("commission_rate") or 0),
             "shop": it.get("shop_title", ""),
             "url": f"https://item.taobao.com/item.htm?id={it.get('num_iid')}",
         })
