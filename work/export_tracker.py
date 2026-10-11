@@ -29,11 +29,11 @@ LINE = "E3E6EA"
 
 HEADERS = ["ID", "候选品", "试销日期", "购入日期", "货源价(元)", "得物核价(元)", "核价后价差率",
            "试销件数", "已卖出件数", "卖出均价(元)", "平台费率", "快递费(元/件)", "单均净利(元)",
-           "满3单？", "加仓决策", "得物价参考", "参考净利(元)", "标签", "门道链接"]
+           "满3单？", "加仓决策", "得物价参考", "参考净利(元)", "标签", "门道链接", "得物分享链接"]
 COL = {"ID": "B", "候选品": "C", "试销日期": "D", "购入日期": "E", "货源价": "F", "核价": "G",
        "价差率": "H", "试销件数": "I", "已卖出": "J", "卖出均价": "K", "平台费率": "L",
        "快递费": "M", "单均净利": "N", "满3单": "O", "加仓决策": "P", "得物价参考": "Q",
-       "参考净利": "R", "标签": "S", "链接": "T"}
+       "参考净利": "R", "标签": "S", "链接": "T", "分享链接": "U"}
 ORDER = {"待核价": 0, "冷门优选": 1, "可蹲·降价中": 2, "可蹲": 3}
 
 
@@ -66,7 +66,7 @@ def build(items, path, stamp):
     ws.row_dimensions[4].height = 28
     for col, w in [("B", 14), ("C", 32), ("D", 11), ("E", 11), ("F", 11), ("G", 11), ("H", 12),
                    ("I", 9), ("J", 10), ("K", 12), ("L", 10), ("M", 12), ("N", 12), ("O", 9),
-                   ("P", 10), ("Q", 12), ("R", 12), ("S", 14), ("T", 36)]:
+                   ("P", 10), ("Q", 12), ("R", 12), ("S", 14), ("T", 36), ("U", 42)]:
         ws.column_dimensions[col].width = w
 
     for idx, it in enumerate(items):
@@ -86,6 +86,7 @@ def build(items, path, stamp):
             "R": it.get("net_profit"),
             "S": (it.get("verdict") or "") + (f"·{trend_txt}" if trend_txt else ""),
             "T": it.get("url"),
+            "U": ("← App搜同款·分享·复制链接粘这里" if it.get("source") in ("tbk", "jd") else ""),
         }
         formulas = {
             "H": f'=IFERROR(IF(OR(F{r}="",G{r}=""),"",(G{r}-F{r})/F{r}),"")',
@@ -93,7 +94,7 @@ def build(items, path, stamp):
             "O": f'=IF(J{r}="","",IF(J{r}>=3,"是","否"))',
             "P": f'=IF(OR(F{r}="",G{r}=""),"",IF(H{r}<0.15,"放弃",IF(AND(J{r}>=3,N{r}>=25),"加仓","观察")))',
         }
-        for col_letter in "BCDEFGHIJKLMNOPQRST":
+        for col_letter in "BCDEFGHIJKLMNOPQRSTU":
             cell = ws[f"{col_letter}{r}"]
             if col_letter in values:
                 cell.value = values[col_letter]
@@ -113,7 +114,7 @@ def build(items, path, stamp):
     note_row = 5 + len(items) + 1
     ws.merge_cells(start_row=note_row, start_column=2, end_row=note_row, end_column=last_col)
     nc = ws.cell(row=note_row, column=2,
-                 value="用法：①B列ID勿删（核价结果回传就靠它）②得物App核价填G列、购买当天E列记购入日期（月底誊到账单）③卖出后补I/J/K列；「加仓」=价差率≥15%且满3单且单均净利≥25元，公式自动判定。F列券后价来自联盟API，下单前自行复核。核完价把文件交回给助手回传，站点即自动算净利排序。")
+                 value="用法：①B列ID勿删②得物App搜同款→点分享→复制链接→粘到U列，回传后自动核价并每天跟踪价格（比手填G列省事，G列手填也仍然有效）；E列记购入日期，卖出后补I/J/K列；「加仓」=价差率≥15%且满3单且单均净利≥25元，公式自动判定。F列券后价来自联盟API，下单前自行复核。核完价把文件交回给助手回传，站点即自动算净利排序。")
     nc.font = Font(size=9, color="8C8A84")
     nc.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
     ws.row_dimensions[note_row].height = 42

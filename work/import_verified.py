@@ -14,6 +14,8 @@
 import argparse
 import json
 import os
+import re
+import sys
 from datetime import datetime
 
 from openpyxl import load_workbook
@@ -22,8 +24,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_FILE = os.path.join(ROOT, "outputs", "site", "checklist.xlsx")
 POOL = os.path.join(ROOT, "data", "pool.json")
 PURCHASE_LOG = os.path.join(ROOT, "data", "purchase_log.json")
-# 列布局见 export_tracker.HEADERS：B=ID, E=购入日期, G=得物核价
-COL_ID, COL_BUY_DATE, COL_VERIFY = "B", "E", "G"
+# 列布局见 export_tracker.HEADERS：B=ID, E=购入日期, G=得物核价, U=得物分享链接
+COL_ID, COL_BUY_DATE, COL_VERIFY, COL_SHARE = "B", "E", "G", "U"
 DATA_START = 5
 
 
@@ -62,6 +64,31 @@ def main():
                 updated.append(f"{cid} {pool_map[cid].get('title', '')[:20]} -> 得物价{du}")
             else:
                 missing.append(f"{cid}: 池子里没有该ID")
+        elif cid in pool_map:
+            # U 列分享链接回流：得物App「分享-复制链接」粘进来即可，spuId 自动抓价
+            share = ws[f"{COL_SHARE}{r}"].value
+            link = str(share or "").strip()
+            m = re.search(r"spuId[=/](\d{5,12})", link)
+            if m:
+                spu = m.group(1)
+                it = pool_map[cid]
+                it["dewu_spu_id"] = spu
+                try:
+                    sys.path.insert(0, os.path.join(ROOT, "work"))
+                    from dewu_price import fetch_spu
+                    r2 = fetch_spu(spu)
+                    if r2.get("price"):
+                        it["du_price"] = r2["price"]
+                        it["du_price_checked_at"] = datetime.now().astimezone().isoformat(timespec="seconds")
+                        if r2.get("article_no") and not it.get("article_no"):
+                            it["article_no"] = r2["article_no"]
+                        updated.append(f"{cid} {it.get('title', '')[:18]} 链接核价 -> ¥{r2['price']} (spu {spu})")
+                    else:
+                        print(f"[{cid}] spu {spu} 暂未抓到价格（下轮 refresh_dewu 会重试）")
+                except Exception as e:
+                    print(f"[{cid}] 链接核价失败: {str(e)[:60]}（spu 已记下，下轮重试）")
+            elif link and "dewu" not in link:
+                missing.append(f"{cid}: U列不是得物链接？'{link[:40]}'")
         if buy_date is not None and str(buy_date).strip() != "":
             purchases.append({"id": cid, "title": pool_map.get(cid, {}).get("title", ""), "date": str(buy_date)})
 
