@@ -54,6 +54,7 @@ jobs:
         run: |
           python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5 --fallback-snapshot
           python work/source_allies.py || echo "[allies] 联盟源拉取失败/未配密钥，跳过"
+          python work/link_spu.py || echo "[link] spu匹配跳过"
           python work/refresh_dewu.py || echo "[dewu] 得物价刷新失败，跳过"
           python work/scoring.py
           python work/export_tracker.py
