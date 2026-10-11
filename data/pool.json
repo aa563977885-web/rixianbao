@@ -17,7 +17,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "1165421"
+    "dewu_spu_id": "1165421",
+    "du_price_checked_at": "2026-10-11T21:05:37+08:00"
   },
   {
     "carry_id": "11611203",
@@ -26,7 +27,7 @@
     "color": "黑白",
     "size": "37.5",
     "gross_profit": 104.2,
-    "du_price": 274.2,
+    "du_price": 599.0,
     "cost": 170,
     "want_count": null,
     "sales_7d": 69,
@@ -37,7 +38,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
-    "dewu_spu_id": "9330368"
+    "dewu_spu_id": "9330368",
+    "du_price_checked_at": "2026-10-11T21:05:52+08:00"
   },
   {
     "carry_id": "11611098",
@@ -46,7 +48,7 @@
     "color": "白蓝",
     "size": "41",
     "gross_profit": 94.35,
-    "du_price": 271.35,
+    "du_price": 639.0,
     "cost": 177,
     "want_count": null,
     "sales_7d": 51,
@@ -57,7 +59,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
-    "dewu_spu_id": "8004485"
+    "dewu_spu_id": "8004485",
+    "du_price_checked_at": "2026-10-11T21:06:07+08:00"
   },
   {
     "carry_id": "11583953",
@@ -66,7 +69,7 @@
     "color": "白蓝",
     "size": null,
     "gross_profit": 124.55,
-    "du_price": 514.55,
+    "du_price": 799.0,
     "cost": 390,
     "want_count": null,
     "sales_7d": null,
@@ -77,7 +80,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "63025470"
+    "dewu_spu_id": "63025470",
+    "du_price_checked_at": "2026-10-11T21:06:22+08:00"
   },
   {
     "carry_id": "11610520",
@@ -97,7 +101,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
-    "dewu_spu_id": "15024812"
+    "dewu_spu_id": "15024812",
+    "du_price_checked_at": "2026-10-11T21:06:37+08:00"
   },
   {
     "carry_id": "11584234",
@@ -106,7 +111,7 @@
     "color": "卡其",
     "size": null,
     "gross_profit": 95.9,
-    "du_price": 412.9,
+    "du_price": 899.0,
     "cost": 317,
     "want_count": null,
     "sales_7d": null,
@@ -117,7 +122,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "32978412"
+    "dewu_spu_id": "32978412",
+    "du_price_checked_at": "2026-10-11T21:06:53+08:00"
   },
   {
     "carry_id": "11610465",
@@ -137,7 +143,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "31534823"
+    "dewu_spu_id": "31534823",
+    "du_price_checked_at": "2026-10-11T21:07:08+08:00"
   },
   {
     "carry_id": "11584908",
@@ -146,7 +153,7 @@
     "color": "黑色",
     "size": null,
     "gross_profit": 81.9,
-    "du_price": 355.9,
+    "du_price": 899.0,
     "cost": 274,
     "want_count": null,
     "sales_7d": null,
@@ -157,7 +164,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "34167303"
+    "dewu_spu_id": "34167303",
+    "du_price_checked_at": "2026-10-11T21:07:23+08:00"
   },
   {
     "carry_id": "11593882",
@@ -166,7 +174,7 @@
     "color": "白黑红",
     "size": null,
     "gross_profit": 150.85,
-    "du_price": 926.85,
+    "du_price": 1299.0,
     "cost": 776,
     "want_count": null,
     "sales_7d": null,
@@ -177,7 +185,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "28897816"
+    "dewu_spu_id": "28897816",
+    "du_price_checked_at": "2026-10-11T21:07:38+08:00"
   },
   {
     "carry_id": "11583908",
@@ -186,7 +195,7 @@
     "color": "棕褐色",
     "size": null,
     "gross_profit": 63.15,
-    "du_price": 313.15,
+    "du_price": 649.0,
     "cost": 250,
     "want_count": null,
     "sales_7d": null,
@@ -197,7 +206,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "74593642"
+    "dewu_spu_id": "74593642",
+    "du_price_checked_at": "2026-10-11T21:07:53+08:00"
   },
   {
     "carry_id": "11610234",
@@ -206,7 +216,7 @@
     "color": "40",
     "size": "40",
     "gross_profit": 75.15,
-    "du_price": 414.15,
+    "du_price": 599.0,
     "cost": 339,
     "want_count": null,
     "sales_7d": 110,
@@ -217,7 +227,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
-    "dewu_spu_id": "1310648"
+    "dewu_spu_id": "1310648",
+    "du_price_checked_at": "2026-10-11T21:08:10+08:00"
   },
   {
     "carry_id": "11584890",
@@ -226,7 +237,7 @@
     "color": "黑色",
     "size": null,
     "gross_profit": 70.56,
-    "du_price": 399.56,
+    "du_price": 899.0,
     "cost": 329,
     "want_count": null,
     "sales_7d": null,
@@ -237,7 +248,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "32621637"
+    "dewu_spu_id": "32621637",
+    "du_price_checked_at": "2026-10-11T21:08:26+08:00"
   },
   {
     "carry_id": "11584124",
@@ -246,7 +258,7 @@
     "color": "雨雾灰",
     "size": null,
     "gross_profit": 63.4,
-    "du_price": 346.4,
+    "du_price": 790.0,
     "cost": 283,
     "want_count": null,
     "sales_7d": null,
@@ -257,7 +269,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "55012861"
+    "dewu_spu_id": "55012861",
+    "du_price_checked_at": "2026-10-11T21:08:41+08:00"
   },
   {
     "carry_id": "11611326",
@@ -266,7 +279,7 @@
     "color": "白灰",
     "size": "38.5",
     "gross_profit": 70.85,
-    "du_price": 413.85,
+    "du_price": 880.0,
     "cost": 343,
     "want_count": null,
     "sales_7d": 58,
@@ -277,7 +290,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
-    "dewu_spu_id": "20888735"
+    "dewu_spu_id": "20888735",
+    "du_price_checked_at": "2026-10-11T21:08:56+08:00"
   },
   {
     "carry_id": "11608028",
@@ -286,7 +300,7 @@
     "color": "女款",
     "size": "女款",
     "gross_profit": 56.05,
-    "du_price": 315.05,
+    "du_price": 649.0,
     "cost": 259,
     "want_count": null,
     "sales_7d": null,
@@ -297,7 +311,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "41461395"
+    "dewu_spu_id": "41461395",
+    "du_price_checked_at": "2026-10-11T21:09:11+08:00"
   },
   {
     "carry_id": "11610242",
@@ -317,7 +332,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
-    "dewu_spu_id": "27870062"
+    "dewu_spu_id": "27870062",
+    "du_price_checked_at": "2026-10-11T21:09:27+08:00"
   },
   {
     "carry_id": "11610220",
@@ -326,7 +342,7 @@
     "color": "黑白",
     "size": null,
     "gross_profit": 71.05,
-    "du_price": 524.05,
+    "du_price": 799.0,
     "cost": 453,
     "want_count": null,
     "sales_7d": 66,
@@ -337,7 +353,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "5633013"
+    "dewu_spu_id": "5633013",
+    "du_price_checked_at": "2026-10-11T21:09:42+08:00"
   },
   {
     "carry_id": "11609965",
@@ -357,7 +374,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "13870205"
+    "dewu_spu_id": "13870205",
+    "du_price_checked_at": "2026-10-11T21:09:58+08:00"
   },
   {
     "carry_id": "11609753",
@@ -366,7 +384,7 @@
     "color": "银灰",
     "size": "43",
     "gross_profit": 62.6,
-    "du_price": 513.6,
+    "du_price": 980.0,
     "cost": 451,
     "want_count": null,
     "sales_7d": 12,
@@ -377,7 +395,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "21792214"
+    "dewu_spu_id": "21792214",
+    "du_price_checked_at": "2026-10-11T21:10:13+08:00"
   },
   {
     "carry_id": "11584967",
@@ -386,7 +405,7 @@
     "color": "灰棕",
     "size": null,
     "gross_profit": 59.95,
-    "du_price": 506.95,
+    "du_price": 990.0,
     "cost": 447,
     "want_count": null,
     "sales_7d": null,
@@ -397,7 +416,8 @@
     "first_seen": "2026-08-27T17:34:11+08:00",
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
-    "dewu_spu_id": "60407465"
+    "dewu_spu_id": "60407465",
+    "du_price_checked_at": "2026-10-11T21:10:28+08:00"
   },
   {
     "carry_id": "11612871",
@@ -417,7 +437,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "23982859"
+    "dewu_spu_id": "23982859",
+    "du_price_checked_at": "2026-10-11T21:10:43+08:00"
   },
   {
     "carry_id": "11612707",
@@ -437,7 +458,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "23984347"
+    "dewu_spu_id": "23984347",
+    "du_price_checked_at": "2026-10-11T21:10:58+08:00"
   },
   {
     "carry_id": "11612459",
@@ -457,7 +479,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "15224834"
+    "dewu_spu_id": "15224834",
+    "du_price_checked_at": "2026-10-11T21:11:14+08:00"
   },
   {
     "carry_id": "11612423",
@@ -477,7 +500,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "6110870"
+    "dewu_spu_id": "6110870",
+    "du_price_checked_at": "2026-10-11T21:11:29+08:00"
   },
   {
     "carry_id": "11612367",
@@ -486,7 +510,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 70.35,
-    "du_price": 290.35,
+    "du_price": 549.0,
     "cost": 220.0,
     "want_count": 39,
     "sales_7d": 17,
@@ -497,7 +521,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "8059173"
+    "dewu_spu_id": "8059173",
+    "du_price_checked_at": "2026-10-11T21:11:45+08:00"
   },
   {
     "carry_id": "11611919",
@@ -506,7 +531,7 @@
     "color": "奶茶棕 尺码:L",
     "size": "L",
     "gross_profit": 55.16,
-    "du_price": 306.16,
+    "du_price": 799.0,
     "cost": 251.0,
     "want_count": 41,
     "sales_7d": 17,
@@ -517,7 +542,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:34:18+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "18952937"
+    "dewu_spu_id": "18952937",
+    "du_price_checked_at": "2026-10-11T21:12:00+08:00"
   },
   {
     "carry_id": "11611899",
@@ -526,7 +552,7 @@
     "color": "奶茶棕 尺码:L",
     "size": "L",
     "gross_profit": 52.03,
-    "du_price": 407.03,
+    "du_price": 899.0,
     "cost": 355.0,
     "want_count": 14,
     "sales_7d": 17,
@@ -537,7 +563,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:34:18+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "28714669"
+    "dewu_spu_id": "28714669",
+    "du_price_checked_at": "2026-10-11T21:12:15+08:00"
   },
   {
     "carry_id": "11611892",
@@ -546,7 +573,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 55.01,
-    "du_price": 379.01,
+    "du_price": 899.0,
     "cost": 324.0,
     "want_count": 41,
     "sales_7d": 17,
@@ -557,7 +584,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "17480435"
+    "dewu_spu_id": "17480435",
+    "du_price_checked_at": "2026-10-11T21:12:30+08:00"
   },
   {
     "carry_id": "11611831",
@@ -577,7 +605,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "31114324"
+    "dewu_spu_id": "31114324",
+    "du_price_checked_at": "2026-10-11T21:12:45+08:00"
   },
   {
     "carry_id": "11611815",
@@ -586,7 +615,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 72.15,
-    "du_price": 292.15,
+    "du_price": 899.0,
     "cost": 220.0,
     "want_count": 32,
     "sales_7d": 17,
@@ -597,7 +626,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "15342116"
+    "dewu_spu_id": "15342116",
+    "du_price_checked_at": "2026-10-11T21:13:01+08:00"
   },
   {
     "carry_id": "11611735",
@@ -617,7 +647,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "27870062"
+    "dewu_spu_id": "27870062",
+    "du_price_checked_at": "2026-10-11T21:13:16+08:00"
   },
   {
     "carry_id": "11611500",
@@ -626,7 +657,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 82.6,
-    "du_price": 570.6,
+    "du_price": 1099.0,
     "cost": 488.0,
     "want_count": 62,
     "sales_7d": 17,
@@ -637,7 +668,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "21134788"
+    "dewu_spu_id": "21134788",
+    "du_price_checked_at": "2026-10-11T21:13:31+08:00"
   },
   {
     "carry_id": "11611345",
@@ -657,7 +689,8 @@
     "first_seen": "2026-08-27T14:13:32+00:00",
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "16701588"
+    "dewu_spu_id": "16701588",
+    "du_price_checked_at": "2026-10-11T21:13:46+08:00"
   },
   {
     "carry_id": "12214630",
@@ -666,7 +699,7 @@
     "color": "黑灰",
     "size": "42",
     "gross_profit": 52.26,
-    "du_price": 446.26,
+    "du_price": 999.0,
     "cost": 394.0,
     "want_count": 81,
     "sales_7d": 14,
@@ -677,7 +710,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-09T04:38:26+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "33630376"
+    "dewu_spu_id": "33630376",
+    "du_price_checked_at": "2026-10-11T21:14:01+08:00"
   },
   {
     "carry_id": "12214623",
@@ -686,7 +720,7 @@
     "color": "黑白色",
     "size": "43",
     "gross_profit": 54.56,
-    "du_price": 217.56,
+    "du_price": 599.0,
     "cost": 163.0,
     "want_count": 48,
     "sales_7d": 33,
@@ -697,7 +731,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "18383878"
+    "dewu_spu_id": "18383878",
+    "du_price_checked_at": "2026-10-11T21:14:17+08:00"
   },
   {
     "carry_id": "12214611",
@@ -717,7 +752,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "8256155"
+    "dewu_spu_id": "8256155",
+    "du_price_checked_at": "2026-10-11T21:14:32+08:00"
   },
   {
     "carry_id": "12214602",
@@ -737,7 +773,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "34236597"
+    "dewu_spu_id": "34236597",
+    "du_price_checked_at": "2026-10-11T21:14:47+08:00"
   },
   {
     "carry_id": "12214553",
@@ -757,7 +794,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "89436716"
+    "dewu_spu_id": "89436716",
+    "du_price_checked_at": "2026-10-11T21:15:03+08:00"
   },
   {
     "carry_id": "12214530",
@@ -777,7 +815,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "2010606"
+    "dewu_spu_id": "2010606",
+    "du_price_checked_at": "2026-10-11T21:15:18+08:00"
   },
   {
     "carry_id": "12214417",
@@ -786,7 +825,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 64.22,
-    "du_price": 208.22,
+    "du_price": 599.0,
     "cost": 144.0,
     "want_count": 25,
     "sales_7d": 37,
@@ -797,7 +836,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "27414571"
+    "dewu_spu_id": "27414571",
+    "du_price_checked_at": "2026-10-11T21:15:33+08:00"
   },
   {
     "carry_id": "12214318",
@@ -817,7 +857,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "8256155"
+    "dewu_spu_id": "8256155",
+    "du_price_checked_at": "2026-10-11T21:15:48+08:00"
   },
   {
     "carry_id": "12214237",
@@ -837,7 +878,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-10T10:21:45+08:00",
     "seen_count": 2,
-    "dewu_spu_id": "80541973"
+    "dewu_spu_id": "80541973",
+    "du_price_checked_at": "2026-10-11T21:16:03+08:00"
   },
   {
     "carry_id": "12214217",
@@ -846,7 +888,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 97.99,
-    "du_price": 406.99,
+    "du_price": 2228.0,
     "cost": 309.0,
     "want_count": 30,
     "sales_7d": 37,
@@ -857,7 +899,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "26123903"
+    "dewu_spu_id": "26123903",
+    "du_price_checked_at": "2026-10-11T21:16:19+08:00"
   },
   {
     "carry_id": "12214171",
@@ -866,7 +909,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 71.58,
-    "du_price": 433.58,
+    "du_price": 699.0,
     "cost": 362.0,
     "want_count": 32,
     "sales_7d": 37,
@@ -877,7 +920,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "11924478"
+    "dewu_spu_id": "11924478",
+    "du_price_checked_at": "2026-10-11T21:16:34+08:00"
   },
   {
     "carry_id": "12214138",
@@ -886,7 +930,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 77.2,
-    "du_price": 597.2,
+    "du_price": 1599.0,
     "cost": 520.0,
     "want_count": 28,
     "sales_7d": 37,
@@ -897,7 +941,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "28663541"
+    "dewu_spu_id": "28663541",
+    "du_price_checked_at": "2026-10-11T21:16:49+08:00"
   },
   {
     "carry_id": "12213982",
