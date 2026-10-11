@@ -926,7 +926,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 1746.05,
       "last": 1746.05,
@@ -959,7 +959,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 644.7,
       "last": 644.7,
@@ -992,7 +992,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 624.48,
       "last": 625.39,
@@ -1025,7 +1025,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65
+    "seen_days": 0.66
   },
   {
     "carry_id": "12216206",
@@ -1052,7 +1052,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65
+    "seen_days": 0.66
   },
   {
     "carry_id": "12216515",
@@ -1079,7 +1079,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 202.48,
       "last": 200.5,
@@ -1112,7 +1112,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.025,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 406.99,
       "last": 412.45,
@@ -1145,7 +1145,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.025,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 277.0,
       "last": 276.07,
@@ -1178,7 +1178,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65
+    "seen_days": 0.66
   },
   {
     "carry_id": "12226191",
@@ -1205,7 +1205,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.37
+    "seen_days": 0.38
   },
   {
     "carry_id": "12225441",
@@ -1232,7 +1232,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 1258.7,
       "last": 1255.85,
@@ -1265,7 +1265,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.37
+    "seen_days": 0.38
   },
   {
     "carry_id": "12216327",
@@ -1292,7 +1292,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 748.2,
       "last": 747.25,
@@ -1325,7 +1325,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.37
+    "seen_days": 0.38
   },
   {
     "carry_id": "12216175",
@@ -1352,7 +1352,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65
+    "seen_days": 0.66
   },
   {
     "carry_id": "12226236",
@@ -1379,7 +1379,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.37
+    "seen_days": 0.38
   },
   {
     "carry_id": "12226296",
@@ -1406,7 +1406,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.37
+    "seen_days": 0.38
   },
   {
     "carry_id": "12216904",
@@ -1433,7 +1433,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 266.6,
       "last": 261.85,
@@ -1459,14 +1459,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T16:01:06+00:00",
     "seen_count": 3,
-    "scarcity_score": 3.6,
+    "scarcity_score": 3.5,
     "verdict": "普通",
     "time_label": "真需求确认",
     "w_time": 1.3,
     "w_supply_demand": 0.2843,
     "w_category": 0.725,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
   },
   {
     "carry_id": "12216622",
@@ -1486,14 +1486,14 @@
     "first_seen": "2026-10-09T10:38:03+00:00",
     "last_seen": "2026-10-09T10:38:03+00:00",
     "seen_count": 1,
-    "scarcity_score": 2.4,
+    "scarcity_score": 2.3,
     "verdict": "普通",
     "time_label": "真需求确认",
     "w_time": 1.3,
     "w_supply_demand": 0.3115,
     "w_category": 1.0,
-    "exposure_coeff": 0.684,
-    "seen_days": 2.37
+    "exposure_coeff": 0.689,
+    "seen_days": 2.38
   },
   {
     "carry_id": "12215295",
@@ -1513,14 +1513,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T16:01:06+00:00",
     "seen_count": 3,
-    "scarcity_score": 2.1,
+    "scarcity_score": 2.0,
     "verdict": "普通",
     "time_label": "真需求确认",
     "w_time": 1.3,
     "w_supply_demand": 0.2757,
     "w_category": 1.0,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
   },
   {
     "carry_id": "12217066",
@@ -1540,14 +1540,14 @@
     "first_seen": "2026-10-09T16:01:06+00:00",
     "last_seen": "2026-10-09T16:01:06+00:00",
     "seen_count": 1,
-    "scarcity_score": 1.5,
+    "scarcity_score": 2.0,
     "verdict": "普通",
-    "time_label": "冷静期中",
-    "w_time": 1.0,
+    "time_label": "真需求确认",
+    "w_time": 1.3,
     "w_supply_demand": 0.2497,
     "w_category": 0.725,
-    "exposure_coeff": 0.572,
-    "seen_days": 2.14
+    "exposure_coeff": 0.577,
+    "seen_days": 2.15
   },
   {
     "carry_id": "12224948",
@@ -1573,8 +1573,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.231,
-    "seen_days": 1.46
+    "exposure_coeff": 0.236,
+    "seen_days": 1.47
   },
   {
     "carry_id": "12215189",
@@ -1600,8 +1600,8 @@
     "w_time": 1.3,
     "w_supply_demand": 0.2776,
     "w_category": 0.725,
-    "exposure_coeff": 0.684,
-    "seen_days": 2.37
+    "exposure_coeff": 0.689,
+    "seen_days": 2.38
   },
   {
     "carry_id": "12217174",
@@ -1628,7 +1628,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 348.6,
       "last": 348.6,
@@ -1660,8 +1660,8 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.572,
-    "seen_days": 2.14
+    "exposure_coeff": 0.577,
+    "seen_days": 2.15
   },
   {
     "carry_id": "12214843",
@@ -1687,35 +1687,8 @@
     "w_time": 1.3,
     "w_supply_demand": 0.2873,
     "w_category": 1.0,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
-  },
-  {
-    "carry_id": "12214671",
-    "title": "CAMEL骆驼 暖绒系列 防风立领加厚保暖防寒面包服运动火炉羽绒服 男女同款",
-    "article_no": "C36CW10100",
-    "color": "黑白色",
-    "size": "43",
-    "gross_profit": 56.19,
-    "du_price": 334.19,
-    "cost": 278.0,
-    "want_count": 25,
-    "sales_7d": 33,
-    "published_at": "2026-10-08T16:52",
-    "category": "服饰",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214671",
-    "net_profit": 4.43,
-    "first_seen": "2026-10-09T04:38:26+00:00",
-    "last_seen": "2026-10-09T10:38:03+00:00",
-    "seen_count": 2,
-    "scarcity_score": 0.4,
-    "verdict": "普通",
-    "time_label": "真需求确认",
-    "w_time": 1.3,
-    "w_supply_demand": 0.3212,
-    "w_category": 1.0,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
   },
   {
     "carry_id": "12216915",
@@ -1741,8 +1714,8 @@
     "w_time": 1.3,
     "w_supply_demand": 0.2541,
     "w_category": 0.725,
-    "exposure_coeff": 0.684,
-    "seen_days": 2.37
+    "exposure_coeff": 0.689,
+    "seen_days": 2.38
   },
   {
     "carry_id": "12214840",
@@ -1768,8 +1741,35 @@
     "w_time": 1.3,
     "w_supply_demand": 0.3358,
     "w_category": 1.0,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
+  },
+  {
+    "carry_id": "12214671",
+    "title": "CAMEL骆驼 暖绒系列 防风立领加厚保暖防寒面包服运动火炉羽绒服 男女同款",
+    "article_no": "C36CW10100",
+    "color": "黑白色",
+    "size": "43",
+    "gross_profit": 56.19,
+    "du_price": 334.19,
+    "cost": 278.0,
+    "want_count": 25,
+    "sales_7d": 33,
+    "published_at": "2026-10-08T16:52",
+    "category": "服饰",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12214671",
+    "net_profit": 4.43,
+    "first_seen": "2026-10-09T04:38:26+00:00",
+    "last_seen": "2026-10-09T10:38:03+00:00",
+    "seen_count": 2,
+    "scarcity_score": 0.3,
+    "verdict": "普通",
+    "time_label": "真需求确认",
+    "w_time": 1.3,
+    "w_supply_demand": 0.3212,
+    "w_category": 1.0,
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
   },
   {
     "carry_id": "12216492",
@@ -1795,8 +1795,8 @@
     "w_time": 1.3,
     "w_supply_demand": 0.2605,
     "w_category": 0.725,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
   },
   {
     "carry_id": "12214730",
@@ -1816,14 +1816,14 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T04:38:26+00:00",
     "seen_count": 1,
-    "scarcity_score": -2.5,
+    "scarcity_score": -2.4,
     "verdict": "普通",
     "time_label": "真需求确认",
     "w_time": 1.3,
     "w_supply_demand": 0.4629,
     "w_category": 0.725,
-    "exposure_coeff": 0.809,
-    "seen_days": 2.62
+    "exposure_coeff": 0.814,
+    "seen_days": 2.63
   },
   {
     "carry_id": "12225011",
@@ -1849,8 +1849,8 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.231,
-    "seen_days": 1.46
+    "exposure_coeff": 0.236,
+    "seen_days": 1.47
   },
   {
     "carry_id": "12224670",
@@ -1877,7 +1877,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 468.95,
       "last": 466.1,
@@ -1910,7 +1910,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 598.15,
       "last": 596.25,
@@ -1943,7 +1943,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 450.9,
       "last": 449.95,
@@ -1976,7 +1976,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 607.65,
       "last": 604.8,
@@ -2009,7 +2009,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65,
+    "seen_days": 0.66,
     "price_trend": {
       "first": 540.2,
       "last": 541.15,
@@ -2042,34 +2042,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 0.0,
-    "seen_days": 0.65
-  },
-  {
-    "carry_id": "12213547",
-    "title": "Nike Zoom Kobe 5 Protro Dodgers 舒适贴合 支撑 低帮 篮球鞋 男款 蓝色",
-    "article_no": "IO6256-400",
-    "color": null,
-    "size": null,
-    "gross_profit": 498.75,
-    "du_price": 1897.75,
-    "cost": 1399.0,
-    "want_count": null,
-    "sales_7d": null,
-    "published_at": null,
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213547",
-    "net_profit": 237.04,
-    "first_seen": "2026-10-08T16:44:45+08:00",
-    "last_seen": "2026-10-10T10:21:45+08:00",
-    "seen_count": 2,
-    "scarcity_score": 171.9,
-    "verdict": "可蹲",
-    "time_label": "真需求确认",
-    "w_time": 1.3,
-    "w_supply_demand": 0.8,
-    "w_category": 0.725,
-    "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 0.66
   },
   {
     "carry_id": "12214630",
@@ -2096,7 +2069,7 @@
     "w_supply_demand": 1.0,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214623",
@@ -2123,7 +2096,7 @@
     "w_supply_demand": 0.4327,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214611",
@@ -2150,7 +2123,7 @@
     "w_supply_demand": 0.2995,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214602",
@@ -2177,7 +2150,7 @@
     "w_supply_demand": 0.3686,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214553",
@@ -2204,7 +2177,7 @@
     "w_supply_demand": 0.4076,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214530",
@@ -2231,7 +2204,7 @@
     "w_supply_demand": 0.2173,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214417",
@@ -2258,7 +2231,7 @@
     "w_supply_demand": 0.3081,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214318",
@@ -2285,7 +2258,7 @@
     "w_supply_demand": 0.5286,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214237",
@@ -2312,7 +2285,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214217",
@@ -2339,7 +2312,7 @@
     "w_supply_demand": 0.3297,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214171",
@@ -2366,7 +2339,7 @@
     "w_supply_demand": 0.3384,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12214138",
@@ -2393,7 +2366,7 @@
     "w_supply_demand": 0.3211,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12213982",
@@ -2420,7 +2393,7 @@
     "w_supply_demand": 0.4076,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12213927",
@@ -2447,7 +2420,7 @@
     "w_supply_demand": 1.0,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12213857",
@@ -2474,7 +2447,7 @@
     "w_supply_demand": 0.6195,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12213816",
@@ -2501,7 +2474,7 @@
     "w_supply_demand": 0.3686,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "12213701",
@@ -2528,7 +2501,36 @@
     "w_supply_demand": 0.3384,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
+  },
+  {
+    "carry_id": "12213547",
+    "title": "Nike Zoom Kobe 5 Protro Dodgers 舒适贴合 支撑 低帮 篮球鞋 男款 蓝色",
+    "article_no": "IO6256-400",
+    "color": null,
+    "size": null,
+    "gross_profit": 498.75,
+    "du_price": 1399.0,
+    "cost": 1399.0,
+    "want_count": null,
+    "sales_7d": null,
+    "published_at": null,
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12213547",
+    "net_profit": -196.87,
+    "first_seen": "2026-10-08T16:44:45+08:00",
+    "last_seen": "2026-10-10T10:21:45+08:00",
+    "seen_count": 2,
+    "dewu_spu_id": "32916997",
+    "du_price_checked_at": "2026-10-11T19:41:15+08:00",
+    "scarcity_score": 0,
+    "verdict": "黑名单",
+    "time_label": "真需求确认",
+    "w_time": 1.3,
+    "w_supply_demand": 0.8,
+    "w_category": 0.725,
+    "exposure_coeff": 1.0,
+    "seen_days": 3.12
   },
   {
     "carry_id": "12213344",
@@ -2555,7 +2557,7 @@
     "w_supply_demand": 0.36,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.11
+    "seen_days": 3.12
   },
   {
     "carry_id": "11611203",
@@ -2582,7 +2584,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11611098",
@@ -2609,7 +2611,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11583953",
@@ -2636,7 +2638,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11610520",
@@ -2663,7 +2665,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11584234",
@@ -2690,7 +2692,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11610465",
@@ -2717,7 +2719,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11584908",
@@ -2744,7 +2746,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11593882",
@@ -2771,7 +2773,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11583908",
@@ -2798,7 +2800,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11610234",
@@ -2825,7 +2827,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11584890",
@@ -2852,7 +2854,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11584124",
@@ -2879,7 +2881,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11611326",
@@ -2906,7 +2908,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11608028",
@@ -2933,7 +2935,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11610242",
@@ -2960,7 +2962,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11610220",
@@ -2987,7 +2989,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11609965",
@@ -3014,7 +3016,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11609753",
@@ -3041,7 +3043,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11584967",
@@ -3068,7 +3070,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.08
+    "seen_days": 45.09
   },
   {
     "carry_id": "11612871",
@@ -3095,7 +3097,7 @@
     "w_supply_demand": 0.3119,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11612707",
@@ -3122,7 +3124,7 @@
     "w_supply_demand": 1.0,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11612459",
@@ -3149,7 +3151,7 @@
     "w_supply_demand": 0.9153,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11612423",
@@ -3176,7 +3178,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11612367",
@@ -3203,7 +3205,7 @@
     "w_supply_demand": 0.5671,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611919",
@@ -3230,7 +3232,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611899",
@@ -3257,7 +3259,7 @@
     "w_supply_demand": 0.3318,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611892",
@@ -3284,7 +3286,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611831",
@@ -3311,7 +3313,7 @@
     "w_supply_demand": 0.7647,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611815",
@@ -3338,7 +3340,7 @@
     "w_supply_demand": 0.5012,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611735",
@@ -3365,7 +3367,7 @@
     "w_supply_demand": 0.2847,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611500",
@@ -3392,7 +3394,7 @@
     "w_supply_demand": 0.7835,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   },
   {
     "carry_id": "11611345",
@@ -3419,6 +3421,6 @@
     "w_supply_demand": 0.4635,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 45.22
+    "seen_days": 45.23
   }
 ]

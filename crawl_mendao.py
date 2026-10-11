@@ -180,6 +180,16 @@ def fetch_page(carry_id, use_browser=False):
     return fetch_browser(carry_id)
 
 
+def extract_spu(carry_id, html):
+    """主商机的得物 spuId/货号：页面内嵌 carryInfo JSON 逐商机自带，
+    用 carryId==当前页 判主（相似推荐的 carryInfo 会被排除）。"""
+    pat = re.escape(str(carry_id))
+    m = re.search(r'"carryId":%s,[^}]*?"spuId":(\d+)' % pat, html)
+    m2 = re.search(r'"carryId":%s,[^}]*?"poizonArticleNo":"([^"]+)"' % pat, html)
+    return {"dewu_spu_id": m.group(1) if m else None,
+            "poizon_article_no": m2.group(1) if m2 else None}
+
+
 def fetch_and_parse(carry_id, use_browser=False):
     """抓取并解析；requests 模式解析为空时自动降级 playwright 重试一次。"""
     text, html = fetch_page(carry_id, use_browser=use_browser)
@@ -191,6 +201,7 @@ def fetch_and_parse(carry_id, use_browser=False):
             parsed = parse(text, html)
         except Exception as e:
             print("  [warn] playwright 也失败:", str(e)[:100])
+    parsed.update({k: v for k, v in extract_spu(carry_id, html).items() if v})
     return parsed, text, html
 
 
@@ -303,6 +314,8 @@ def to_pool_item(carry_id, parsed, rates, exp, ts):
         "category": classify_category(parsed.get("title")),
         "url": BASE.format(carry_id),
     }
+    if parsed.get("dewu_spu_id"):
+        item["dewu_spu_id"] = parsed["dewu_spu_id"]
     item["net_profit"] = compute_net(item, rates)
     item["first_seen"] = exp.get("first_seen", ts)
     item["last_seen"] = exp.get("last_seen", ts)
