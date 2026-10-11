@@ -63,6 +63,33 @@ def brand_hit(title, brands):
     return any(b.lower() in t for b in (brands or []))
 
 
+def cleanup_pool(pool_map, brands):
+    """每轮对整个池子统一清洗（存量+增量一起）：
+    1) 联盟条目必须过品牌白名单（早期无白名单时混进的白牌存量也一并清掉）；
+    2) 京东同款多 SKU 标题重复，按标题前 20 字去重，保留到手价最低的一条。"""
+    import re as _re
+    drop = [cid for cid, it in pool_map.items()
+            if it.get("source") in ("tbk", "jd") and brands and not brand_hit(it.get("title"), brands)]
+    for cid in drop:
+        del pool_map[cid]
+    seen = {}
+    for cid, it in list(pool_map.items()):
+        if it.get("source") not in ("tbk", "jd"):
+            continue
+        key = _re.sub(r"\s", "", str(it.get("title") or ""))[:20]
+        prev = seen.get(key)
+        if prev is None:
+            seen[key] = cid
+            continue
+        a, b = pool_map[prev], it
+        if (b.get("cost") or 9e9) < (a.get("cost") or 9e9):
+            del pool_map[prev]
+            seen[key] = cid
+        else:
+            del pool_map[cid]
+    return len(drop)
+
+
 def now_iso():
     return datetime.now().astimezone().isoformat(timespec="seconds")
 
@@ -209,6 +236,10 @@ def main():
         if not seq or seq[-1][1] != it["cost"]:
             seq.append([ts, it["cost"], None])
             history[cid] = seq[-60:]
+
+    dropped = cleanup_pool(pool_map, conf.get("dewu_brands") or [])
+    if dropped:
+        print(f"清洗：移除非品牌/重复条目 {dropped} 条")
 
     save_json(POOL, list(pool_map.values()))
     save_json(EXPOSURE, exposure)

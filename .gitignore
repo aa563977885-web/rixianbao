@@ -4,3 +4,4 @@ __pycache__/
 data_backup/
 config/local_secrets.json
 data/local_pull.log
+local_pull.bat
