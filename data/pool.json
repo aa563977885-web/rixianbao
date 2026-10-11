@@ -1,23 +1,24 @@
 [
   {
     "carry_id": "11610567",
-    "title": "Arcteryx始祖鸟 GRANVILLE 10L Granville 经典纯色翻盖开口斜挎户外包 尼龙黑色 男女同款情侣款",
+    "title": "始祖鸟 GRANVILLE 10L 斜挎包",
     "article_no": "X000007826-black",
-    "color": null,
+    "color": "黑色",
     "size": null,
-    "gross_profit": 397.05,
-    "du_price": 1746.05,
-    "cost": 1349.0,
+    "gross_profit": 502.5,
+    "du_price": 1851.5,
+    "cost": 1349,
     "want_count": null,
-    "sales_7d": null,
+    "sales_7d": 18,
     "published_at": null,
     "category": "其他",
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11610567",
     "dewu_spu_id": "1165421",
-    "net_profit": 189.98,
+    "net_profit": 283.84,
     "first_seen": "2026-10-11T03:44:01+00:00",
-    "last_seen": "2026-10-11T17:16:18+00:00",
-    "seen_count": 3
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 4,
+    "du_price_checked_at": "2026-10-12T07:33:05+08:00"
   },
   {
     "carry_id": "11611203",
@@ -26,7 +27,7 @@
     "color": "黑白",
     "size": "37.5",
     "gross_profit": 104.2,
-    "du_price": 599.0,
+    "du_price": 274.2,
     "cost": 170,
     "want_count": null,
     "sales_7d": 69,
@@ -35,8 +36,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11611203",
     "net_profit": 53.55,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 91,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "9330368",
     "du_price_checked_at": "2026-10-11T21:05:52+08:00"
   },
@@ -47,7 +48,7 @@
     "color": "白蓝",
     "size": "41",
     "gross_profit": 94.35,
-    "du_price": 639.0,
+    "du_price": 271.35,
     "cost": 177,
     "want_count": null,
     "sales_7d": 51,
@@ -56,8 +57,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11611098",
     "net_profit": 44.07,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 91,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "8004485",
     "du_price_checked_at": "2026-10-11T21:06:07+08:00"
   },
@@ -68,7 +69,7 @@
     "color": "白蓝",
     "size": null,
     "gross_profit": 124.55,
-    "du_price": 799.0,
+    "du_price": 514.55,
     "cost": 390,
     "want_count": null,
     "sales_7d": null,
@@ -77,8 +78,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11583953",
     "net_profit": 42.66,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "63025470",
     "du_price_checked_at": "2026-10-11T21:06:22+08:00"
   },
@@ -98,8 +99,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11610520",
     "net_profit": 27.43,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 91,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "15024812",
     "du_price_checked_at": "2026-10-11T21:06:37+08:00"
   },
@@ -110,7 +111,7 @@
     "color": "卡其",
     "size": null,
     "gross_profit": 95.9,
-    "du_price": 899.0,
+    "du_price": 412.9,
     "cost": 317,
     "want_count": null,
     "sales_7d": null,
@@ -119,8 +120,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11584234",
     "net_profit": 27.22,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "32978412",
     "du_price_checked_at": "2026-10-11T21:06:53+08:00"
   },
@@ -140,8 +141,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11610465",
     "net_profit": 25.91,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "31534823",
     "du_price_checked_at": "2026-10-11T21:07:08+08:00"
   },
@@ -152,7 +153,7 @@
     "color": "黑色",
     "size": null,
     "gross_profit": 81.9,
-    "du_price": 899.0,
+    "du_price": 355.9,
     "cost": 274,
     "want_count": null,
     "sales_7d": null,
@@ -161,8 +162,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11584908",
     "net_profit": 20.63,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "34167303",
     "du_price_checked_at": "2026-10-11T21:07:23+08:00"
   },
@@ -173,7 +174,7 @@
     "color": "白黑红",
     "size": null,
     "gross_profit": 150.85,
-    "du_price": 1299.0,
+    "du_price": 926.85,
     "cost": 776,
     "want_count": null,
     "sales_7d": null,
@@ -182,8 +183,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11593882",
     "net_profit": 15.36,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "28897816",
     "du_price_checked_at": "2026-10-11T21:07:38+08:00"
   },
@@ -194,7 +195,7 @@
     "color": "棕褐色",
     "size": null,
     "gross_profit": 63.15,
-    "du_price": 649.0,
+    "du_price": 313.15,
     "cost": 250,
     "want_count": null,
     "sales_7d": null,
@@ -203,8 +204,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11583908",
     "net_profit": 7.44,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "74593642",
     "du_price_checked_at": "2026-10-11T21:07:53+08:00"
   },
@@ -215,7 +216,7 @@
     "color": "40",
     "size": "40",
     "gross_profit": 75.15,
-    "du_price": 599.0,
+    "du_price": 414.15,
     "cost": 339,
     "want_count": null,
     "sales_7d": 110,
@@ -224,8 +225,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11610234",
     "net_profit": 6.31,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 91,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "1310648",
     "du_price_checked_at": "2026-10-11T21:08:10+08:00"
   },
@@ -236,7 +237,7 @@
     "color": "黑色",
     "size": null,
     "gross_profit": 70.56,
-    "du_price": 899.0,
+    "du_price": 399.56,
     "cost": 329,
     "want_count": null,
     "sales_7d": null,
@@ -245,8 +246,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11584890",
     "net_profit": 3.62,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "32621637",
     "du_price_checked_at": "2026-10-11T21:08:26+08:00"
   },
@@ -257,7 +258,7 @@
     "color": "雨雾灰",
     "size": null,
     "gross_profit": 63.4,
-    "du_price": 790.0,
+    "du_price": 346.4,
     "cost": 283,
     "want_count": null,
     "sales_7d": null,
@@ -266,8 +267,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11584124",
     "net_profit": 3.37,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "55012861",
     "du_price_checked_at": "2026-10-11T21:08:41+08:00"
   },
@@ -278,7 +279,7 @@
     "color": "白灰",
     "size": "38.5",
     "gross_profit": 70.85,
-    "du_price": 880.0,
+    "du_price": 413.85,
     "cost": 343,
     "want_count": null,
     "sales_7d": 58,
@@ -287,8 +288,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11611326",
     "net_profit": 2.05,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 91,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "20888735",
     "du_price_checked_at": "2026-10-11T21:08:56+08:00"
   },
@@ -299,7 +300,7 @@
     "color": "女款",
     "size": "女款",
     "gross_profit": 56.05,
-    "du_price": 649.0,
+    "du_price": 315.05,
     "cost": 259,
     "want_count": null,
     "sales_7d": null,
@@ -308,8 +309,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11608028",
     "net_profit": 0.09,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "41461395",
     "du_price_checked_at": "2026-10-11T21:09:11+08:00"
   },
@@ -329,8 +330,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11610242",
     "net_profit": -4.05,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 91,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "27870062",
     "du_price_checked_at": "2026-10-11T21:09:27+08:00"
   },
@@ -341,7 +342,7 @@
     "color": "黑白",
     "size": null,
     "gross_profit": 71.05,
-    "du_price": 799.0,
+    "du_price": 524.05,
     "cost": 453,
     "want_count": null,
     "sales_7d": 66,
@@ -350,8 +351,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11610220",
     "net_profit": -12.08,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "5633013",
     "du_price_checked_at": "2026-10-11T21:09:42+08:00"
   },
@@ -371,8 +372,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11609965",
     "net_profit": -13.4,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "13870205",
     "du_price_checked_at": "2026-10-11T21:09:58+08:00"
   },
@@ -383,7 +384,7 @@
     "color": "银灰",
     "size": "43",
     "gross_profit": 62.6,
-    "du_price": 980.0,
+    "du_price": 513.6,
     "cost": 451,
     "want_count": null,
     "sales_7d": 12,
@@ -392,8 +393,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11609753",
     "net_profit": -19.17,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "21792214",
     "du_price_checked_at": "2026-10-11T21:10:13+08:00"
   },
@@ -404,7 +405,7 @@
     "color": "灰棕",
     "size": null,
     "gross_profit": 59.95,
-    "du_price": 990.0,
+    "du_price": 506.95,
     "cost": 447,
     "want_count": null,
     "sales_7d": null,
@@ -413,8 +414,8 @@
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=11584967",
     "net_profit": -20.95,
     "first_seen": "2026-08-27T17:34:11+08:00",
-    "last_seen": "2026-10-10T04:08:08+00:00",
-    "seen_count": 88,
+    "last_seen": "2026-10-11T23:26:28+00:00",
+    "seen_count": 1,
     "dewu_spu_id": "60407465",
     "du_price_checked_at": "2026-10-11T21:10:28+08:00"
   },
@@ -950,7 +951,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 114.85,
-    "du_price": 432.85,
+    "du_price": 999.0,
     "cost": 318.0,
     "want_count": 48,
     "sales_7d": 37,
@@ -961,7 +962,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "2444618"
+    "dewu_spu_id": "2444618",
+    "du_price_checked_at": "2026-10-12T07:33:22+08:00"
   },
   {
     "carry_id": "12213927",
@@ -970,7 +972,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 54.45,
-    "du_price": 478.45,
+    "du_price": 1507.0,
     "cost": 424.0,
     "want_count": 207,
     "sales_7d": 37,
@@ -981,7 +983,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "13890860"
+    "dewu_spu_id": "13890860",
+    "du_price_checked_at": "2026-10-12T07:33:38+08:00"
   },
   {
     "carry_id": "12213857",
@@ -990,7 +993,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 140.31,
-    "du_price": 332.31,
+    "du_price": 699.0,
     "cost": 192.0,
     "want_count": 97,
     "sales_7d": 37,
@@ -1001,7 +1004,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "26848084"
+    "dewu_spu_id": "26848084",
+    "du_price_checked_at": "2026-10-12T07:33:54+08:00"
   },
   {
     "carry_id": "12213816",
@@ -1021,7 +1025,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "5662854"
+    "dewu_spu_id": "5662854",
+    "du_price_checked_at": "2026-10-12T07:34:11+08:00"
   },
   {
     "carry_id": "12213701",
@@ -1030,7 +1035,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 112.79,
-    "du_price": 537.79,
+    "du_price": 899.0,
     "cost": 425.0,
     "want_count": 32,
     "sales_7d": 37,
@@ -1041,7 +1046,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "11925980"
+    "dewu_spu_id": "11925980",
+    "du_price_checked_at": "2026-10-12T07:34:27+08:00"
   },
   {
     "carry_id": "12213547",
@@ -1071,7 +1077,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 63.95,
-    "du_price": 335.95,
+    "du_price": 820.0,
     "cost": 272.0,
     "want_count": 37,
     "sales_7d": 37,
@@ -1082,7 +1088,8 @@
     "first_seen": "2026-10-08T16:44:45+08:00",
     "last_seen": "2026-10-08T16:44:45+08:00",
     "seen_count": 1,
-    "dewu_spu_id": "12404617"
+    "dewu_spu_id": "12404617",
+    "du_price_checked_at": "2026-10-12T07:34:43+08:00"
   },
   {
     "carry_id": "12216515",
@@ -1091,7 +1098,7 @@
     "color": null,
     "size": null,
     "gross_profit": 87.5,
-    "du_price": 200.5,
+    "du_price": 649.0,
     "cost": 113.0,
     "want_count": null,
     "sales_7d": null,
@@ -1102,7 +1109,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "1168907"
+    "dewu_spu_id": "1168907",
+    "du_price_checked_at": "2026-10-12T07:34:59+08:00"
   },
   {
     "carry_id": "12216492",
@@ -1111,7 +1119,7 @@
     "color": "幻影黑",
     "size": "L",
     "gross_profit": 61.75,
-    "du_price": 605.75,
+    "du_price": 799.0,
     "cost": 544.0,
     "want_count": 28,
     "sales_7d": 74,
@@ -1122,7 +1130,8 @@
     "first_seen": "2026-10-09T04:38:26+00:00",
     "last_seen": "2026-10-09T16:01:06+00:00",
     "seen_count": 3,
-    "dewu_spu_id": "67317554"
+    "dewu_spu_id": "67317554",
+    "du_price_checked_at": "2026-10-12T07:35:17+08:00"
   },
   {
     "carry_id": "12216422",
@@ -1131,7 +1140,7 @@
     "color": null,
     "size": null,
     "gross_profit": 76.07,
-    "du_price": 276.07,
+    "du_price": 1099.0,
     "cost": 200.0,
     "want_count": null,
     "sales_7d": null,
@@ -1142,7 +1151,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "27518636"
+    "dewu_spu_id": "27518636",
+    "du_price_checked_at": "2026-10-12T07:35:33+08:00"
   },
   {
     "carry_id": "12216327",
@@ -1162,7 +1172,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
-    "dewu_spu_id": "28597187"
+    "dewu_spu_id": "28597187",
+    "du_price_checked_at": "2026-10-12T07:35:49+08:00"
   },
   {
     "carry_id": "12216206",
@@ -1182,7 +1193,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T03:44:01+00:00",
     "seen_count": 1,
-    "dewu_spu_id": "71702115"
+    "dewu_spu_id": "71702115",
+    "du_price_checked_at": "2026-10-12T07:36:05+08:00"
   },
   {
     "carry_id": "12216175",
@@ -1191,7 +1203,7 @@
     "color": null,
     "size": null,
     "gross_profit": 59.04,
-    "du_price": 237.04,
+    "du_price": 699.0,
     "cost": 178.0,
     "want_count": null,
     "sales_7d": null,
@@ -1202,7 +1214,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T03:44:01+00:00",
     "seen_count": 1,
-    "dewu_spu_id": "26848084"
+    "dewu_spu_id": "26848084",
+    "du_price_checked_at": "2026-10-12T07:36:22+08:00"
   },
   {
     "carry_id": "12216118",
@@ -1222,7 +1235,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T03:44:01+00:00",
     "seen_count": 1,
-    "dewu_spu_id": "6306724"
+    "dewu_spu_id": "6306724",
+    "du_price_checked_at": "2026-10-12T07:36:38+08:00"
   },
   {
     "carry_id": "12215312",
@@ -1242,7 +1256,8 @@
     "first_seen": "2026-10-11T03:44:01+00:00",
     "last_seen": "2026-10-11T03:44:01+00:00",
     "seen_count": 1,
-    "dewu_spu_id": "89436716"
+    "dewu_spu_id": "89436716",
+    "du_price_checked_at": "2026-10-12T07:36:56+08:00"
   },
   {
     "carry_id": "12215301",
@@ -2683,6 +2698,42 @@
     "published_at": "2026-10-11T17:19:26+00:00",
     "first_seen": "2026-10-11T17:25:48+00:00",
     "last_seen": "2026-10-11T17:25:48+00:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-8YQrR1gGsj2IBej7Zo89IBej7Zo89Q_391fhqbuHKrB4mXmd6",
+    "title": "Apple/苹果【教育优惠】iPad 11英寸 A16芯片2025年款 平板电脑 (256GB WLAN版/学习办公娱乐)银色",
+    "category": "数码",
+    "cost": 3499.0,
+    "gross": 4099.0,
+    "coupon": 0,
+    "commission_pct": 1.0,
+    "commission_amt": 40.99,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/8YQrR1gGsj2IBej7Zo89IBej7Zo89Q_391fhqbuHKrB4mXmd6.html",
+    "published_at": "2026-10-11T23:26:28+00:00",
+    "first_seen": "2026-10-11T23:32:50+00:00",
+    "last_seen": "2026-10-11T23:32:50+00:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-Wl4yE2NZMLRfI1DBS2LEfI1DBS2LE4_3QWdDLcL7d2oijC6PR",
+    "title": "adidas T头鞋 STADT经典薄底运动板鞋平底鞋男女阿迪达斯三叶草 黑色/汉玉白/浅猩红（推荐女生买小半码）   42.5  ",
+    "category": "球鞋",
+    "cost": 244.0,
+    "gross": 440.0,
+    "coupon": 0,
+    "commission_pct": 2.0,
+    "commission_amt": 8.8,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/Wl4yE2NZMLRfI1DBS2LEfI1DBS2LE4_3QWdDLcL7d2oijC6PR.html",
+    "published_at": "2026-10-11T23:26:28+00:00",
+    "first_seen": "2026-10-11T23:32:50+00:00",
+    "last_seen": "2026-10-11T23:32:50+00:00",
     "seen_count": 0,
     "net_profit": null
   }
