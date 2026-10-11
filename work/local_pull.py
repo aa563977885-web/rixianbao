@@ -33,6 +33,13 @@ def pool_signature():
 
 
 def main():
+    # 兜底：上一轮 push/rebase 异常可能留下 rebase 中途或 detached 状态，先恢复干净 main
+    run(["git", "rebase", "--abort"])
+    _rc, branch = run(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+    if branch.strip() != "main":
+        run(["git", "checkout", "-f", "main"])
+        print("[local] 恢复到 main 分支")
+
     # 1) 拉联盟源（jd+tbk；密钥从 config/local_secrets.json 读，见各 client 的 _creds 兜底）
     code, out = run([PY, os.path.join("work", "source_allies.py")])
     print(out.strip()[-500:])
