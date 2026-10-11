@@ -9,6 +9,11 @@
       "2026-10-11T10:33:19+00:00",
       1746.05,
       1349.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
+      1746.05,
+      1349.0
     ]
   ],
   "12225778": [
@@ -19,6 +24,11 @@
     ],
     [
       "2026-10-11T10:33:19+00:00",
+      644.7,
+      396.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
       644.7,
       396.0
     ]
@@ -32,6 +42,11 @@
     [
       "2026-10-11T10:33:19+00:00",
       1255.85,
+      1080.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
+      1259.65,
       1080.0
     ]
   ],
@@ -324,11 +339,21 @@
       "2026-10-11T10:33:19+00:00",
       436.95,
       337.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
+      432.2,
+      337.0
     ]
   ],
   "12226296": [
     [
       "2026-10-11T10:33:19+00:00",
+      313.15,
+      242.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
       313.15,
       242.0
     ]
@@ -338,6 +363,11 @@
       "2026-10-11T10:33:19+00:00",
       323.6,
       227.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
+      316.95,
+      227.0
     ]
   ],
   "12226236": [
@@ -345,12 +375,22 @@
       "2026-10-11T10:33:19+00:00",
       324.55,
       247.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
+      331.2,
+      247.0
     ]
   ],
   "12226191": [
     [
       "2026-10-11T10:33:19+00:00",
       594.35,
+      444.0
+    ],
+    [
+      "2026-10-11T17:16:18+00:00",
+      589.6,
       444.0
     ]
   ],
@@ -778,6 +818,209 @@
     [
       "2026-10-11T19:27:04+08:00",
       604.0,
+      null
+    ]
+  ],
+  "12226950": [
+    [
+      "2026-10-11T17:16:18+00:00",
+      409.92,
+      356.0
+    ]
+  ],
+  "12226949": [
+    [
+      "2026-10-11T17:16:18+00:00",
+      386.26,
+      317.0
+    ]
+  ],
+  "12226800": [
+    [
+      "2026-10-11T17:16:18+00:00",
+      359.7,
+      297.0
+    ]
+  ],
+  "12226697": [
+    [
+      "2026-10-11T17:16:18+00:00",
+      895.5,
+      630.0
+    ]
+  ],
+  "jd-MOQsWh2qbaweFIWGVWmveFIWGVWmvQ_3UIh1p4mYDh91P3O0U": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      12.0,
+      null
+    ]
+  ],
+  "jd-wAQEbTBH1PTwDdbsktlCwDdbsktlCQ_3ioMtB1s3UTa9rGCVX": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      28.0,
+      null
+    ]
+  ],
+  "jd-1Z4On3ALDK7dJLn0XaovdJLn0Xaov4_3fgGzif1AfOJ1Hla7m": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      3.9,
+      null
+    ]
+  ],
+  "jd-uKQvkBIXjQ59rpkpLgPr9rpkpLgPrQ_3ZXBbQkizYvr2P10NR": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      1080.0,
+      null
+    ]
+  ],
+  "jd-1Z4On3ALDK7dJLn0XRRDdJLn0XRRD4_3fgGzif1AfOJ1b0Cnm": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      960.0,
+      null
+    ]
+  ],
+  "jd-qY8X2Lswzz8S5b245AuSS5b245AuS8_3m8L81LyUgXXlxkVjA": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      86.0,
+      null
+    ]
+  ],
+  "jd-DhQIDlY8KZdA2NDRWXzOA2NDRWXzOQ_3as8Hw8Ex7lWuQOF7M": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      48.0,
+      null
+    ]
+  ],
+  "jd-DTQ5laKCiIjdLvlSdIzxdLvlSdIzxQ_3VBXEJzElkaqJBJr8o": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      149.0,
+      null
+    ]
+  ],
+  "jd-QrQUMeDdE8vBpO6Zf1EfBpO6Zf1EfQ_3sdbABfpCnejJ1hSQC": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      10.9,
+      null
+    ]
+  ],
+  "jd-jwQitWL7h5LXqHcc3fOeXqHcc3fOeQ_3ERApt0GTziiPIjAis": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      11.9,
+      null
+    ]
+  ],
+  "jd-SF4M9K0KPtDRYnA1biZdRYnA1biZd4_327om9606cMYBfMDzT": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      2699.0,
+      null
+    ]
+  ],
+  "jd-eu8BjNqB2hdN1mRKTvhaN1mRKTvha8_385Vjhs8GSB1SkHaUb": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      3499.0,
+      null
+    ]
+  ],
+  "jd-BFQAJ8UmtDqw9PObsuzyw9PObsuzyQ_3hj3LwOh1aA97igyAK": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      599.0,
+      null
+    ]
+  ],
+  "jd-H4rW9HPkuxG3jC57UirW3jC57UirWr_6qw8QXwmk7aGPRHv6z": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      21.89,
+      null
+    ]
+  ],
+  "jd-2OQl0HpY85vWfk0C9T4HWfk0C9T4HQ_3HJs6XxZN4H5p7ucgr": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      259.0,
+      null
+    ]
+  ],
+  "jd-ra4PatdOrkTEc0aw2etAEc0aw2etA4_3df4TuvDaBthd63P1A": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      21.9,
+      null
+    ]
+  ],
+  "jd-jwQitWL7h5LXqHtF0faAXqHtF0faAQ_3ERApt0GTzWJLdEcLs": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      319.0,
+      null
+    ]
+  ],
+  "jd-1Z4On3ALDK7dJLnUxOP8dJLnUxOP84_3fgGzif1Af3KsLmo5m": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      429.0,
+      null
+    ]
+  ],
+  "jd-aBXTrxV6XEuH0Zrp4VJuH0Zrp4VJuX_3paYXLn77eT0icTLqS": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      309.0,
+      null
+    ]
+  ],
+  "jd-BWQ93VhrCjrZ8c35QMQRZ8c35QMQRQ_3rtcvZaPHy98ahqegZ": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      559.0,
+      null
+    ]
+  ],
+  "jd-jwQitWL7h5LXqHtF0nmdXqHtF0nmdQ_3ERApt0GTzWVr1RdQs": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      351.0,
+      null
+    ]
+  ],
+  "jd-BXTDv0f01wy1T7vkNTmX1T7vkNTmXT_3klNf83gap0yq72IMJ": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      304.0,
+      null
+    ]
+  ],
+  "jd-ejQZewyNLyU049encFhK049encFhKQ_3vbTPlG3J3wrJHOicD": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      219.0,
+      null
+    ]
+  ],
+  "jd-6ZTjQ7b9xSUFdSQ1ySrPFdSQ1ySrPT_3FGgFy7qtu7BTCu97O": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      559.0,
+      null
+    ]
+  ],
+  "jd-2OQl0HpY85vWfk0Cj25cWfk0Cj25cQ_3HJs6XxZN4HX2jy9Zr": [
+    [
+      "2026-10-11T17:25:48+00:00",
+      234.0,
       null
     ]
   ]
