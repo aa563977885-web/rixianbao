@@ -70,6 +70,7 @@ def main():
             link = str(share or "").strip()
             m = re.search(r"spuId[=/](\d{5,12})", link)
             if m:
+                # 落地页没有现货价（¥ 是发售价），只补元数据；得物价仍需 G 列手填
                 spu = m.group(1)
                 it = pool_map[cid]
                 it["dewu_spu_id"] = spu
@@ -77,16 +78,13 @@ def main():
                     sys.path.insert(0, os.path.join(ROOT, "work"))
                     from dewu_price import fetch_spu
                     r2 = fetch_spu(spu)
-                    if r2.get("price"):
-                        it["du_price"] = r2["price"]
-                        it["du_price_checked_at"] = datetime.now().astimezone().isoformat(timespec="seconds")
-                        if r2.get("article_no") and not it.get("article_no"):
-                            it["article_no"] = r2["article_no"]
-                        updated.append(f"{cid} {it.get('title', '')[:18]} 链接核价 -> ¥{r2['price']} (spu {spu})")
-                    else:
-                        print(f"[{cid}] spu {spu} 暂未抓到价格（下轮 refresh_dewu 会重试）")
+                    if r2.get("article_no") and not it.get("article_no"):
+                        it["article_no"] = r2["article_no"]
+                    if r2.get("msrp"):
+                        it["msrp"] = r2["msrp"]
+                    updated.append(f"{cid} {it.get('title', '')[:18]} 已关联得物款（货号 {it.get('article_no') or '?'}，发售价 {r2.get('msrp') or '?'}）；得物价请填G列")
                 except Exception as e:
-                    print(f"[{cid}] 链接核价失败: {str(e)[:60]}（spu 已记下，下轮重试）")
+                    print(f"[{cid}] 元数据抓取失败: {str(e)[:60]}（spu 已记下）")
             elif link and "dewu" not in link:
                 missing.append(f"{cid}: U列不是得物链接？'{link[:40]}'")
         if buy_date is not None and str(buy_date).strip() != "":

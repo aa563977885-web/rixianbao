@@ -1447,13 +1447,13 @@
     "dewu_spu_id": "1165421",
     "du_price_checked_at": null,
     "dewu_name": "云南深山的“雄鹰少年”",
-    "scarcity_score": 100.4,
+    "scarcity_score": 100.3,
     "verdict": "冷门优选",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 1746.05,
@@ -1487,7 +1487,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 644.7,
@@ -1515,13 +1515,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
     "dewu_spu_id": "27136798",
-    "scarcity_score": 49.3,
+    "scarcity_score": 49.2,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 624.48,
@@ -1549,13 +1549,13 @@
     "last_seen": "2026-10-11T03:44:01+00:00",
     "seen_count": 1,
     "dewu_spu_id": "6306724",
-    "scarcity_score": 34.3,
+    "scarcity_score": 34.2,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49
   },
   {
@@ -1583,7 +1583,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.103,
+    "exposure_coeff": 0.104,
     "seen_days": 1.21
   },
   {
@@ -1611,7 +1611,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49
   },
   {
@@ -1633,13 +1633,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 1,
     "dewu_spu_id": "2230310",
-    "scarcity_score": 20.6,
+    "scarcity_score": 20.5,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.103,
+    "exposure_coeff": 0.104,
     "seen_days": 1.21
   },
   {
@@ -1667,7 +1667,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 202.48,
@@ -1695,13 +1695,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
     "dewu_spu_id": "26123903",
-    "scarcity_score": 19.9,
+    "scarcity_score": 19.8,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.025,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 406.99,
@@ -1735,7 +1735,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.025,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 277.0,
@@ -1769,7 +1769,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.103,
+    "exposure_coeff": 0.104,
     "seen_days": 1.21
   },
   {
@@ -1797,7 +1797,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49
   },
   {
@@ -1825,7 +1825,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 1258.7,
@@ -1859,7 +1859,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.103,
+    "exposure_coeff": 0.104,
     "seen_days": 1.21
   },
   {
@@ -1887,7 +1887,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 748.2,
@@ -1921,7 +1921,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.103,
+    "exposure_coeff": 0.104,
     "seen_days": 1.21
   },
   {
@@ -1949,7 +1949,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49
   },
   {
@@ -1977,7 +1977,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 266.6,
@@ -2011,7 +2011,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 348.6,
@@ -2045,36 +2045,8 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.648,
+    "exposure_coeff": 0.649,
     "seen_days": 2.3
-  },
-  {
-    "carry_id": "12217066",
-    "title": "Anta安踏 塑胶先锋2 满分红 体考体测 场地竞训 一体成型工艺减震防滑耐磨 低帮 氮80科技 镂空碳板跑步鞋 男款 白红",
-    "article_no": "912615599-2",
-    "color": "幻影黑",
-    "size": "L",
-    "gross_profit": 70.4,
-    "du_price": 274.4,
-    "cost": 204.0,
-    "want_count": 23,
-    "sales_7d": 74,
-    "published_at": "2026-10-09T19:28",
-    "category": "球鞋",
-    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12217066",
-    "net_profit": 19.73,
-    "first_seen": "2026-10-09T16:01:06+00:00",
-    "last_seen": "2026-10-09T16:01:06+00:00",
-    "seen_count": 1,
-    "dewu_spu_id": "32026740",
-    "scarcity_score": 0.1,
-    "verdict": "普通",
-    "time_label": "真需求确认",
-    "w_time": 1.3,
-    "w_supply_demand": 0.2497,
-    "w_category": 0.725,
-    "exposure_coeff": 0.989,
-    "seen_days": 2.98
   },
   {
     "carry_id": "12217146",
@@ -2101,7 +2073,35 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.989,
+    "exposure_coeff": 0.99,
+    "seen_days": 2.98
+  },
+  {
+    "carry_id": "12217066",
+    "title": "Anta安踏 塑胶先锋2 满分红 体考体测 场地竞训 一体成型工艺减震防滑耐磨 低帮 氮80科技 镂空碳板跑步鞋 男款 白红",
+    "article_no": "912615599-2",
+    "color": "幻影黑",
+    "size": "L",
+    "gross_profit": 70.4,
+    "du_price": 274.4,
+    "cost": 204.0,
+    "want_count": 23,
+    "sales_7d": 74,
+    "published_at": "2026-10-09T19:28",
+    "category": "球鞋",
+    "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12217066",
+    "net_profit": 19.73,
+    "first_seen": "2026-10-09T16:01:06+00:00",
+    "last_seen": "2026-10-09T16:01:06+00:00",
+    "seen_count": 1,
+    "dewu_spu_id": "32026740",
+    "scarcity_score": 0.0,
+    "verdict": "普通",
+    "time_label": "真需求确认",
+    "w_time": 1.3,
+    "w_supply_demand": 0.2497,
+    "w_category": 0.725,
+    "exposure_coeff": 0.99,
     "seen_days": 2.98
   },
   {
@@ -2129,7 +2129,7 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.648,
+    "exposure_coeff": 0.649,
     "seen_days": 2.3
   },
   {
@@ -2157,7 +2157,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 468.95,
@@ -2191,7 +2191,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 598.15,
@@ -2225,7 +2225,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 450.9,
@@ -2253,13 +2253,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
     "dewu_spu_id": "66046786",
-    "scarcity_score": -9.6,
+    "scarcity_score": -9.5,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 607.65,
@@ -2293,7 +2293,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49,
     "price_trend": {
       "first": 540.2,
@@ -2327,7 +2327,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.245,
+    "exposure_coeff": 0.246,
     "seen_days": 1.49
   },
   {
@@ -3184,7 +3184,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11611098",
@@ -3215,7 +3215,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11583953",
@@ -3246,7 +3246,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11610520",
@@ -3276,7 +3276,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11584234",
@@ -3307,7 +3307,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11610465",
@@ -3337,7 +3337,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.875,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11584908",
@@ -3368,7 +3368,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11593882",
@@ -3399,7 +3399,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11583908",
@@ -3430,7 +3430,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11610234",
@@ -3452,6 +3452,8 @@
     "seen_count": 91,
     "dewu_spu_id": "1310648",
     "du_price_checked_at": null,
+    "msrp": 599.0,
+    "dewu_name": "NikeAir Force 1 舒适缓震轻便 GS校园风 耐磨 板鞋 男女同款",
     "scarcity_score": 0,
     "verdict": "过期",
     "time_label": "过期",
@@ -3459,7 +3461,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11584890",
@@ -3481,6 +3483,8 @@
     "seen_count": 88,
     "dewu_spu_id": "32621637",
     "du_price_checked_at": null,
+    "msrp": 899.0,
+    "dewu_name": "得物捐赠1000万元物资做公益",
     "scarcity_score": 0,
     "verdict": "过期",
     "time_label": "过期",
@@ -3488,7 +3492,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11584124",
@@ -3510,6 +3514,8 @@
     "seen_count": 88,
     "dewu_spu_id": "55012861",
     "du_price_checked_at": null,
+    "msrp": 790.0,
+    "dewu_name": "耐磨,透气,轻便,增高",
     "scarcity_score": 0,
     "verdict": "过期",
     "time_label": "过期",
@@ -3517,7 +3523,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11611326",
@@ -3546,7 +3552,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11608028",
@@ -3575,7 +3581,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11610242",
@@ -3604,7 +3610,7 @@
     "w_supply_demand": 0.8,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11610220",
@@ -3633,7 +3639,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11609965",
@@ -3662,7 +3668,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11609753",
@@ -3691,7 +3697,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11584967",
@@ -3720,7 +3726,7 @@
     "w_supply_demand": 0.8,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 45.91
+    "seen_days": 45.92
   },
   {
     "carry_id": "11612871",
