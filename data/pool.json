@@ -314,7 +314,9 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
     "dewu_spu_id": "20888735",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "msrp": 880.0,
+    "dewu_name": "云南深山的“雄鹰少年”"
   },
   {
     "carry_id": "11608028",
@@ -335,7 +337,9 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
     "dewu_spu_id": "41461395",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "msrp": 649.0,
+    "dewu_name": "听说山区小学里有座\"得物楼\"？"
   },
   {
     "carry_id": "11610242",
@@ -356,7 +360,8 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 91,
     "dewu_spu_id": "27870062",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "dewu_name": "答网友问：得物白冰冰到底是谁？"
   },
   {
     "carry_id": "11610220",
@@ -377,7 +382,9 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
     "dewu_spu_id": "5633013",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "msrp": 799.0,
+    "dewu_name": "这件事情，得物全年不打烊"
   },
   {
     "carry_id": "11609965",
@@ -398,7 +405,8 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
     "dewu_spu_id": "13870205",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "dewu_name": "法院已查明针对得物的造谣"
   },
   {
     "carry_id": "11609753",
@@ -419,7 +427,9 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
     "dewu_spu_id": "21792214",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "msrp": 980.0,
+    "dewu_name": "A12M521207FSG"
   },
   {
     "carry_id": "11584967",
@@ -440,7 +450,9 @@
     "last_seen": "2026-10-10T04:08:08+00:00",
     "seen_count": 88,
     "dewu_spu_id": "60407465",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "msrp": 990.0,
+    "dewu_name": "得物荣获“安心奖”，主打放心买"
   },
   {
     "carry_id": "11612871",
@@ -2879,6 +2891,42 @@
     "published_at": "2026-10-12T15:27:01+08:00",
     "first_seen": "2026-10-12T15:27:03+08:00",
     "last_seen": "2026-10-12T15:27:03+08:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-oxXpYmjPBU43eJATZxbo3eJATZxboX_3TYrKwsRkipeYZ4rED",
+    "title": "理肤泉【孙颖莎推荐】B5面膜PRO+ 5片装修护补水保湿男士女士护肤品礼物",
+    "category": "美妆",
+    "cost": 128.0,
+    "gross": 186.0,
+    "coupon": 0,
+    "commission_pct": 1.0,
+    "commission_amt": 1.86,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/oxXpYmjPBU43eJATZxbo3eJATZxboX_3TYrKwsRkipeYZ4rED.html",
+    "published_at": "2026-10-12T17:27:01+08:00",
+    "first_seen": "2026-10-12T17:27:03+08:00",
+    "last_seen": "2026-10-12T17:27:03+08:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-dKnncqwRlJ4XifLJ6YRrXifLJ6YRrn_3CVJOUqR3xqOijYy3E",
+    "title": "361°运动鞋男鞋飞燃5.5新品马拉松竞速缓震耐磨跑鞋比赛训练鞋跑步鞋  一马当先 42",
+    "category": "球鞋",
+    "cost": 479.99,
+    "gross": 479.99,
+    "coupon": 0,
+    "commission_pct": 3.0,
+    "commission_amt": 14.4,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/dKnncqwRlJ4XifLJ6YRrXifLJ6YRrn_3CVJOUqR3xqOijYy3E.html",
+    "published_at": "2026-10-12T17:27:01+08:00",
+    "first_seen": "2026-10-12T17:27:03+08:00",
+    "last_seen": "2026-10-12T17:27:03+08:00",
     "seen_count": 0,
     "net_profit": null
   }
