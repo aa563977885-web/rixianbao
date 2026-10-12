@@ -180,14 +180,31 @@ def fetch_page(carry_id, use_browser=False):
     return fetch_browser(carry_id)
 
 
-def extract_spu(carry_id, html):
-    """主商机的得物 spuId/货号：页面内嵌 carryInfo JSON 逐商机自带，
-    用 carryId==当前页 判主（相似推荐的 carryInfo 会被排除）。"""
+def extract_carry_info(carry_id, html):
+    """主商机的结构化字段：页面内嵌 carryInfo JSON 逐商机自带（SSR 原始数据，
+    比渲染文本可靠）。用 carryId==当前页 判主（相似推荐的 carryInfo 会被排除）。
+    dwHandsPrice 单位是分。"""
     pat = re.escape(str(carry_id))
-    m = re.search(r'"carryId":%s,[^}]*?"spuId":(\d+)' % pat, html)
-    m2 = re.search(r'"carryId":%s,[^}]*?"poizonArticleNo":"([^"]+)"' % pat, html)
-    return {"dewu_spu_id": m.group(1) if m else None,
-            "poizon_article_no": m2.group(1) if m2 else None}
+    m = re.search(r'"carryId":%s,[^{]*(\{[^}]*\})' % pat, html)
+    seg = m.group(0) if m else ""
+
+    def num(key, scale=1):
+        mm = re.search(r'"%s":(-?[\d.]+)' % key, seg)
+        return round(float(mm.group(1)) / scale, 2) if mm else None
+
+    def txt(key):
+        mm = re.search(r'"%s":"([^"]*)"' % key, seg)
+        return mm.group(1) if mm else None
+
+    return {
+        "dewu_spu_id": (re.search(r'"spuId":(\d+)', seg).group(1) if re.search(r'"spuId":(\d+)', seg) else None),
+        "poizon_article_no": txt("poizonArticleNo"),
+        "want_user_count": num("wantUserCount"),
+        "seven_day_sale": num("sevenDaySale"),
+        "dw_hands_price": num("dwHandsPrice", 100),   # 得物现价（分->元）
+        "mendao_profit": num("profitPrice", 100),      # 门道口径利润
+        "sku_size": txt("size"),
+    }
 
 
 def fetch_and_parse(carry_id, use_browser=False):
@@ -201,7 +218,16 @@ def fetch_and_parse(carry_id, use_browser=False):
             parsed = parse(text, html)
         except Exception as e:
             print("  [warn] playwright 也失败:", str(e)[:100])
-    parsed.update({k: v for k, v in extract_spu(carry_id, html).items() if v})
+    info = extract_carry_info(carry_id, html)
+    # carryInfo 为权威源：结构化字段优先，文本解析作兜底
+    for src, dst in (("dewu_spu_id", "dewu_spu_id"), ("poizon_article_no", "article_no"),
+                     ("want_user_count", "want_count"), ("seven_day_sale", "sales_7d")):
+        if info.get(src):
+            parsed[dst] = info[src]
+    if info.get("dw_hands_price"):
+        parsed["du_price_carry"] = info["dw_hands_price"]
+    if info.get("mendao_profit"):
+        parsed["gross_profit"] = parsed.get("gross_profit") or info["mendao_profit"]
     return parsed, text, html
 
 
@@ -316,6 +342,8 @@ def to_pool_item(carry_id, parsed, rates, exp, ts):
     }
     if parsed.get("dewu_spu_id"):
         item["dewu_spu_id"] = parsed["dewu_spu_id"]
+    if parsed.get("du_price_carry"):  # carryInfo 的得物现价优先于渲染文本
+        item["du_price"] = parsed["du_price_carry"]
     item["net_profit"] = compute_net(item, rates)
     item["first_seen"] = exp.get("first_seen", ts)
     item["last_seen"] = exp.get("last_seen", ts)
@@ -489,6 +517,37 @@ def main():
         build_from_snapshot(rates, args.snapshot)
         return
 
+    # carryInfo 全池刷新：BFS 队列覆盖不到的存量商机，用轻量请求补齐
+    # （SSR JSON 自带 想买人数/7天销量/得物现价，纯 requests 每条约 1 秒）
+    refreshed = 0
+    visited = set(seen_queue)
+    for cid, it in list(pool.items()):
+        if cid in visited or it.get("source"):
+            continue
+        try:
+            _t, _h = fetch_page(cid)
+            info = extract_carry_info(cid, _h)
+            if info.get("dw_hands_price"):
+                it["du_price"] = info["dw_hands_price"]
+            if info.get("want_user_count") is not None:
+                it["want_count"] = int(info["want_user_count"])
+            if info.get("seven_day_sale") is not None:
+                it["sales_7d"] = int(info["seven_day_sale"])
+            if info.get("poizon_article_no") and not it.get("article_no"):
+                it["article_no"] = info["poizon_article_no"]
+            if info.get("dewu_spu_id") and not it.get("dewu_spu_id"):
+                it["dewu_spu_id"] = info["dewu_spu_id"]
+            it["net_profit"] = compute_net(it, rates)
+            record_price(history, cid, it.get("du_price"), it.get("cost"), ts)
+            e = exposure.setdefault(cid, {"first_seen": ts, "seen_count": 0})
+            e["last_seen"] = ts
+            refreshed += 1
+        except Exception:
+            pass
+        time.sleep(max(args.sleep, 0.8))
+    if refreshed:
+        print(f"carryInfo 全池刷新: {refreshed} 条")
+
     # --since-hours 过滤
     if args.since_hours:
         pool = {k: v for k, v in pool.items() if within_hours(v.get("published_at"), args.since_hours)}
@@ -499,7 +558,7 @@ def main():
 
     total = len(pool)
     print("-" * 50)
-    print(f"汇总：总 {total} 条 | 本次新增 {new_count} | 热页发现 {hot_discovered} 链接 | HOT跳过 {hot_skip} | 解析/抓取失败 {failed}")
+    print(f"汇总：总 {total} 条 | 本次新增 {new_count} | 热页发现 {hot_discovered} 链接 | HOT跳过 {hot_skip} | 解析/抓取失败 {failed} | carryInfo刷新 {refreshed}")
     print("exposure:", EXPOSURE)
     print("pool:", POOL)
     print("price_history:", PRICE_HISTORY)
