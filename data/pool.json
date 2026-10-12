@@ -473,7 +473,8 @@
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
     "dewu_spu_id": "23982859",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "dewu_name": "云南深山的“雄鹰少年”"
   },
   {
     "carry_id": "11612707",
@@ -494,7 +495,8 @@
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
     "dewu_spu_id": "23984347",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "dewu_name": "得物因品质保障荣获上海市质量金奖"
   },
   {
     "carry_id": "11612459",
@@ -515,7 +517,8 @@
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
     "dewu_spu_id": "15224834",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "dewu_name": "Jordan 大容量运动休闲百搭 聚酯纤维双肩包 中号 男女同款情侣款 黑色"
   },
   {
     "carry_id": "11612423",
@@ -536,7 +539,8 @@
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
     "dewu_spu_id": "6110870",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "dewu_name": "《人民网》记者：在得物见证好物品质之旅"
   },
   {
     "carry_id": "11612367",
@@ -557,7 +561,9 @@
     "last_seen": "2026-08-27T14:42:01+00:00",
     "seen_count": 3,
     "dewu_spu_id": "8059173",
-    "du_price_checked_at": null
+    "du_price_checked_at": null,
+    "msrp": 549.0,
+    "dewu_name": "290g/单只42码/单只"
   },
   {
     "carry_id": "11611919",
@@ -2927,6 +2933,42 @@
     "published_at": "2026-10-12T17:27:01+08:00",
     "first_seen": "2026-10-12T17:27:03+08:00",
     "last_seen": "2026-10-12T17:27:03+08:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-BXTDv0f01wy1T7N6QQVm1T7N6QQVmT_3klNf83gapDT9lP80J",
+    "title": "苹果/苹果AI/MacBook Air13英寸M5 (10+8核) 16G 512G银色笔记本电脑【教育优惠】MDH74CH/A",
+    "category": "其他",
+    "cost": 8749.0,
+    "gross": 8749.0,
+    "coupon": 0,
+    "commission_pct": 0.1,
+    "commission_amt": 8.75,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/BXTDv0f01wy1T7N6QQVm1T7N6QQVmT_3klNf83gapDT9lP80J.html",
+    "published_at": "2026-10-12T19:27:02+08:00",
+    "first_seen": "2026-10-12T19:27:03+08:00",
+    "last_seen": "2026-10-12T19:27:03+08:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-8YQrR1gGsj2IBeZOdpYVIBeZOdpYVQ_391fhqbuHK1TaF20g6",
+    "title": "雪中飞女式轻暖排骨羽绒服26款时尚舒适休闲通勤百搭保暖运动羽绒内恤 宝石黑|8086 L 170/92A",
+    "category": "服饰",
+    "cost": 89.0,
+    "gross": 129.0,
+    "coupon": 0,
+    "commission_pct": 15.0,
+    "commission_amt": 19.35,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/8YQrR1gGsj2IBeZOdpYVIBeZOdpYVQ_391fhqbuHK1TaF20g6.html",
+    "published_at": "2026-10-12T19:27:02+08:00",
+    "first_seen": "2026-10-12T19:27:03+08:00",
+    "last_seen": "2026-10-12T19:27:03+08:00",
     "seen_count": 0,
     "net_profit": null
   }
