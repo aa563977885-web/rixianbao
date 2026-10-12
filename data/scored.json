@@ -1447,13 +1447,13 @@
     "dewu_spu_id": "1165421",
     "du_price_checked_at": null,
     "dewu_name": "云南深山的“雄鹰少年”",
-    "scarcity_score": 100.3,
+    "scarcity_score": 100.1,
     "verdict": "冷门优选",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 1746.05,
@@ -1481,13 +1481,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
     "dewu_spu_id": "41095330",
-    "scarcity_score": 65.6,
+    "scarcity_score": 65.5,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 644.7,
@@ -1515,13 +1515,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
     "dewu_spu_id": "27136798",
-    "scarcity_score": 49.2,
+    "scarcity_score": 49.1,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 624.48,
@@ -1555,7 +1555,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49
   },
   {
@@ -1577,13 +1577,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 1,
     "dewu_spu_id": "66046786",
-    "scarcity_score": 30.2,
+    "scarcity_score": 30.1,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.104,
+    "exposure_coeff": 0.105,
     "seen_days": 1.21
   },
   {
@@ -1605,13 +1605,13 @@
     "last_seen": "2026-10-11T03:44:01+00:00",
     "seen_count": 1,
     "dewu_spu_id": "71702115",
-    "scarcity_score": 25.3,
+    "scarcity_score": 25.2,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49
   },
   {
@@ -1639,7 +1639,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.104,
+    "exposure_coeff": 0.105,
     "seen_days": 1.21
   },
   {
@@ -1667,7 +1667,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 202.48,
@@ -1701,7 +1701,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.025,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 406.99,
@@ -1735,7 +1735,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.025,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 277.0,
@@ -1769,7 +1769,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.104,
+    "exposure_coeff": 0.105,
     "seen_days": 1.21
   },
   {
@@ -1797,7 +1797,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49
   },
   {
@@ -1825,7 +1825,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 1258.7,
@@ -1859,7 +1859,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.104,
+    "exposure_coeff": 0.105,
     "seen_days": 1.21
   },
   {
@@ -1887,7 +1887,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 748.2,
@@ -1921,7 +1921,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.104,
+    "exposure_coeff": 0.105,
     "seen_days": 1.21
   },
   {
@@ -1949,7 +1949,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49
   },
   {
@@ -1977,7 +1977,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 266.6,
@@ -2011,7 +2011,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 348.6,
@@ -2045,7 +2045,7 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.649,
+    "exposure_coeff": 0.651,
     "seen_days": 2.3
   },
   {
@@ -2073,7 +2073,7 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.99,
+    "exposure_coeff": 0.991,
     "seen_days": 2.98
   },
   {
@@ -2101,7 +2101,7 @@
     "w_time": 1.3,
     "w_supply_demand": 0.2497,
     "w_category": 0.725,
-    "exposure_coeff": 0.99,
+    "exposure_coeff": 0.991,
     "seen_days": 2.98
   },
   {
@@ -2129,7 +2129,7 @@
     "w_time": 1.3,
     "w_supply_demand": 0.8,
     "w_category": 1.0,
-    "exposure_coeff": 0.649,
+    "exposure_coeff": 0.651,
     "seen_days": 2.3
   },
   {
@@ -2157,7 +2157,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 468.95,
@@ -2185,13 +2185,13 @@
     "last_seen": "2026-10-11T10:33:19+00:00",
     "seen_count": 2,
     "dewu_spu_id": "66046786",
-    "scarcity_score": -9.2,
+    "scarcity_score": -9.1,
     "verdict": "普通",
     "time_label": "冷静期中",
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.875,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 598.15,
@@ -2225,7 +2225,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 450.9,
@@ -2259,7 +2259,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 607.65,
@@ -2293,7 +2293,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49,
     "price_trend": {
       "first": 540.2,
@@ -2327,7 +2327,7 @@
     "w_time": 1.0,
     "w_supply_demand": 0.8,
     "w_category": 0.725,
-    "exposure_coeff": 0.246,
+    "exposure_coeff": 0.247,
     "seen_days": 1.49
   },
   {
@@ -2337,7 +2337,7 @@
     "color": null,
     "size": null,
     "gross_profit": 498.75,
-    "du_price": null,
+    "du_price": 1897.75,
     "cost": 1399.0,
     "want_count": null,
     "sales_7d": null,
@@ -2385,7 +2385,7 @@
     "w_supply_demand": 0.2843,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12214630",
@@ -2394,7 +2394,7 @@
     "color": "黑灰",
     "size": "42",
     "gross_profit": 52.26,
-    "du_price": null,
+    "du_price": 446.26,
     "cost": 394.0,
     "want_count": 81,
     "sales_7d": 14,
@@ -2423,7 +2423,7 @@
     "color": "黑白色",
     "size": "43",
     "gross_profit": 54.56,
-    "du_price": null,
+    "du_price": 217.56,
     "cost": 163.0,
     "want_count": 48,
     "sales_7d": 33,
@@ -2452,7 +2452,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 68.49,
-    "du_price": null,
+    "du_price": 400.49,
     "cost": 332.0,
     "want_count": 23,
     "sales_7d": 37,
@@ -2481,7 +2481,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 87.81,
-    "du_price": null,
+    "du_price": 282.81,
     "cost": 195.0,
     "want_count": 39,
     "sales_7d": 37,
@@ -2510,7 +2510,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 235.0,
-    "du_price": null,
+    "du_price": 905.0,
     "cost": 670.0,
     "want_count": 48,
     "sales_7d": 37,
@@ -2539,7 +2539,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 138.2,
-    "du_price": null,
+    "du_price": 616.2,
     "cost": 478.0,
     "want_count": 4,
     "sales_7d": 37,
@@ -2568,7 +2568,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 64.22,
-    "du_price": null,
+    "du_price": 208.22,
     "cost": 144.0,
     "want_count": 25,
     "sales_7d": 37,
@@ -2597,7 +2597,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 65.49,
-    "du_price": null,
+    "du_price": 400.49,
     "cost": 335.0,
     "want_count": 76,
     "sales_7d": 37,
@@ -2626,7 +2626,7 @@
     "color": null,
     "size": null,
     "gross_profit": 92.24,
-    "du_price": null,
+    "du_price": 293.24,
     "cost": 201.0,
     "want_count": null,
     "sales_7d": null,
@@ -2655,7 +2655,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 97.99,
-    "du_price": null,
+    "du_price": 406.99,
     "cost": 309.0,
     "want_count": 30,
     "sales_7d": 37,
@@ -2684,7 +2684,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 71.58,
-    "du_price": null,
+    "du_price": 433.58,
     "cost": 362.0,
     "want_count": 32,
     "sales_7d": 37,
@@ -2713,7 +2713,7 @@
     "color": "标准白",
     "size": "42",
     "gross_profit": 77.2,
-    "du_price": null,
+    "du_price": 597.2,
     "cost": 520.0,
     "want_count": 28,
     "sales_7d": 37,
@@ -2929,7 +2929,7 @@
     "w_supply_demand": 0.2605,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12215295",
@@ -2957,7 +2957,7 @@
     "w_supply_demand": 0.2757,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12214843",
@@ -2985,7 +2985,7 @@
     "w_supply_demand": 0.2873,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12214840",
@@ -3013,7 +3013,7 @@
     "w_supply_demand": 0.3358,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12214730",
@@ -3041,7 +3041,7 @@
     "w_supply_demand": 0.4629,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12214671",
@@ -3069,7 +3069,7 @@
     "w_supply_demand": 0.3212,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 3.45
+    "seen_days": 3.46
   },
   {
     "carry_id": "12216915",
@@ -3097,7 +3097,7 @@
     "w_supply_demand": 0.2541,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.2
+    "seen_days": 3.21
   },
   {
     "carry_id": "12216622",
@@ -3125,7 +3125,7 @@
     "w_supply_demand": 0.3115,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 3.2
+    "seen_days": 3.21
   },
   {
     "carry_id": "12215189",
@@ -3153,7 +3153,7 @@
     "w_supply_demand": 0.2776,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 3.2
+    "seen_days": 3.21
   },
   {
     "carry_id": "11611203",
@@ -3162,7 +3162,7 @@
     "color": "黑白",
     "size": "37.5",
     "gross_profit": 104.2,
-    "du_price": null,
+    "du_price": 274.2,
     "cost": 170,
     "want_count": null,
     "sales_7d": 69,
@@ -3193,7 +3193,7 @@
     "color": "白蓝",
     "size": "41",
     "gross_profit": 94.35,
-    "du_price": null,
+    "du_price": 271.35,
     "cost": 177,
     "want_count": null,
     "sales_7d": 51,
@@ -3224,7 +3224,7 @@
     "color": "白蓝",
     "size": null,
     "gross_profit": 124.55,
-    "du_price": null,
+    "du_price": 514.55,
     "cost": 390,
     "want_count": null,
     "sales_7d": null,
@@ -3255,7 +3255,7 @@
     "color": "炭黑拼色",
     "size": null,
     "gross_profit": 225.4,
-    "du_price": null,
+    "du_price": 1663.4,
     "cost": 1438,
     "want_count": null,
     "sales_7d": 146,
@@ -3285,7 +3285,7 @@
     "color": "卡其",
     "size": null,
     "gross_profit": 95.9,
-    "du_price": null,
+    "du_price": 412.9,
     "cost": 317,
     "want_count": null,
     "sales_7d": null,
@@ -3316,7 +3316,7 @@
     "color": "淡粉",
     "size": null,
     "gross_profit": 54.12,
-    "du_price": null,
+    "du_price": 120.12,
     "cost": 66,
     "want_count": null,
     "sales_7d": 14,
@@ -3346,7 +3346,7 @@
     "color": "黑色",
     "size": null,
     "gross_profit": 81.9,
-    "du_price": null,
+    "du_price": 355.9,
     "cost": 274,
     "want_count": null,
     "sales_7d": null,
@@ -3377,7 +3377,7 @@
     "color": "白黑红",
     "size": null,
     "gross_profit": 150.85,
-    "du_price": null,
+    "du_price": 926.85,
     "cost": 776,
     "want_count": null,
     "sales_7d": null,
@@ -3408,7 +3408,7 @@
     "color": "棕褐色",
     "size": null,
     "gross_profit": 63.15,
-    "du_price": null,
+    "du_price": 313.15,
     "cost": 250,
     "want_count": null,
     "sales_7d": null,
@@ -3439,7 +3439,7 @@
     "color": "40",
     "size": "40",
     "gross_profit": 75.15,
-    "du_price": null,
+    "du_price": 414.15,
     "cost": 339,
     "want_count": null,
     "sales_7d": 110,
@@ -3470,7 +3470,7 @@
     "color": "黑色",
     "size": null,
     "gross_profit": 70.56,
-    "du_price": null,
+    "du_price": 399.56,
     "cost": 329,
     "want_count": null,
     "sales_7d": null,
@@ -3501,7 +3501,7 @@
     "color": "雨雾灰",
     "size": null,
     "gross_profit": 63.4,
-    "du_price": null,
+    "du_price": 346.4,
     "cost": 283,
     "want_count": null,
     "sales_7d": null,
@@ -3532,7 +3532,7 @@
     "color": "白灰",
     "size": "38.5",
     "gross_profit": 70.85,
-    "du_price": null,
+    "du_price": 413.85,
     "cost": 343,
     "want_count": null,
     "sales_7d": 58,
@@ -3561,7 +3561,7 @@
     "color": "女款",
     "size": "女款",
     "gross_profit": 56.05,
-    "du_price": null,
+    "du_price": 315.05,
     "cost": 259,
     "want_count": null,
     "sales_7d": null,
@@ -3590,7 +3590,7 @@
     "color": "暮光蓝",
     "size": "L",
     "gross_profit": 73.24,
-    "du_price": null,
+    "du_price": 566.24,
     "cost": 493,
     "want_count": null,
     "sales_7d": 33,
@@ -3619,7 +3619,7 @@
     "color": "黑白",
     "size": null,
     "gross_profit": 71.05,
-    "du_price": null,
+    "du_price": 524.05,
     "cost": 453,
     "want_count": null,
     "sales_7d": 66,
@@ -3648,7 +3648,7 @@
     "color": "白",
     "size": "44",
     "gross_profit": 75.65,
-    "du_price": null,
+    "du_price": 569.65,
     "cost": 494,
     "want_count": null,
     "sales_7d": 20,
@@ -3677,7 +3677,7 @@
     "color": "银灰",
     "size": "43",
     "gross_profit": 62.6,
-    "du_price": null,
+    "du_price": 513.6,
     "cost": 451,
     "want_count": null,
     "sales_7d": 12,
@@ -3706,7 +3706,7 @@
     "color": "灰棕",
     "size": null,
     "gross_profit": 59.95,
-    "du_price": null,
+    "du_price": 506.95,
     "cost": 447,
     "want_count": null,
     "sales_7d": null,
@@ -3735,7 +3735,7 @@
     "color": "白玉粉/幻影黑",
     "size": "M",
     "gross_profit": 113.89,
-    "du_price": null,
+    "du_price": 397.89,
     "cost": 284.0,
     "want_count": 79,
     "sales_7d": 113,
@@ -3755,7 +3755,7 @@
     "w_supply_demand": 0.3119,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11612707",
@@ -3764,7 +3764,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 51.99,
-    "du_price": null,
+    "du_price": 315.99,
     "cost": 264.0,
     "want_count": 170,
     "sales_7d": 17,
@@ -3784,7 +3784,7 @@
     "w_supply_demand": 1.0,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11612459",
@@ -3793,7 +3793,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 63.35,
-    "du_price": null,
+    "du_price": 353.35,
     "cost": 290.0,
     "want_count": 76,
     "sales_7d": 17,
@@ -3813,7 +3813,7 @@
     "w_supply_demand": 0.9153,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11612423",
@@ -3822,7 +3822,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 63.1,
-    "du_price": null,
+    "du_price": 263.1,
     "cost": 200.0,
     "want_count": 41,
     "sales_7d": 17,
@@ -3842,7 +3842,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 1.025,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11612367",
@@ -3851,7 +3851,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 70.35,
-    "du_price": null,
+    "du_price": 290.35,
     "cost": 220.0,
     "want_count": 39,
     "sales_7d": 17,
@@ -3871,7 +3871,7 @@
     "w_supply_demand": 0.5671,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611919",
@@ -3880,7 +3880,7 @@
     "color": "奶茶棕 尺码:L",
     "size": "L",
     "gross_profit": 55.16,
-    "du_price": null,
+    "du_price": 306.16,
     "cost": 251.0,
     "want_count": 41,
     "sales_7d": 17,
@@ -3900,7 +3900,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611899",
@@ -3909,7 +3909,7 @@
     "color": "奶茶棕 尺码:L",
     "size": "L",
     "gross_profit": 52.03,
-    "du_price": null,
+    "du_price": 407.03,
     "cost": 355.0,
     "want_count": 14,
     "sales_7d": 17,
@@ -3929,7 +3929,7 @@
     "w_supply_demand": 0.3318,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611892",
@@ -3938,7 +3938,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 55.01,
-    "du_price": null,
+    "du_price": 379.01,
     "cost": 324.0,
     "want_count": 41,
     "sales_7d": 17,
@@ -3958,7 +3958,7 @@
     "w_supply_demand": 0.5859,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611831",
@@ -3967,7 +3967,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 52.27,
-    "du_price": null,
+    "du_price": 276.27,
     "cost": 224.0,
     "want_count": 60,
     "sales_7d": 17,
@@ -3987,7 +3987,7 @@
     "w_supply_demand": 0.7647,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611815",
@@ -3996,7 +3996,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 72.15,
-    "du_price": null,
+    "du_price": 292.15,
     "cost": 220.0,
     "want_count": 32,
     "sales_7d": 17,
@@ -4016,7 +4016,7 @@
     "w_supply_demand": 0.5012,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611735",
@@ -4025,7 +4025,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 119.65,
-    "du_price": null,
+    "du_price": 612.65,
     "cost": 493.0,
     "want_count": 9,
     "sales_7d": 17,
@@ -4045,7 +4045,7 @@
     "w_supply_demand": 0.2847,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611500",
@@ -4054,7 +4054,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 82.6,
-    "du_price": null,
+    "du_price": 570.6,
     "cost": 488.0,
     "want_count": 62,
     "sales_7d": 17,
@@ -4074,7 +4074,7 @@
     "w_supply_demand": 0.7835,
     "w_category": 0.725,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   },
   {
     "carry_id": "11611345",
@@ -4083,7 +4083,7 @@
     "color": "奶茶棕",
     "size": "L",
     "gross_profit": 175.33,
-    "du_price": null,
+    "du_price": 875.33,
     "cost": 700.0,
     "want_count": 28,
     "sales_7d": 17,
@@ -4103,6 +4103,6 @@
     "w_supply_demand": 0.4635,
     "w_category": 1.0,
     "exposure_coeff": 1.0,
-    "seen_days": 46.05
+    "seen_days": 46.06
   }
 ]
