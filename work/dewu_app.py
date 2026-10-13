@@ -103,10 +103,18 @@ def parse_detail(nodes):
             if i + 1 < len(texts) and texts[i + 1].startswith("¥"):
                 out["msrp"] = float(texts[i + 1][1:].replace(" ", ""))
             break
+    cnt = re.compile(r"^[\d.]+[w万+]?$")
     for label, key in (("想要", "want"), ("穿过", "owned"), ("我有", "owned")):
+        if out.get(key):
+            continue
         for i, t in enumerate(texts):
-            if t == label and i > 0:
-                out[key] = out[key] or texts[i - 1]
+            if t != label:
+                continue
+            for k in (i - 1, i + 1):  # 值可能在标签前或后（页面变体）
+                if 0 <= k < len(texts) and cnt.match(texts[k]):
+                    out[key] = texts[k]
+                    break
+            if out.get(key):
                 break
     m = re.search(r"3日均价¥(\d+)", j)
     if m:
@@ -213,18 +221,16 @@ def fetch_by_keyword(keyword, settle=9.0, expect=None):
     if not has_tabs and not any(t == "商品" for t, _, _ in nodes):
         return {"error": "未进入结果页", "screen": [t for t, _, _ in nodes][:10]}
     cand = sorted([n for n in nodes if n[2] > 380 and len(n[0]) > 8
-                   and not re.search(r"¥|筛选|同款|人付款|人在围观|直播|买手|穿搭|榜单|定制|客制", n[0])],
+                   and not re.search(r"¥|筛选|同款|人付款|人在围观|直播|买手|穿搭|榜单|定制|客制|#|试穿", n[0])],
                   key=lambda n: (n[2], n[1]))  # 先按行再按列：取第一行的最左卡
     if expect and cand:
-        # 配色防错（双层）：①期望标题里的颜色词必须在候选标题中出现；②按相似度排序。
-        # （搜索结果常混入同款异配色/定制款，点错配色=价格全错）
-        colors = set(re.findall(r"[黑白灰蓝红粉紫绿黄银米棕褐]色?", expect))
-        strict = [n for n in cand if not colors or any(c in n[0] for c in colors)]
+        # 颜色不在标题层校验（得物标题多不写色）；详情页的主色/辅色才是权威源。
+        # 候选按相似度排，相似度过低时翻页扩池；定制/客制/内容帖已在上面排除。
+        use = sorted(cand, key=lambda n: -_sim(n[0], expect))
         seen = list(cand)
-        for _ in range(3):
-            if strict or not colors:
+        for _ in range(2):
+            if use and _sim(use[0][0], expect) >= 0.35:
                 break
-            # 可见卡全是异配色/周边：往下翻一屏继续找官方款
             _adb("shell", "input swipe 960 780 960 320")
             time.sleep(4)
             nodes = _dump("dw_res3")
@@ -232,31 +238,15 @@ def fetch_by_keyword(keyword, settle=9.0, expect=None):
                          and not re.search(r"¥|筛选|同款|人付款|人在围观|直播|买手|穿搭|榜单|定制|客制", n[0])
                          and not any(abs(n[1]-o[1]) < 60 and abs(n[2]-o[2]) < 60 for o in seen)]
             seen += new_cards
-            strict = [n for n in new_cards if not colors or any(c in n[0] for c in colors)]
-        if colors and not strict:
-            return {"keyword": keyword,
-                    "error": f"配色不匹配：期望含{colors}，翻页后仍未找到官方款"}
-        use = sorted(strict, key=lambda n: -_sim(n[0], expect))
-        _simcache = use[0]
-        if _sim(_simcache[0], expect) < 0.3:
-            # 可见卡全不像：往下翻一屏再找
-            _adb("shell", "input swipe 960 780 960 380")
-            time.sleep(4)
-            nodes = _dump("dw_res2")
-            more = [n for n in nodes if n[2] > 300 and len(n[0]) > 8
-                    and not re.search(r"¥|筛选|同款|人付款|人在围观|直播|买手|穿搭|榜单|定制|客制", n[0])]
-            more = [n for n in more if not any(abs(n[2]-o[1]) < 60 and abs(n[3]-o[2]) < 60 for o in cand)]
-            if more:
-                best_more = sorted(more, key=lambda n: -_sim(n[0], expect))[0]
-                if _sim(best_more[0], expect) > _sim(use[0], expect):
-                    use = [best_more] + use
+            use += new_cards
+            use = sorted(use, key=lambda n: -_sim(n[0], expect))
         cand = use
     if not cand:
         return {"error": "结果页无商品卡", "screen": [t for t, _, _ in nodes][:12]}
     # 5) 逐候选进详情，主货号与搜索词一致才算命中（颜色/型号仿冒通行证全失效）
     kw_norm = re.sub(r"[^A-Z0-9]", "", keyword.upper())
     attempts, warns = [], []
-    for node in cand[:3]:
+    for node in cand[:5]:
         _tap(node[1], node[2])
         time.sleep(settle)
         nodes = _dump("dw_det")
