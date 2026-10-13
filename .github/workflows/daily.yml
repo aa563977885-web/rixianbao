@@ -1,4 +1,4 @@
-name: 每日线报自动更新
+name: 每日独立线报更新
 
 on:
   schedule:
@@ -26,25 +26,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 校验 SEED_ID Secret
-        env:
-          SEED_ID: ${{ secrets.SEED_ID }}
-        run: |
-          if [ -z "$SEED_ID" ]; then
-            echo "::error::缺少 SEED_ID Secret：请在仓库 Settings → Secrets and variables → Actions 添加 SEED_ID（任一门道商机 carryId，例如 11610567）"
-            exit 1
-          fi
-
-      - name: 安装依赖（含无头浏览器，门道页需渲染 JS）
+      - name: 安装依赖
         run: |
           pip install -r requirements.txt
-          pip install playwright
-          python -m playwright install --with-deps chromium
 
-      - name: 爬取 + 联盟券价 + 打分 + 渲染 + 推送
+      - name: 校验独立核价规则
+        run: python -m unittest discover -s work -p 'test_*.py'
+
+      - name: 联盟选品 + 独立核价 + 打分 + 渲染
         id: pipeline
         env:
-          SEED_ID: ${{ secrets.SEED_ID }}
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           BARK_KEY: ${{ secrets.BARK_KEY }}
           TBK_APPKEY: ${{ secrets.TBK_APPKEY }}
@@ -52,10 +43,8 @@ jobs:
           JD_UNION_APPKEY: ${{ secrets.JD_UNION_APPKEY }}
           JD_UNION_APPSECRET: ${{ secrets.JD_UNION_APPSECRET }}
         run: |
-          python crawl_mendao.py --seed "$SEED_ID" --depth 2 --avoid-hot 5 --fallback-snapshot
           python work/source_allies.py || echo "[allies] 联盟源拉取失败/未配密钥，跳过"
-          python work/link_spu.py || echo "[link] spu匹配跳过"
-          python work/refresh_dewu.py || echo "[dewu] 得物价刷新失败，跳过"
+          python work/independent.py
           python work/scoring.py
           python work/export_tracker.py
           python work/make_html.py

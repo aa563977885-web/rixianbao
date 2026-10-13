@@ -18,6 +18,20 @@ import requests
 GATEWAY = "https://api.jd.com/routerjson"
 
 
+def landing_url(goods, sku):
+    """保留接口提供的链接；不透明商品 ID 不能直接拼成 item.jd.com 链接。"""
+    from urllib.parse import urlparse
+    for key in ("materialUrl", "goodsUrl", "skuUrl"):
+        url = str(goods.get(key) or "")
+        if url.startswith("//"):
+            url = "https:" + url
+        parsed = urlparse(url)
+        if parsed.scheme in ("http", "https") and (parsed.hostname == "jd.com" or
+                (parsed.hostname or "").endswith(".jd.com")):
+            return url
+    return f"https://item.jd.com/{sku}.html" if str(sku).isdigit() else ""
+
+
 class JdPermissionError(PermissionError):
     """权限/等级不足时抛出，调用方降级跳过。"""
 
@@ -112,7 +126,7 @@ def goods_rank(rank_id, page=1, page_size=20):
             "shop": "",
             "commission": round(wl * float(g.get("commissionShare") or 0) / 100, 2),
             "commission_pct": float(g.get("commissionShare") or 0),
-            "url": f"https://item.jd.com/{sku}.html" if sku else "",
+            "url": landing_url(g, sku),
         })
     return out
 
@@ -132,6 +146,6 @@ def goods_query(keyword, page=1, page_size=10):
             "price": price,
             "lowest_price": float((price_info.get("lowestPrice") or price) or 0),
             "shop": (it.get("shopInfo") or {}).get("shopName", ""),
-            "url": f"https://item.jd.com/{base.get('skuId')}.html",
+            "url": landing_url(it, base.get("skuId") or ""),
         })
     return out

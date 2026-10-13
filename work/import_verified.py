@@ -109,7 +109,7 @@ def main():
         print("  !", m)
     if not updated and not purchases:
         print("（没有可回传的行——G列得物核价都还是空的？）")
-    print("下一步：跑 python work/scoring.py 让核价结果参与排序")
+    print("独立模式：单个核价值不能直接参与排序；需按 INDEPENDENT.md 补齐同款规格、核价时间及依据，保存至 data/verified_quotes.json。")
 
 
 if __name__ == "__main__":

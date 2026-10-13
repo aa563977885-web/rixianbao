@@ -29,7 +29,7 @@ LINE = "E3E6EA"
 
 HEADERS = ["ID", "候选品", "试销日期", "购入日期", "货源价(元)", "得物核价(元)", "核价后价差率",
            "试销件数", "已卖出件数", "卖出均价(元)", "平台费率", "快递费(元/件)", "单均净利(元)",
-           "满3单？", "加仓决策", "得物价参考", "参考净利(元)", "标签", "门道链接", "得物分享链接"]
+           "满3单？", "加仓决策", "得物价参考", "预估净利(元)", "标签", "货源链接", "得物分享链接"]
 COL = {"ID": "B", "候选品": "C", "试销日期": "D", "购入日期": "E", "货源价": "F", "核价": "G",
        "价差率": "H", "试销件数": "I", "已卖出": "J", "卖出均价": "K", "平台费率": "L",
        "快递费": "M", "单均净利": "N", "满3单": "O", "加仓决策": "P", "得物价参考": "Q",
@@ -114,7 +114,7 @@ def build(items, path, stamp):
     note_row = 5 + len(items) + 1
     ws.merge_cells(start_row=note_row, start_column=2, end_row=note_row, end_column=last_col)
     nc = ws.cell(row=note_row, column=2,
-                 value="用法：①B列ID勿删②得物App搜同款→点分享→复制链接→粘到U列，回传后自动核价并每天跟踪价格（比手填G列省事，G列手填也仍然有效）；E列记购入日期，卖出后补I/J/K列；「加仓」=价差率≥15%且满3单且单均净利≥25元，公式自动判定。F列券后价来自联盟API，下单前自行复核。核完价把文件交回给助手回传，站点即自动算净利排序。")
+                 value="B列ID勿删。F列为联盟参考价，指定规格和券条件需复核；G列可记当前得物报价。分享链接只能补充款式信息，不能自动获取实时卖价。正式核价需记录双方货号、颜色、尺码、时间及截图依据，按INDEPENDENT.md写入verified_quotes.json；超过24小时重新核价。默认费率仅作估算，实际费用需核实。")
     nc.font = Font(size=9, color="8C8A84")
     nc.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
     ws.row_dimensions[note_row].height = 42

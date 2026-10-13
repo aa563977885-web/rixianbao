@@ -63,7 +63,7 @@ def main():
         f.write(sig)
 
     # 3) 得物价直读刷新 + 打分 + 清单 + 渲染
-    for step in ("link_spu.py", "refresh_dewu.py", "scoring.py", "export_tracker.py", "make_html.py"):
+    for step in ("independent.py", "scoring.py", "export_tracker.py", "make_html.py"):
         code, out = run([PY, os.path.join("work", step)])
         print(f"[local] {step}: rc={code}")
         if code != 0:
