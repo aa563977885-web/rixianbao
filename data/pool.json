@@ -16,7 +16,7 @@
     "dewu_spu_id": "1165421",
     "net_profit": null,
     "first_seen": "2026-10-11T03:44:01+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
+    "last_seen": "2026-10-13T23:35:20+00:00",
     "seen_count": 5,
     "dewu_name": "央视报道得物创新体验"
   },
@@ -3022,8 +3022,8 @@
     "article_no": "IF4396-104",
     "color": null,
     "size": null,
-    "gross_profit": 68.6,
-    "du_price": 1026.6,
+    "gross_profit": 65.75,
+    "du_price": 1023.75,
     "cost": 958.0,
     "want_count": 65.0,
     "sales_7d": 27.0,
@@ -3031,10 +3031,10 @@
     "category": "球鞋",
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12228799",
     "dewu_spu_id": "63901795",
-    "net_profit": -79.86,
+    "net_profit": -82.34,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228744",
@@ -3053,8 +3053,8 @@
     "dewu_spu_id": "24242561",
     "net_profit": -4.02,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228733",
@@ -3073,8 +3073,8 @@
     "dewu_spu_id": "19667265",
     "net_profit": 91.18,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228711",
@@ -3082,19 +3082,19 @@
     "article_no": "LW3JGYS",
     "color": null,
     "size": null,
-    "gross_profit": 329.9,
-    "du_price": 1209.9,
+    "gross_profit": 328.95,
+    "du_price": 1208.95,
     "cost": 880.0,
-    "want_count": 156.0,
+    "want_count": 158.0,
     "sales_7d": 370.0,
     "published_at": null,
     "category": "服饰",
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12228711",
     "dewu_spu_id": "19770571",
-    "net_profit": 181.81,
+    "net_profit": 180.97,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228700",
@@ -3113,8 +3113,8 @@
     "dewu_spu_id": "87514368",
     "net_profit": 2.83,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228677",
@@ -3133,8 +3133,8 @@
     "dewu_spu_id": "85858980",
     "net_profit": -1.92,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228653",
@@ -3153,8 +3153,8 @@
     "dewu_spu_id": "6408230",
     "net_profit": 32.21,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228512",
@@ -3173,8 +3173,8 @@
     "dewu_spu_id": "1547881",
     "net_profit": 15.14,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228475",
@@ -3193,8 +3193,8 @@
     "dewu_spu_id": "2848722",
     "net_profit": 47.35,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228442",
@@ -3233,8 +3233,8 @@
     "dewu_spu_id": "75604594",
     "net_profit": 24.54,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228404",
@@ -3242,8 +3242,8 @@
     "article_no": "FV3654-111",
     "color": null,
     "size": null,
-    "gross_profit": 62.8,
-    "du_price": 490.8,
+    "gross_profit": 53.3,
+    "du_price": 481.3,
     "cost": 428.0,
     "want_count": 42.0,
     "sales_7d": 71.0,
@@ -3251,10 +3251,10 @@
     "category": "球鞋",
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12228404",
     "dewu_spu_id": "5527227",
-    "net_profit": -16.0,
+    "net_profit": -24.27,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228329",
@@ -3273,8 +3273,8 @@
     "dewu_spu_id": "16804703",
     "net_profit": 26.76,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228314",
@@ -3282,8 +3282,8 @@
     "article_no": "CW2288-111",
     "color": null,
     "size": null,
-    "gross_profit": 93.65,
-    "du_price": 493.65,
+    "gross_profit": 88.9,
+    "du_price": 488.9,
     "cost": 400.0,
     "want_count": 49.0,
     "sales_7d": 1087.0,
@@ -3291,10 +3291,10 @@
     "category": "球鞋",
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12228314",
     "dewu_spu_id": "1237506",
-    "net_profit": 14.48,
+    "net_profit": 10.34,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228296",
@@ -3313,8 +3313,8 @@
     "dewu_spu_id": "5633013",
     "net_profit": 4.56,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228273",
@@ -3333,8 +3333,8 @@
     "dewu_spu_id": "1237477",
     "net_profit": 24.74,
     "first_seen": "2026-10-12T17:18:54+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 4
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 5
   },
   {
     "carry_id": "12228216",
@@ -3528,8 +3528,8 @@
     "article_no": "1203B031-100",
     "color": null,
     "size": null,
-    "gross_profit": 84.15,
-    "du_price": 446.15,
+    "gross_profit": 83.2,
+    "du_price": 445.2,
     "cost": 362.0,
     "want_count": 37.0,
     "sales_7d": 24.0,
@@ -3537,10 +3537,10 @@
     "category": "球鞋",
     "url": "https://deal.mendaoapp.com/page/carry-referee?carryId=12261406",
     "dewu_spu_id": "32914774",
-    "net_profit": 11.15,
+    "net_profit": 10.32,
     "first_seen": "2026-10-13T11:22:52+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 2
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 3
   },
   {
     "carry_id": "12261329",
@@ -3559,8 +3559,8 @@
     "dewu_spu_id": "19996517",
     "net_profit": 25.21,
     "first_seen": "2026-10-13T11:22:52+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 2
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 3
   },
   {
     "carry_id": "12229150",
@@ -3579,8 +3579,8 @@
     "dewu_spu_id": "1547881",
     "net_profit": 8.03,
     "first_seen": "2026-10-13T11:22:52+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 2
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 3
   },
   {
     "carry_id": "jd-5A8VFOiexQNXuXXqjzM5XuXXqjzM58_3525qIHGm2Vugp9F14",
@@ -3833,8 +3833,8 @@
     "dewu_spu_id": "1547881",
     "net_profit": -13.88,
     "first_seen": "2026-10-13T18:49:35+00:00",
-    "last_seen": "2026-10-13T18:49:35+00:00",
-    "seen_count": 1
+    "last_seen": "2026-10-13T23:35:20+00:00",
+    "seen_count": 2
   },
   {
     "carry_id": "jd-2JQgZRHb8goIkMKFxDdPIkMKFxDdPQ_3SD7smLDY9RbIURDvR",
@@ -3887,6 +3887,24 @@
     "published_at": "2026-10-13T18:57:28+00:00",
     "first_seen": "2026-10-13T19:03:49+00:00",
     "last_seen": "2026-10-13T19:03:49+00:00",
+    "seen_count": 0,
+    "net_profit": null
+  },
+  {
+    "carry_id": "jd-Zv4tI5eQfUxLXzrxB5LpLXzrxB5Lp4_3WEwZIiEwNtXj0v59r",
+    "title": "兰蔻菁纯眼霜20ml淡化细纹抗老护肤品化妆品礼盒生日礼物",
+    "category": "美妆",
+    "cost": 1040.0,
+    "gross": 1200.0,
+    "coupon": 0,
+    "commission_pct": 5.0,
+    "commission_amt": 60.0,
+    "source": "jd",
+    "sales_7d": null,
+    "url": "https://item.jd.com/Zv4tI5eQfUxLXzrxB5LpLXzrxB5Lp4_3WEwZIiEwNtXj0v59r.html",
+    "published_at": "2026-10-13T23:43:20+00:00",
+    "first_seen": "2026-10-13T23:49:40+00:00",
+    "last_seen": "2026-10-13T23:49:40+00:00",
     "seen_count": 0,
     "net_profit": null
   }
