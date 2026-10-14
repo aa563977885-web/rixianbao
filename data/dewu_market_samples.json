@@ -1,4 +1,5 @@
-[{
+[
+{
   "article_no": "237153-BKGY",
   "color": "黑灰",
   "gender": "男款",
@@ -280,10 +281,67 @@
     "dewu-237153-425-history.png",
     "dewu-237153-415-current.png"
   ],
-  "supplier": null,
+  "supplier": {
+    "article_no": "237153-BKGY",
+    "color": "黑灰",
+    "gender": "男款",
+    "source": "京东商品详情页",
+    "shop": "铭华运动户外专营店",
+    "captured_at": "2026-10-14T11:28:29.465Z",
+    "cost_kind": "displayed_to_hand_price",
+    "checkout_verified": false,
+    "delivery_status": "当前配送区域显示预计发货及包邮，未确认最终下单库存",
+    "offers": [
+      {
+        "size": "41.5",
+        "platform_item_id": "10183025767571",
+        "url": "https://item.jd.com/10183025767571.html",
+        "displayed_cost": 307.13,
+        "evidence": [
+          "jd-237153-415-price.jpg"
+        ]
+      },
+      {
+        "size": "42.5",
+        "platform_item_id": "10183025767573",
+        "url": "https://item.jd.com/10183025767573.html",
+        "displayed_cost": 307.13,
+        "evidence": [
+          "jd-237153-425-price.jpg"
+        ]
+      }
+    ],
+    "offer_label": "已享受满300减45；京豆返还未抵扣采购成本",
+    "net_profit": null,
+    "official_check": {
+      "url": "https://item.jd.com/10136298706199.html",
+      "shop": "skechers斯凯奇官方旗舰店",
+      "selected_size": "41",
+      "displayed_cost": 308.13,
+      "status": "此商品暂时售完；41.5、42.5等男款BKGY尺码显示无货",
+      "captured_at": "2026-10-14T11:29:06.919Z"
+    }
+  },
   "seller_settlement": null,
   "fees_verified": false,
   "net_profit": null,
-  "report_status": "得物已采样；同规格货源及费用待核实",
-  "automation_status": "本机单品实测；尚未验证批量采集或定时更新"
-}]
+  "report_status": "同规格货源已匹配；当前无正价差，结算及费用未核实",
+  "automation_status": "本机单品实测；尚未验证批量采集或定时更新",
+  "comparisons": [
+    {
+      "size": "41.5",
+      "displayed_source_cost": 307.13,
+      "buyer_quote": 239.0,
+      "price_gap_before_fees": -68.13,
+      "net_profit": null
+    },
+    {
+      "size": "42.5",
+      "displayed_source_cost": 307.13,
+      "buyer_quote": 236.0,
+      "price_gap_before_fees": -71.13,
+      "net_profit": null
+    }
+  ]
+}
+]
