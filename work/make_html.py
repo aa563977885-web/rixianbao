@@ -25,6 +25,7 @@ SITE_OUT = os.path.join(BASE, "site", "index.html")
 
 sys.path.insert(0, WORK)
 import scoring  # noqa: E402  复用 age_hours/time_factor
+from market_samples import render_samples
 
 VERDICT_RANK = {"待核价": -1, "冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}
 BEIJING = timezone(timedelta(hours=8))
@@ -327,6 +328,7 @@ def main():
     html_doc = html_doc.replace("__OK__", str(n_ok))
     html_doc = html_doc.replace("__CARDS__", cards_html)
     html_doc = html_doc.replace("__LIVE_LINKS__", live_html)
+    html_doc = html_doc.replace("__MARKET__", render_samples(os.path.join(ROOT, "data", "dewu_market_samples.json")))
 
     checklist_html = ""
     if os.path.exists(os.path.join(BASE, "site", "checklist.xlsx")):
@@ -426,8 +428,9 @@ TEMPLATE = """<!DOCTYPE html>
     待核价商品不计算利润；报价超过24小时需重新核实。净利按配置费用预估，佣金不提前计入。
     __CHECKLIST__</p>
   </header>
+  __MARKET__
   <div class="tabs">
-    <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 线报</button>
+    <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 货源候选</button>
     <button class="tab" id="tabbtn-live" onclick="showTab('live')">🔴 实时入口</button>
   </div>
   <div class="stat">

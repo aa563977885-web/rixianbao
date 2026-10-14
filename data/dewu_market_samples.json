@@ -1,0 +1,289 @@
+[{
+  "article_no": "237153-BKGY",
+  "color": "黑灰",
+  "gender": "男款",
+  "title": "Skechers D'LITES 1.0 奶茶熊2代 椰乳大理石",
+  "identity_verification": "本次商品详情主货号、颜色和男款描述已人工核对",
+  "quote_captured_at": "2026-10-14T18:23:32.456856+08:00",
+  "quote_kind": "buyer_quote",
+  "quotes": [
+    {
+      "size": "39",
+      "buyer_quote": 286.0
+    },
+    {
+      "size": "39.5",
+      "buyer_quote": 279.0
+    },
+    {
+      "size": "40",
+      "buyer_quote": 263.0
+    },
+    {
+      "size": "41",
+      "buyer_quote": 240.0
+    },
+    {
+      "size": "41.5",
+      "buyer_quote": 239.0
+    },
+    {
+      "size": "42",
+      "buyer_quote": 256.0
+    },
+    {
+      "size": "42.5",
+      "buyer_quote": 236.0
+    },
+    {
+      "size": "43",
+      "buyer_quote": 242.0
+    },
+    {
+      "size": "44",
+      "buyer_quote": 268.0
+    },
+    {
+      "size": "45",
+      "buyer_quote": 327.0
+    },
+    {
+      "size": "45.5",
+      "buyer_quote": 358.0
+    },
+    {
+      "size": "46",
+      "buyer_quote": 321.0
+    }
+  ],
+  "sales": [
+    {
+      "size": "41.5",
+      "records": [
+        {
+          "spec": "黑灰 41.5",
+          "price": 229.0,
+          "relative_time": "21小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 219.0,
+          "relative_time": "39小时前",
+          "channel_label": "还价"
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 230.0,
+          "relative_time": "68小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 230.0,
+          "relative_time": "96小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 239.0,
+          "relative_time": "5天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 238.0,
+          "relative_time": "6天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 238.0,
+          "relative_time": "7天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 238.0,
+          "relative_time": "10天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 239.0,
+          "relative_time": "11天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 242.0,
+          "relative_time": "16天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 243.0,
+          "relative_time": "18天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 243.0,
+          "relative_time": "18天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 41.5",
+          "price": 244.0,
+          "relative_time": "19天前",
+          "channel_label": ""
+        }
+      ],
+      "observed_within_7d": 6,
+      "observed_price_min": 219.0,
+      "observed_price_max": 239.0,
+      "observed_price_mean": 230.83,
+      "full_sales_count_7d": null,
+      "coverage": "App展示记录；非全量销量；7天前的边界记录未计入",
+      "captured_at": "2026-10-14T18:27:10.419458+08:00"
+    },
+    {
+      "size": "42.5",
+      "records": [
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "8小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "28小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "48小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "51小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "54小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "74小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "93小时前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 235.0,
+          "relative_time": "4天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "5天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 235.0,
+          "relative_time": "5天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "6天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "7天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "8天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 236.0,
+          "relative_time": "8天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 237.0,
+          "relative_time": "9天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "11天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "11天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "11天前",
+          "channel_label": ""
+        },
+        {
+          "spec": "黑灰 42.5",
+          "price": 242.0,
+          "relative_time": "11天前",
+          "channel_label": ""
+        }
+      ],
+      "observed_within_7d": 11,
+      "observed_price_min": 235.0,
+      "observed_price_max": 242.0,
+      "observed_price_mean": 236.36,
+      "full_sales_count_7d": null,
+      "coverage": "App展示记录；非全量销量；7天前的边界记录未计入",
+      "captured_at": "2026-10-14T18:25:56.614307+08:00"
+    }
+  ],
+  "source": "得物 Android App公开商品页面；通过模拟器读取",
+  "evidence": [
+    "dewu-237153-current-sales.png",
+    "dewu-237153-425-history.png",
+    "dewu-237153-415-current.png"
+  ],
+  "supplier": null,
+  "seller_settlement": null,
+  "fees_verified": false,
+  "net_profit": null,
+  "report_status": "得物已采样；同规格货源及费用待核实",
+  "automation_status": "本机单品实测；尚未验证批量采集或定时更新"
+}]
