@@ -20,6 +20,7 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import jd_client  # noqa: E402
 import tbk_client  # noqa: E402
+from independent import prepare_pool  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONF = os.path.join(ROOT, "config", "allies.json")
@@ -66,27 +67,12 @@ def brand_hit(title, brands):
 def cleanup_pool(pool_map, brands):
     """每轮对整个池子统一清洗（存量+增量一起）：
     1) 联盟条目必须过品牌白名单（早期无白名单时混进的白牌存量也一并清掉）；
-    2) 京东同款多 SKU 标题重复，按标题前 20 字去重，保留到手价最低的一条。"""
-    import re as _re
+    各平台商品ID去重由 pool_map 完成；不按标题合并不同规格。"""
     drop = [cid for cid, it in pool_map.items()
             if it.get("source") in ("tbk", "jd") and brands and not brand_hit(it.get("title"), brands)]
     for cid in drop:
         del pool_map[cid]
-    seen = {}
-    for cid, it in list(pool_map.items()):
-        if it.get("source") not in ("tbk", "jd"):
-            continue
-        key = _re.sub(r"\s", "", str(it.get("title") or ""))[:20]
-        prev = seen.get(key)
-        if prev is None:
-            seen[key] = cid
-            continue
-        a, b = pool_map[prev], it
-        if (b.get("cost") or 9e9) < (a.get("cost") or 9e9):
-            del pool_map[prev]
-            seen[key] = cid
-        else:
-            del pool_map[cid]
+    # 不再按标题前缀去重：不同尺码、颜色的 SKU 必须分别保留。
     return len(drop)
 
 
@@ -208,6 +194,9 @@ def main():
     save_json(NOTES, {"updated": now_iso(), "notes": notes})
 
     pool = load_json(POOL, [])
+    if isinstance(pool, dict):
+        pool = list(pool.values())
+    pool = prepare_pool(pool, load_json(os.path.join(ROOT, "data", "verified_quotes.json"), []))
     if isinstance(pool, list):
         pool_map = {str(d.get("carry_id")): d for d in pool if d.get("carry_id")}
     else:
@@ -241,7 +230,8 @@ def main():
     if dropped:
         print(f"清洗：移除非品牌/重复条目 {dropped} 条")
 
-    save_json(POOL, list(pool_map.values()))
+    own = prepare_pool(list(pool_map.values()), load_json(os.path.join(ROOT, "data", "verified_quotes.json"), []))
+    save_json(POOL, own)
     save_json(EXPOSURE, exposure)
     save_json(PRICE_HISTORY, history)
     print(f"汇总：联盟候选 {len(items)} 条 | 新增 {new_count} | 池子共 {len(pool_map)} 条")

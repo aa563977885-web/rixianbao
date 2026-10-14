@@ -25,6 +25,7 @@ SITE_OUT = os.path.join(BASE, "site", "index.html")
 
 sys.path.insert(0, WORK)
 import scoring  # noqa: E402  复用 age_hours/time_factor
+from market_samples import render_samples
 
 VERDICT_RANK = {"待核价": -1, "冷门优选": 0, "普通": 1, "可蹲·降价中": 2, "可蹲": 3, "黑名单": 4, "过期": 5}
 BEIJING = timezone(timedelta(hours=8))
@@ -45,6 +46,8 @@ def load_scored():
 
 def load_excel_extra():
     """按 carryId 建 Excel 补充字段索引（教程/涨价预期/校准/说明/发布/码数/销量）。"""
+    if not os.path.exists(XLSX):
+        return {}
     import openpyxl
     try:
         wb = openpyxl.load_workbook(XLSX)
@@ -139,7 +142,7 @@ def build_cards(scored, excel, ts):
         if verdict == "待核价":
             # 联盟新券：得物侧数据（货号/得物价/净利/稀缺分/销量）只有核价后才有，
             # 不渲染空行，只给到手价 + 联盟佣金（高佣金=商家冲量推广，真实信号）
-            rows.append(("<tr><td>到手价</td><td>¥" + fmt(c.get("cost")) + "</td></tr>"))
+            rows.append(("<tr><td>联盟参考价</td><td>¥" + fmt(c.get("cost")) + "（规格及券条件待复核）</td></tr>"))
             if c.get("commission_amt") is not None and c.get("commission_amt") != 0:
                 pct = c.get("commission_pct")
                 pct_txt = f"（{fmt(pct)}%）" if pct else ""
@@ -148,7 +151,7 @@ def build_cards(scored, excel, ts):
             rows.append(("<tr><td>货号</td><td>" + H.escape(str(c.get("article_no") or "—")) + "</td></tr>"))
             rows.append(("<tr><td>到手价</td><td>¥" + fmt(c.get("cost")) + "</td></tr>"))
             rows.append(("<tr><td>得物价</td><td>¥" + fmt(c.get("du_price")) + "</td></tr>"))
-            rows.append(("<tr><td>净利</td><td>¥" + fmt(net) + "</td></tr>"))
+            rows.append(("<tr><td>预估净利</td><td>¥" + fmt(net) + "</td></tr>"))
             if verdict not in ("过期", "黑名单"):
                 rows.append(("<tr><td>稀缺分</td><td>" + (str(score) if score is not None else "—") + "</td></tr>"))
             tr = c.get("price_trend")
@@ -163,13 +166,23 @@ def build_cards(scored, excel, ts):
             rows.append(("<tr><td>得物7天销量</td><td>" + H.escape(str(sales)) + "</td></tr>"))
             if verdict not in ("过期", "黑名单"):
                 rows.append(("<tr><td>曝光次数</td><td>" + str(c.get("seen_count") or 0) + " 次</td></tr>"))
+        source_name = "京东联盟" if c.get("source") == "jd" else "淘宝联盟"
+        rows.append("<tr><td>选品来源</td><td>" + source_name + "</td></tr>")
+        if c.get("verification_note"):
+            rows.append("<tr><td>待核实</td><td>" + H.escape(c["verification_note"]) + "</td></tr>")
+        if not c.get("url"):
+            rows.append("<tr><td>货源链接</td><td>待核实；可按商品名称在京东/淘宝搜索</td></tr>")
+        if c.get("du_price_checked_at"):
+            rows.append("<tr><td>得物核价时间</td><td>" + H.escape(c["du_price_checked_at"]) + "</td></tr>")
+            kind = "卖家预计到手价" if c.get("dewu_price_kind") == "seller_settlement" else "买家当前报价，按配置费率估算"
+            rows.append("<tr><td>核价口径</td><td>" + kind + "</td></tr>")
         ls = c.get("last_seen")
         if ls:
             try:
                 from datetime import datetime as _dt
                 ldt = _dt.fromisoformat(str(ls)).replace(tzinfo=None)
                 note = ("联盟券后价随活动变动" if c.get("source") in ("tbk", "jd")
-                        else "门道最低价实时波动")
+                        else "价格随活动变动")
                 rows.append(("<tr><td>数据时间</td><td>" + ldt.strftime("%m-%d %H:%M") +
                              " 抓取｜" + note + "，下单前以App为准</td></tr>"))
             except ValueError:
@@ -196,6 +209,10 @@ def build_cards(scored, excel, ts):
             p.append('<button class="btn copy" onclick="copyLink(this,\'' + H.escape(c["url"]).replace("'", "\\'") + '\')">📋 复制链接</button>')
             p.append('</div>')
             p.append('<div class="hint">🔍得物查价：点一下复制货号或商品词，去得物App顶部搜索框粘贴即可；📋复制链接：粘到🍑🐶 App 下单更快</div>')
+        else:
+            kw = search_keyword(c.get("title")) or ""
+            p.append('<button class="btn dewu" onclick="copyDewu(this,\'' + H.escape(str(kw)).replace("'", "\\'") + '\')">复制查价词</button>')
+            p.append('<div class="hint">货源链接待核实；可复制商品词，在京东、淘宝及得物搜索同款。</div>')
         if c.get("tut"):
             p.append('<details><summary>📖 下单教程</summary><div class="tut">' + H.escape(str(c["tut"])).replace("\n", "<br>") + '</div></details>')
         if c.get("cal"):
@@ -211,14 +228,14 @@ def verdict_banner(verdict, net, item=None):
     net_txt = ("+" + fmt(net)) if net is not None else "—"
     if verdict == "待核价":
         cost = (item or {}).get("cost")
-        return ('<div class="profit verifyline">🆕 联盟新券 · 券后 <b>¥' + fmt(cost) +
-                '</b>｜打开得物App搜同款核价，价差≥15%就回填清单试销</div>')
+        return ('<div class="profit verifyline">🆕 独立候选 · 联盟参考 <b>¥' + fmt(cost) +
+                '</b>｜核对同货号、颜色、尺码及费用后，再评估是否有利润</div>')
     if verdict == "冷门优选":
         return '<div class="profit coldline">⭐ 冷门优选　净利 <b>' + net_txt + '</b> 元</div>'
     if verdict == "可蹲·降价中":
         return '<div class="profit watchline">👀 可蹲·降价中　当前净利 <b>' + net_txt + '</b> 元，仍在跌，蹲到心理价再入</div>'
     if verdict == "可蹲":
-        return '<div class="profit watchline">👀 可蹲　热度已过仍在售，净利 <b>' + net_txt + '</b> 元，无人跟你抢</div>'
+        return '<div class="profit watchline">👀 继续观察　预估净利 <b>' + net_txt + '</b> 元，需核实当前库存与报价</div>'
     if verdict == "过期":
         return '<div class="profit redline">⏰ 已过期　净利 <b>' + net_txt + '</b> 元</div>'
     if verdict == "黑名单":
@@ -230,7 +247,7 @@ def verdict_banner(verdict, net, item=None):
 
 def main():
     scored = load_scored()
-    if not scored:
+    if scored is None:
         print("缺少 data/scored.json，先跑 python work/scoring.py")
         sys.exit(1)
     excel = load_excel_extra()
@@ -256,9 +273,9 @@ def main():
         groups[key].sort(key=lambda x: -(x.get("scarcity_score") or 0))
 
     section_titles = {
-        "verify": "🆕 联盟新券 · 待App核价（券后价已知，查得物价后回填试销清单）",
+        "verify": "🆕 独立选品候选 · 待核价（联盟参考价不代表指定规格到手价）",
         "picks": "📋 今日机会",
-        "radar": "👀 盯款雷达（热度已过、仍有利润——别人抢完剩下的确定性）",
+        "radar": "👀 盯款雷达（观察价格变化，核实报价后再评估）",
     }
     cards_by_group = {}
     for key, items in groups.items():
@@ -311,6 +328,7 @@ def main():
     html_doc = html_doc.replace("__OK__", str(n_ok))
     html_doc = html_doc.replace("__CARDS__", cards_html)
     html_doc = html_doc.replace("__LIVE_LINKS__", live_html)
+    html_doc = html_doc.replace("__MARKET__", render_samples(os.path.join(ROOT, "data", "dewu_market_samples.json")))
 
     checklist_html = ""
     if os.path.exists(os.path.join(BASE, "site", "checklist.xlsx")):
@@ -334,7 +352,7 @@ TEMPLATE = """<!DOCTYPE html>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>得物搬砖 · 差异化线报</title>
+<title>自己的线报 · 联盟独立选品</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -404,14 +422,15 @@ TEMPLATE = """<!DOCTYPE html>
 <body>
 <div class="wrap">
   <header>
-    <h1>📦 得物搬砖 · 差异化线报 v3</h1>
-    <p>数据更新于 __STAMP__ ｜ 共 __N__ 条 ｜ ⭐冷门优选 __COLD__ ｜ 👀可蹲 __WATCH__ ｜ 净利≥50 __OK__<br>
-    新品看「今日机会」；被抢烂的款交给「盯款雷达」等降价；黑名单/过期收进折叠区。<br>
-    稀缺分 = 净利×时效×供需×类目×(1−曝光)，类目分已接入你的账单先验。下单前自行核价。
+    <h1>📦 自己的线报 · 联盟独立选品</h1>
+    <p>页面生成于 __STAMP__ ｜ 共 __N__ 条 ｜ ⭐冷门优选 __COLD__ ｜ 👀可蹲 __WATCH__ ｜ 预估净利≥50 __OK__<br>
+    从京东、淘宝联盟发现候选，按同货号、颜色和尺码独立核价。<br>
+    待核价商品不计算利润；报价超过24小时需重新核实。净利按配置费用预估，佣金不提前计入。
     __CHECKLIST__</p>
   </header>
+  __MARKET__
   <div class="tabs">
-    <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 线报</button>
+    <button class="tab on" id="tabbtn-main" onclick="showTab('main')">📋 货源候选</button>
     <button class="tab" id="tabbtn-live" onclick="showTab('live')">🔴 实时入口</button>
   </div>
   <div class="stat">
@@ -425,12 +444,12 @@ TEMPLATE = """<!DOCTYPE html>
   </div>
   <div id="tab-live" style="display:none">
     <div class="livebox">
-      <div class="liveintro">🔴 得物官方“门道商机”直达入口（今日机会与盯款雷达里的商品，点开看得物实时数据）</div>
+      <div class="liveintro">货源入口：联盟接口提供的京东、淘宝商品链接。实际规格、券条件及库存需在货源页确认。</div>
       __LIVE_LINKS__
       <div class="liveintro" style="margin-top:10px;padding-top:10px;border-top:1px dashed #e3e6ea;">❗ 下单前自行核对到手价与得物实时卖价；盯款雷达的款建议等降价再入。</div>
     </div>
   </div>
-  <footer>数据来源：门道商机自动抓取 + 自有价格轨迹追踪（data/price_history.json）+ 个人账单类目先验<br>仅为信息整理，不构成投资建议；下单前自行核实　© 得物搬砖工具箱 · __STAMP__</footer>
+  <footer>选品来源：京东联盟 / 淘宝联盟；得物报价来自独立核价记录。<br>当前版本以人工核价为主，自动批量查价尚未接通。下单前核实同款规格、库存和费用。<br>© 自己的线报 · __STAMP__</footer>
 </div>
 <script>
 function showTab(name){

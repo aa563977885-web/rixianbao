@@ -189,6 +189,8 @@ def compute_net(item, rates):
     low, buy = item.get("du_price"), item.get("cost")
     if low is None or buy is None:
         return None
+    if item.get("dewu_price_kind") == "seller_settlement":
+        return round(low - buy - item["shipping_cost"], 2)
     cat = item.get("category") or "其他"
     rate = rates["category_rates"].get(cat, 0.10) + rates["transfer_rate"]
     fee = round(low * rate + rates["fixed_fee"], 2)
@@ -197,7 +199,8 @@ def compute_net(item, rates):
 
 def score_item(item, rates, boost, cut, prior, history, now=None):
     # 联盟源（tbk/jd）条目：得物价未知，不参与稀缺分，归「待核价」由 App 核价
-    if item.get("source") in ("tbk", "jd") and item.get("du_price") is None:
+    if item.get("source") in ("tbk", "jd") and (item.get("du_price") is None or
+            (item.get("independent") and item.get("price_status") != "已核价")):
         trend = price_trend(item.get("carry_id"), history)
         out = {
             "net_profit": None,
@@ -266,6 +269,8 @@ def main():
     pool = load_json(POOL, [])
     if not isinstance(pool, list):
         pool = list(pool.values())
+    from independent import prepare_pool
+    pool = prepare_pool(pool, load_json(os.path.join(ROOT, "data", "verified_quotes.json"), []))
 
     items = []
     for it in pool:

@@ -1,0 +1,409 @@
+[
+  {
+    "article_no": "237153-BKGY",
+    "color": "黑灰",
+    "gender": "男款",
+    "title": "Skechers D'LITES 1.0 奶茶熊2代 椰乳大理石",
+    "identity_verification": "本次商品详情主货号、颜色和男款描述已人工核对",
+    "quote_captured_at": "2026-10-14T18:23:32.456856+08:00",
+    "quote_kind": "buyer_quote",
+    "quotes": [
+      {
+        "size": "39",
+        "buyer_quote": 286.0
+      },
+      {
+        "size": "39.5",
+        "buyer_quote": 279.0
+      },
+      {
+        "size": "40",
+        "buyer_quote": 263.0
+      },
+      {
+        "size": "41",
+        "buyer_quote": 240.0
+      },
+      {
+        "size": "41.5",
+        "buyer_quote": 239.0
+      },
+      {
+        "size": "42",
+        "buyer_quote": 256.0
+      },
+      {
+        "size": "42.5",
+        "buyer_quote": 236.0
+      },
+      {
+        "size": "43",
+        "buyer_quote": 242.0
+      },
+      {
+        "size": "44",
+        "buyer_quote": 268.0
+      },
+      {
+        "size": "45",
+        "buyer_quote": 327.0
+      },
+      {
+        "size": "45.5",
+        "buyer_quote": 358.0
+      },
+      {
+        "size": "46",
+        "buyer_quote": 321.0
+      }
+    ],
+    "sales": [
+      {
+        "size": "41.5",
+        "records": [
+          {
+            "spec": "黑灰 41.5",
+            "price": 229.0,
+            "relative_time": "21小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 219.0,
+            "relative_time": "39小时前",
+            "channel_label": "还价"
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 230.0,
+            "relative_time": "68小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 230.0,
+            "relative_time": "96小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 239.0,
+            "relative_time": "5天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 238.0,
+            "relative_time": "6天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 238.0,
+            "relative_time": "7天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 238.0,
+            "relative_time": "10天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 239.0,
+            "relative_time": "11天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 242.0,
+            "relative_time": "16天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 243.0,
+            "relative_time": "18天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 243.0,
+            "relative_time": "18天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 41.5",
+            "price": 244.0,
+            "relative_time": "19天前",
+            "channel_label": ""
+          }
+        ],
+        "observed_within_7d": 6,
+        "observed_price_min": 219.0,
+        "observed_price_max": 239.0,
+        "observed_price_mean": 230.83,
+        "full_sales_count_7d": null,
+        "coverage": "App展示记录；非全量销量；7天前的边界记录未计入",
+        "captured_at": "2026-10-14T18:27:10.419458+08:00"
+      },
+      {
+        "size": "42.5",
+        "records": [
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "8小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "28小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "48小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "51小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "54小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "74小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "93小时前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 235.0,
+            "relative_time": "4天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "5天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 235.0,
+            "relative_time": "5天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "6天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "7天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "8天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 236.0,
+            "relative_time": "8天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 237.0,
+            "relative_time": "9天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "11天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "11天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "11天前",
+            "channel_label": ""
+          },
+          {
+            "spec": "黑灰 42.5",
+            "price": 242.0,
+            "relative_time": "11天前",
+            "channel_label": ""
+          }
+        ],
+        "observed_within_7d": 11,
+        "observed_price_min": 235.0,
+        "observed_price_max": 242.0,
+        "observed_price_mean": 236.36,
+        "full_sales_count_7d": null,
+        "coverage": "App展示记录；非全量销量；7天前的边界记录未计入",
+        "captured_at": "2026-10-14T18:25:56.614307+08:00"
+      }
+    ],
+    "source": "得物 Android App公开商品页面；通过模拟器读取",
+    "evidence": [
+      "dewu-237153-current-sales.png",
+      "dewu-237153-425-history.png",
+      "dewu-237153-415-current.png"
+    ],
+    "supplier": {
+      "article_no": "237153-BKGY",
+      "color": "黑灰",
+      "gender": "男款",
+      "source": "京东商品详情页",
+      "shop": "铭华运动户外专营店",
+      "captured_at": "2026-10-14T11:28:29.465Z",
+      "cost_kind": "displayed_to_hand_price",
+      "checkout_verified": false,
+      "delivery_status": "当前配送区域显示预计发货及包邮，未确认最终下单库存",
+      "offers": [
+        {
+          "size": "41.5",
+          "platform_item_id": "10183025767571",
+          "url": "https://item.jd.com/10183025767571.html",
+          "displayed_cost": 307.13,
+          "evidence": [
+            "jd-237153-415-price.jpg"
+          ]
+        },
+        {
+          "size": "42.5",
+          "platform_item_id": "10183025767573",
+          "url": "https://item.jd.com/10183025767573.html",
+          "displayed_cost": 307.13,
+          "evidence": [
+            "jd-237153-425-price.jpg"
+          ]
+        }
+      ],
+      "offer_label": "已享受满300减45；京豆返还未抵扣采购成本",
+      "net_profit": null,
+      "official_check": {
+        "url": "https://item.jd.com/10136298706199.html",
+        "shop": "skechers斯凯奇官方旗舰店",
+        "selected_size": "41",
+        "displayed_cost": 308.13,
+        "status": "此商品暂时售完；41.5、42.5等男款BKGY尺码显示无货",
+        "captured_at": "2026-10-14T11:29:06.919Z"
+      }
+    },
+    "seller_settlement": null,
+    "fees_verified": false,
+    "net_profit": null,
+    "report_status": "同规格货源已匹配；当前无正价差，结算及费用未核实",
+    "automation_status": "本机单品实测；尚未验证批量采集或定时更新",
+    "income_sample": {
+      "article_no": "237153-BKGY",
+      "color": "黑灰",
+      "gender": "男款",
+      "price_kind": "app_estimated_income",
+      "channel": "普通发货",
+      "tab_verified": true,
+      "captured_at": "2026-10-14T20:24:22.665414+08:00",
+      "records": [
+        {
+          "size": "39",
+          "estimated_income": 223.04
+        },
+        {
+          "size": "39.5",
+          "estimated_income": 216.11
+        },
+        {
+          "size": "40",
+          "estimated_income": 200.27
+        },
+        {
+          "size": "41",
+          "estimated_income": 177.5
+        },
+        {
+          "size": "41.5",
+          "estimated_income": 167.6
+        },
+        {
+          "size": "42",
+          "estimated_income": 193.34
+        },
+        {
+          "size": "42.5",
+          "estimated_income": 173.54
+        },
+        {
+          "size": "43",
+          "estimated_income": 179.48
+        },
+        {
+          "size": "44",
+          "estimated_income": 205.22
+        },
+        {
+          "size": "45",
+          "estimated_income": 260.78
+        }
+      ],
+      "evidence": [
+        "dewu-237153-direct-income.png"
+      ],
+      "fee_breakdown": null,
+      "coverage": "当前页面可见10个尺码；预计收入标签选中状态、货号和配色均已校验",
+      "navigation": "direct_product_link_without_search",
+      "actual_settlement": null
+    },
+    "comparisons": [
+      {
+        "size": "41.5",
+        "displayed_source_cost": 307.13,
+        "buyer_quote": 239.0,
+        "price_gap_before_fees": -68.13,
+        "net_profit": null,
+        "estimated_income": 167.6,
+        "income_minus_source_cost": -139.53
+      },
+      {
+        "size": "42.5",
+        "displayed_source_cost": 307.13,
+        "buyer_quote": 236.0,
+        "price_gap_before_fees": -71.13,
+        "net_profit": null,
+        "estimated_income": 173.54,
+        "income_minus_source_cost": -133.59
+      }
+    ]
+  }
+]
