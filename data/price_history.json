@@ -6151,6 +6151,11 @@
       "2026-10-13T23:35:20+00:00",
       481.3,
       428.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      480.35,
+      428.0
     ]
   ],
   "12228329": [
@@ -6271,6 +6276,11 @@
       "2026-10-14T03:21:33+00:00",
       521.2,
       456.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      520.25,
+      456.0
     ]
   ],
   "12228205": [
@@ -6298,6 +6308,11 @@
       "2026-10-14T03:21:33+00:00",
       519.3,
       430.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      508.85,
+      430.0
     ]
   ],
   "12228184": [
@@ -6324,6 +6339,11 @@
     [
       "2026-10-14T03:21:33+00:00",
       453.6,
+      400.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      451.78,
       400.0
     ]
   ],
@@ -6648,6 +6668,11 @@
       "2026-10-14T03:21:33+00:00",
       442.35,
       362.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      419.55,
+      362.0
     ]
   ],
   "12261329": [
@@ -6664,6 +6689,11 @@
     [
       "2026-10-14T03:21:33+00:00",
       389.9,
+      299.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      388.08,
       299.0
     ]
   ],
@@ -7043,6 +7073,11 @@
     [
       "2026-10-14T03:21:33+00:00",
       472.75,
+      411.0
+    ],
+    [
+      "2026-10-14T09:15:21+00:00",
+      471.8,
       411.0
     ]
   ],
@@ -7588,6 +7623,160 @@
   "jd-Wl4yE2NZMLRfI1RDphGefI1RDphGe4_3QWdDLcL7d2csUF6rR": [
     [
       "2026-10-14T03:37:00+00:00",
+      79.0,
+      null
+    ]
+  ],
+  "jd-nwQ1dg1V0HDDNGCykUymDNGCykUymQ_3erE9uGRjC1NwoQdLe": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      994.0,
+      null
+    ]
+  ],
+  "jd-QrQUMeDdE8vBpOnWzaH4BpOnWzaH4Q_3sdbABfpCnUpNCvNcC": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      56.0,
+      null
+    ]
+  ],
+  "jd-6ZTjQ7b9xSUFdSujeXSNFdSujeXSNT_3FGgFy7qtu7b0KvobO": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      8.0,
+      null
+    ]
+  ],
+  "jd-YRQLfyCTALKJarRBhtYOJarRBhtYOQ_3bnRYPReiRLa3Bz2Tz": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      30.0,
+      null
+    ]
+  ],
+  "jd-qY8X2Lswzz8S5bgvSDu7S5bgvSDu78_3m8L81LyUgXXlxkVjA": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      86.0,
+      null
+    ]
+  ],
+  "jd-H4rW9HPkuxG3jCC1zymz3jCC1zymzr_6qw8QXwmk7XJJpcz7z": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      73.0,
+      null
+    ]
+  ],
+  "jd-JBQ6AYcALqZqMhP9IDeGqMhP9IDeGQ_364ty2shzPY4gETV8R": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      53.0,
+      null
+    ]
+  ],
+  "jd-SF4M9K0KPtDRYnci1xB9RYnci1xB94_327om9606cMYBfMDzT": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      2699.0,
+      null
+    ]
+  ],
+  "jd-IwQNjwY7TUF3HnVmHFDZ3HnVmHFDZQ_cIOfgHv9UEYSwOjhUt": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      1149.0,
+      null
+    ]
+  ],
+  "jd-hd4KVCWl8l1CSqXAISUPCSqXAISUP4_3xcjcg3qRXKK6m5gxZ": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      75.0,
+      null
+    ]
+  ],
+  "jd-8YQrR1gGsj2IBeKrudOIIBeKrudOIQ_391fhqbuHKrB4mXmd6": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      4099.0,
+      null
+    ]
+  ],
+  "jd-BXTDv0f01wy1T7pqNvlJ1T7pqNvlJT_3klNf83gapDT9lP80J": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      8749.0,
+      null
+    ]
+  ],
+  "jd-lp4fxEvi0pGVHRwaMLOvVHRwaMLOv4_3OPKaCRbTwfHP3Xz8x": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      3999.0,
+      null
+    ]
+  ],
+  "jd-QrQUMeDdE8vBpOnWv4N0BpOnWv4N0Q_3sdbABfpCnejJ1hSQC": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      11.9,
+      null
+    ]
+  ],
+  "jd-uKQvkBIXjQ59rpYxGDtM9rpYxGDtMQ_3ZXBbQkizYBD740y1R": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      89.0,
+      null
+    ]
+  ],
+  "jd-EMTwGUtFsgjxQVFc5B9DxQVFc5B9DT_340nuU6AWFwQCw7N6g": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      79.0,
+      null
+    ]
+  ],
+  "jd-Wl4yE2NZMLRfI1df8ezIfI1df8ezI4_3QWdDLcL7d2csUF6rR": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      79.0,
+      null
+    ]
+  ],
+  "jd-ra4PatdOrkTEc0BNpae6Ec0BNpae64_3df4TuvDaBthRLqDsA": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      139.0,
+      null
+    ]
+  ],
+  "jd-aBXTrxV6XEuH0Zeqazs0H0Zeqazs0X_3paYXLn77exIhriToS": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      339.0,
+      null
+    ]
+  ],
+  "jd-Ip47p46sefZQZAJONMYnQZAJONMYn4_3NM1doBNOJ4NTnSZu9": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      324.0,
+      null
+    ]
+  ],
+  "jd-uKQvkBIXjQ59rpYxGnKy9rpYxGnKyQ_3ZXBbQkizYBE2gROIR": [
+    [
+      "2026-10-14T09:29:49+00:00",
+      324.0,
+      null
+    ]
+  ],
+  "jd-VinmS6uuUOlSGsWPW8biSGsWPW8bin_3XCylg9YWW64jc3eir": [
+    [
+      "2026-10-14T09:29:49+00:00",
       79.0,
       null
     ]
