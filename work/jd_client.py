@@ -14,6 +14,7 @@ import os
 import time
 
 import requests
+from jd_offers import reference_price
 
 GATEWAY = "https://api.jd.com/routerjson"
 
@@ -113,16 +114,13 @@ def goods_rank(rank_id, page=1, page_size=20):
     out = []
     for it in qr.get("data") or []:
         g = it.get("rankGoodsResp") or it
-        pid = g.get("purchasePriceInfo") or {}
         wl = float(g.get("wlprice") or 0)
-        purchase = float(pid.get("purchasePrice") or wl)
-        coupon = max([float(c.get("discount") or 0) for c in (pid.get("couponList") or [])] or [0])
         sku = str(g.get("skuId") or g.get("itemId") or "")
         out.append({
             "sku_id": sku,
             "title": g.get("skuName", ""),
             "price": wl,
-            "lowest_price": round(max(purchase - coupon, 0), 2),
+            "lowest_price": reference_price(g) or wl,
             "shop": "",
             "commission": round(wl * float(g.get("commissionShare") or 0) / 100, 2),
             "commission_pct": float(g.get("commissionShare") or 0),
