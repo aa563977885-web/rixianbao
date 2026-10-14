@@ -327,20 +327,81 @@
   "net_profit": null,
   "report_status": "同规格货源已匹配；当前无正价差，结算及费用未核实",
   "automation_status": "本机单品实测；尚未验证批量采集或定时更新",
+  "income_sample": {
+    "article_no": "237153-BKGY",
+    "color": "黑灰",
+    "gender": "男款",
+    "price_kind": "app_estimated_income",
+    "channel": "普通发货",
+    "tab_verified": true,
+    "captured_at": "2026-10-14T19:51:52.743434+08:00",
+    "records": [
+      {
+        "size": "39",
+        "estimated_income": 223.04
+      },
+      {
+        "size": "39.5",
+        "estimated_income": 216.11
+      },
+      {
+        "size": "40",
+        "estimated_income": 200.27
+      },
+      {
+        "size": "41",
+        "estimated_income": 177.5
+      },
+      {
+        "size": "41.5",
+        "estimated_income": 167.6
+      },
+      {
+        "size": "42",
+        "estimated_income": 193.34
+      },
+      {
+        "size": "42.5",
+        "estimated_income": 173.54
+      },
+      {
+        "size": "43",
+        "estimated_income": 179.48
+      },
+      {
+        "size": "44",
+        "estimated_income": 205.22
+      },
+      {
+        "size": "45",
+        "estimated_income": 260.78
+      }
+    ],
+    "evidence": [
+      "dewu-237153-estimated-income.png"
+    ],
+    "fee_breakdown": null,
+    "coverage": "当前页面可见10个尺码；预计收入标签选中状态、货号和配色均已校验",
+    "actual_settlement": null
+  },
   "comparisons": [
     {
       "size": "41.5",
       "displayed_source_cost": 307.13,
       "buyer_quote": 239.0,
       "price_gap_before_fees": -68.13,
-      "net_profit": null
+      "net_profit": null,
+      "estimated_income": 167.6,
+      "income_minus_source_cost": -139.53
     },
     {
       "size": "42.5",
       "displayed_source_cost": 307.13,
       "buyer_quote": 236.0,
       "price_gap_before_fees": -71.13,
-      "net_profit": null
+      "net_profit": null,
+      "estimated_income": 173.54,
+      "income_minus_source_cost": -133.59
     }
   ]
 }

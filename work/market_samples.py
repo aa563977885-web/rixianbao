@@ -6,6 +6,44 @@ import re
 from datetime import datetime, timezone
 
 
+def validated_income(sample, now):
+    income = sample.get('income_sample')
+    if not isinstance(income, dict):
+        return {}, None
+    try:
+        if any(not sample.get(k) or income.get(k) != sample[k] for k in ('article_no', 'color', 'gender')):
+            return {}, None
+        if (income.get('price_kind') != 'app_estimated_income' or income.get('channel') != '普通发货'
+                or income.get('tab_verified') is not True):
+            return {}, None
+        captured = datetime.fromisoformat(income['captured_at'])
+        if captured.tzinfo is None or captured > now:
+            return {}, None
+        prices = {}
+        for row in income['records']:
+            size, amount = row['size'], row['estimated_income']
+            if (not isinstance(size, str) or size in prices or not re.fullmatch(r'[0-9]+(?:\.[0-9]+)?', size)
+                    or not isinstance(amount, (int, float)) or isinstance(amount, bool)
+                    or not math.isfinite(amount) or amount < 0):
+                return {}, None
+            prices[size] = amount
+        return prices, captured
+    except (KeyError, TypeError, ValueError, OverflowError):
+        return {}, None
+
+
+def render_income(sample, now):
+    prices, captured = validated_income(sample, now)
+    if not prices:
+        return ''
+    status = '预计收入采样' if (now - captured).total_seconds() <= 86400 else '历史预计收入（超过24小时，需重新核价）'
+    rows = ''.join(f'<tr><td>{html.escape(size)}</td><td>¥{amount:.2f}</td></tr>' for size, amount in prices.items())
+    return ('<details open><summary>普通发货 · ' + status + '</summary><table class="info">'
+            '<tr><th>尺码</th><th>得物App预计收入</th></tr>' + rows + '</table></details>'
+            '<p style="font-size:12px;color:#666">收入采样：' + html.escape(captured.isoformat()) + '。'
+            '这是出售面板显示的预估值，不是已到账金额；费用明细尚未读取，不重复扣除估算平台费。</p>')
+
+
 def render_supplier(sample, when, now):
     """Compare checked identities, never turn displayed prices into net profit."""
     supplier = sample.get('supplier')
@@ -27,6 +65,8 @@ def render_supplier(sample, when, now):
         if len(set(sizes)) != len(sizes):
             return ''
         rows, gaps = [], []
+        income_prices, income_when = validated_income(sample, now)
+        income_rows = []
         for offer in offers:
             size, cost = offer.get('size'), offer.get('displayed_cost')
             item_id = offer.get('platform_item_id')
@@ -37,6 +77,10 @@ def render_supplier(sample, when, now):
                 continue
             gap = round(quotes[size] - cost, 2)
             gaps.append(gap)
+            if size in income_prices:
+                amount = income_prices[size]
+                income_rows.append(f'<tr><td>{e(size)}</td><td>¥{amount:.2f}</td>'
+                                   f'<td>¥{cost:.2f}</td><td>¥{amount - cost:+.2f}</td></tr>')
             rows.append(f'<tr><td>{e(size)}</td><td><a href="{e(offer["url"])}" target="_blank" '
                         f'rel="noopener noreferrer">¥{cost:.2f}</a></td>'
                         f'<td>¥{quotes[size]:.2f}</td><td>¥{gap:+.2f}</td></tr>')
@@ -45,7 +89,15 @@ def render_supplier(sample, when, now):
         old = any((now - t).total_seconds() > 86400 for t in (when, captured))
         status = '历史价格对照（超过24小时，需重新核价）' if old else (
             '当前采样无正价差' if max(gaps) <= 0 else '存在正价差，结算及费用待核实')
-        return ('<p><strong>' + status + '</strong> · ' + e(supplier.get('shop', '京东货源')) + '</p>'
+        income_comparison = ''
+        if income_rows:
+            historical = any((now - t).total_seconds() > 86400 for t in (captured, income_when))
+            income_comparison = ('<p><strong>' + ('历史收入对照（需重新核价）' if historical else '预计收入与采购价对照') + '</strong></p>'
+                                 '<table class="info"><tr><th>尺码</th><th>App预计收入</th><th>京东页面价</th>'
+                                 '<th>收入减采购价</th></tr>' + ''.join(income_rows) + '</table>'
+                                 '<p style="font-size:12px;color:#666">收入减采购价未扣寄件等额外费用，'
+                                 '未计入联盟佣金和京豆返还，不代表最终净利润。</p>')
+        return (income_comparison + '<p><strong>' + status + '</strong> · ' + e(supplier.get('shop', '京东货源')) + '</p>'
                 '<table class="info"><tr><th>尺码</th><th>京东页面价</th><th>得物买家报价</th>'
                 '<th>费用前价差</th></tr>' + ''.join(rows) + '</table>'
                 '<p style="font-size:12px;color:#666">货源采样：' + e(captured.isoformat()) + '。'
@@ -93,6 +145,7 @@ def render_samples(path, now=None):
                          e(freshness) + ' · ' + e(when.isoformat()) + '</p>'
                          '<details><summary>各尺码买家报价</summary><table class="info">' + quote_rows + '</table></details>'
                          '<table class="info">' + ''.join(sales_rows) + '</table>'
+                         + render_income(sample, now)
                          + supplier_html +
                          '<p style="font-size:12px;line-height:1.7;color:#666">成交笔数仅来自采到的App展示记录，非全量销量；'
                          '“7天前”边界未计入。买家报价不等于卖家实收。<br>'

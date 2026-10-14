@@ -16,11 +16,19 @@ class MarketSamplesTest(unittest.TestCase):
         supplier.update(overrides)
         return supplier
 
-    def render(self, captured='2026-10-14T18:00:00+08:00', price=236, supplier=None):
+    def income(self, **overrides):
+        income = {'article_no': '237153-BKGY', 'color': '黑灰', 'gender': '男款',
+                  'captured_at': '2026-10-14T18:30:00+08:00', 'channel': '普通发货',
+                  'price_kind': 'app_estimated_income', 'tab_verified': True,
+                  'records': [{'size': '42.5', 'estimated_income': 173.54}]}
+        income.update(overrides)
+        return income
+
+    def render(self, captured='2026-10-14T18:00:00+08:00', price=236, supplier=None, income=None):
         sample = {'article_no': '237153-BKGY', 'title': '<shoe>', 'color': '黑灰',
                   'quote_kind': 'buyer_quote', 'quote_captured_at': captured,
                   'quotes': [{'size': '42.5', 'buyer_quote': price}],
-                  'gender': '男款', 'supplier': supplier,
+                  'gender': '男款', 'supplier': supplier, 'income_sample': income,
                   'sales': [{'size': '42.5', 'observed_within_7d': 11}]}
         with patch('builtins.open', return_value=StringIO(json.dumps([sample]))):
             return render_samples('samples.json', datetime(2026, 10, 14, 11, tzinfo=timezone.utc))
@@ -71,3 +79,33 @@ class MarketSamplesTest(unittest.TestCase):
         self.assertIn('¥+42.87', result)
         self.assertIn('结算及费用待核实', result)
         self.assertIn('尚不计算净利润', result)
+
+    def test_income_comparison_does_not_deduct_platform_fees_again(self):
+        result = self.render(supplier=self.supplier(), income=self.income())
+        self.assertIn('¥173.54', result)
+        self.assertIn('¥-133.59', result)
+        self.assertIn('不重复扣除估算平台费', result)
+        self.assertIn('未扣寄件等额外费用', result)
+        self.assertIn('尚不计算净利润', result)
+
+    def test_income_identity_and_selected_tab_are_required(self):
+        for key, value in [('article_no', 'other'), ('color', '白'), ('gender', '女款'),
+                           ('price_kind', 'buyer_quote'), ('channel', '立即变现'), ('tab_verified', False)]:
+            with self.subTest(key=key):
+                result = self.render(supplier=self.supplier(), income=self.income(**{key: value}))
+                self.assertNotIn('得物App预计收入', result)
+                self.assertNotIn('¥173.54', result)
+
+    def test_income_time_is_checked_and_old_comparison_is_labelled(self):
+        result = self.render(supplier=self.supplier(), income=self.income(captured_at='2026-10-12T18:00:00+08:00'))
+        self.assertIn('历史预计收入', result)
+        self.assertIn('历史收入对照', result)
+        for captured in ['2026-10-15T18:00:00+08:00', '2026-10-14T18:00:00']:
+            self.assertNotIn('得物App预计收入', self.render(income=self.income(captured_at=captured)))
+
+    def test_invalid_or_duplicate_income_is_not_displayed(self):
+        for amount in [True, float('nan'), -1]:
+            self.assertNotIn('得物App预计收入', self.render(income=self.income(
+                records=[{'size': '42.5', 'estimated_income': amount}])))
+        duplicate = [{'size': '42.5', 'estimated_income': 173.54}] * 2
+        self.assertNotIn('得物App预计收入', self.render(income=self.income(records=duplicate)))
