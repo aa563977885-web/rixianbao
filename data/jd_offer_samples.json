@@ -19,6 +19,81 @@
     "conditions": "联盟优惠弹窗显示普惠到手价 640 元；商品卡片含超级补贴、券、PLUS标签，会员及补贴适用条件仍需在个人账号结算页核实。先领券，再通过购买链接查看。",
     "checkout_verified": false,
     "dewu_matched": false,
-    "net_profit": null
+    "net_profit": null,
+    "dewu_comparison": {
+      "jd_sku_id": "4918116",
+      "source_kind": "dewu_app_public_ui",
+      "article": "经典版神仙水",
+      "capacity": "75ml",
+      "channel": "普通发货",
+      "income_tab_verified": true,
+      "match_status": "capacity_version_checked_package_pending",
+      "match_notes": "京东经典红盒75ml；得物经典版75ml。礼袋、条码、效期及实物接收要求未确认。",
+      "captured_at": "2026-10-15T14:27:53.152033+08:00",
+      "income_rows": [
+        {
+          "capacity": "75ml",
+          "package": "无礼盒无礼袋",
+          "estimated_income": 293.73
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒无礼袋",
+          "estimated_income": 321.33
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼袋无礼盒",
+          "estimated_income": 304.77
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒礼袋",
+          "estimated_income": 319.49
+        }
+      ],
+      "purchase_sample": {
+        "item_url": "https://item.jd.com/4918116.html",
+        "source_kind": "jd_item_public_ui",
+        "page_reference_price": 618.64,
+        "captured_at": "2026-10-15T14:25:00+08:00",
+        "checkout_verified": false
+      },
+      "recent_captured_at": "2026-10-15T14:28:47.118215+08:00",
+      "recent_rows": [
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒礼袋",
+          "buyer_price": 398.0,
+          "displayed_time": "5小时前"
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒礼袋",
+          "buyer_price": 395.0,
+          "displayed_time": "5小时前"
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒礼袋",
+          "buyer_price": 398.0,
+          "displayed_time": "5小时前"
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒无礼袋",
+          "buyer_price": 393.0,
+          "displayed_time": "18小时前"
+        },
+        {
+          "capacity": "75ml",
+          "package": "官方礼盒无礼袋",
+          "buyer_price": 426.0,
+          "displayed_time": "22小时前"
+        }
+      ],
+      "recent_coverage": "5_distinct_visible_gift_package_rows_from_two_viewports_not_full_volume",
+      "net_profit": null
+    }
   }
 ]
