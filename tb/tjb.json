@@ -3,8 +3,7 @@
     "tip": "全部运行完再看完成多少个\n---------------\n一个手机不能运行超过三个账号\n---------------\n",
     "list": [
       "❤️一键全跑❤️",
-      "❤️开始淘金币任务❤️",
-      "羊毛群 qq群"
+      "❤️开始淘金币任务❤️"
     ],
     "mapping": {
       "设置多账号|自动化": {
@@ -52,31 +51,8 @@
           }
         }
       },
-      "羊毛群 qq群": {
-        "url": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=767857355&card_type=group&source=qrcode"
-      },
-      "美团红包": {
-        "url": "imeituan://www.meituan.com/web?lch=cps:waimai:3:776c2adbab1063dbf7bb27b032eccb42:weixin194:2:80292&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNeHGrf99tjKfEFmfKD5wE8tIKFZ5trT0sOMBI8PYBI709TQrHSowZ35lT3KWxR5a72vQtwrwa1jUpHSHlsPQ3wBH50kzjqu3xTNw3PB3roiT2P2MWrO42CJ2lWJd7PKSHsq7SN-lPlsxVNr-c3nhOZlzawAIr5UyPJjc9kRfnAhGytXnltosMtnrJ4-9fEOLfYcYn1hYyDi1pO1mZxZYFcHVaTZ7wo6zUcGkJ9ItxKfslK20asctpDoufdkj2gOK66MIO_E0-GFVB9nJtuWIF02y5LhdVrEh5ZhzlUhXuwSs7abZ1dbqqz4iLIK-XMwHWFt8hqiPJDLqN1KPbyuqfK0C-muxSJTCZNQxRHJYI6zQAskG7LvEhXxrmu3vEcbJ4hhFalkXdPf0W5opucJJRXCEr47CL5dm9L95FIVMLqeCJJ5CE_ghZ2nAjHWmMLUIxXFy6IujV9DipHPcMPs8ZmoZ0SpSCfFgFHdEXj0cRllpHsledjfVhcds2gty75ozk5vwCDgaO6ixMXqlH1193CtPpMtUDqH-iLaM2A0gxcmJ3gXk5UWz5vX-oQbH-Yjy0Ql7Mn_OEV_b_qDyBYgyrb7unXIthK-lehqig2yh0Nd0PV85jl3TZYOTtcA3YycoWhilLGW2wcCjY31r1QDkEgP"
-      },
-      "饿了么红包": {
-        "url": "eleme://web?url=https://m.tb.cn/h.fHjEo2X"
-      },
-      "8月2-15支付宝天天领红包": {
-        "url": "alipays://platformapi/startapp?appId=68687715&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F180020180000047875%2Fpages%2Findex%2Findex.html%3FuserId%3D2088802913327612&userId=2088802913327612&titlePenetrate=YES&chInfo=ch_share__chsub_CopyLink"
-      },
-      "淘特-天天领红包 09-07": {
-        "url": "taobao://m.tb.cn/h.fcElrTQ"
-      },
       "美食币活动入口": {
         "url": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=1000473"
-      },
-      "交流群": {
-        "list": {
-          "qq": ""
-        }
-      },
-      "薅羊毛群": {
-        "url": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=650072280&card_type=group&source=qrcode"
       },
       "❤️开始淘金币任务❤️": {
         "type": "task",
