@@ -52,6 +52,7 @@ jobs:
           cp outputs/site/index.html site/index.html
           cp outputs/site/checklist.xlsx site/checklist.xlsx
           cp outputs/site/.nojekyll site/.nojekyll 2>/dev/null || touch site/.nojekyll
+          mkdir -p tb && cp -r tb site/tb
           cp outputs/site/index.html index.html
 
       - name: 上传 Pages 产物
