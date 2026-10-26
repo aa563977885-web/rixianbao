@@ -1,5 +1,5 @@
 function run () {
-    var pvStr = '';// 作者追踪链已移除（ut_sk=21380790），待替换为用户自有助力链
+    var pvStr = 'j4SVLRp';// 用户自己的淘金币助力链
     var endStr = '';// 同上
     var data = [];
     var More = configValue ? configValue : 1;
@@ -57,7 +57,7 @@ function run () {
         if (s && s.start){
           data.push({
             url:s.start,
-            wait:5
+            wait:10
           })
         }
         
