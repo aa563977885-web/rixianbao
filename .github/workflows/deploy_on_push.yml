@@ -8,6 +8,8 @@ on:
       - 'data/**'
       - 'config/**'
       - 'work/**'
+      - 'tb/**'
+      - '.github/**'
       - 'crawl_mendao.py'
       - 'requirements.txt'
       - '.github/workflows/**'
