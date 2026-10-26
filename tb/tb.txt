@@ -105,12 +105,13 @@ function run () {
             }
           });
 
+          var isAlipay = /^alipay(s)?:\/\//.test(url);
           data.push({
-            url:s.type ? s.scheme + encodeURIComponent('https' + url):s.scheme + url,
+            url: isAlipay ? url : (s.type ? s.scheme + encodeURIComponent('https' + url):s.scheme + url),
             wait:wait
           })
 
-          if (i%2 === 0){
+          if (!isAlipay && i%2 === 0){
             data.push({
               url:s.main,
               wait:5

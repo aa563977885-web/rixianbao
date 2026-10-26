@@ -4,6 +4,7 @@
     "list": [
       "❤️开始任务❤️",
       "❤️开始淘金币任务❤️",
+      "❤️开始支付宝任务❤️",
       "羊毛群 qq群"
     ],
     "mapping": {
@@ -89,11 +90,18 @@
         "key": [
           "淘金币浏览"
         ]
+      },
+      "❤️开始支付宝任务❤️": {
+        "type": "task",
+        "key": [
+          "支付宝系"
+        ]
       }
     },
     "taskList": [
       "赚话费",
-      "淘金币浏览"
+      "淘金币浏览",
+      "支付宝系"
     ]
   },
   "taskData": {
@@ -214,6 +222,25 @@
           "双十一红包",
           "保温杯",
           "蓝牙耳机"
+        ]
+      }
+    },
+    "支付宝系": {
+      "type": "task1",
+      "main": "taobao://m.taobao.com",
+      "endpage": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
+      "endMessage": "支付宝任务结束",
+      "task": {
+        "tag": "alipay",
+        "scheme": "",
+        "baseurl": "",
+        "wait": 14,
+        "wait2": "",
+        "param": {},
+        "before": [],
+        "item": [
+          "alipays://platformapi/startapp?appId=10000009",
+          "alipays://platformapi/startapp?appId=10012345"
         ]
       }
     }
