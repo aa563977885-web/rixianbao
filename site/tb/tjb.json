@@ -1,0 +1,247 @@
+{
+  "activity": {
+    "tip": "全部运行完再看完成多少个\n---------------\n一个手机不能运行超过三个账号\n---------------\n",
+    "list": [
+      "❤️一键全跑❤️",
+      "❤️开始淘金币任务❤️",
+      "羊毛群 qq群"
+    ],
+    "mapping": {
+      "设置多账号|自动化": {
+        "tip": "多账号设置 不同APP登录不同账号",
+        "list": [
+          "淘宝运行---初始形式",
+          "淘宝+天猫运行",
+          "淘+天+点淘运行",
+          "自动化连接"
+        ],
+        "mapping": {
+          "淘宝运行---初始形式": {
+            "type": "set",
+            "value": "1"
+          },
+          "淘宝+天猫运行": {
+            "type": "set",
+            "value": "2"
+          },
+          "淘+天+点淘运行": {
+            "type": "set",
+            "value": "3"
+          },
+          "自动化连接": {
+            "type": "copy",
+            "value": "shortcuts://run-shortcut?name=淘宝-薅羊毛赚话费&input=text&text=run"
+          }
+        }
+      },
+      "活动入口": {
+        "list": [
+          "淘宝",
+          "天猫",
+          "点淘"
+        ],
+        "mapping": {
+          "淘宝": {
+            "url": "taobao://pages.tmall.com/wow/z/wt/daily-earn-shee/8thjJK38HwhfMAskzDiN?disableNav=YES"
+          },
+          "天猫": {
+            "url": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fwt%2Fdaily-earn-shee%2F8thjJK38HwhfMAskzDiN%3FdisableNav%3DYES"
+          },
+          "点淘": {
+            "url": "taobaoliveshare://pages.tmall.com/wow/z/wt/daily-earn-shee/8thjJK38HwhfMAskzDiN?disableNav=YES"
+          }
+        }
+      },
+      "羊毛群 qq群": {
+        "url": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=767857355&card_type=group&source=qrcode"
+      },
+      "美团红包": {
+        "url": "imeituan://www.meituan.com/web?lch=cps:waimai:3:776c2adbab1063dbf7bb27b032eccb42:weixin194:2:80292&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNeHGrf99tjKfEFmfKD5wE8tIKFZ5trT0sOMBI8PYBI709TQrHSowZ35lT3KWxR5a72vQtwrwa1jUpHSHlsPQ3wBH50kzjqu3xTNw3PB3roiT2P2MWrO42CJ2lWJd7PKSHsq7SN-lPlsxVNr-c3nhOZlzawAIr5UyPJjc9kRfnAhGytXnltosMtnrJ4-9fEOLfYcYn1hYyDi1pO1mZxZYFcHVaTZ7wo6zUcGkJ9ItxKfslK20asctpDoufdkj2gOK66MIO_E0-GFVB9nJtuWIF02y5LhdVrEh5ZhzlUhXuwSs7abZ1dbqqz4iLIK-XMwHWFt8hqiPJDLqN1KPbyuqfK0C-muxSJTCZNQxRHJYI6zQAskG7LvEhXxrmu3vEcbJ4hhFalkXdPf0W5opucJJRXCEr47CL5dm9L95FIVMLqeCJJ5CE_ghZ2nAjHWmMLUIxXFy6IujV9DipHPcMPs8ZmoZ0SpSCfFgFHdEXj0cRllpHsledjfVhcds2gty75ozk5vwCDgaO6ixMXqlH1193CtPpMtUDqH-iLaM2A0gxcmJ3gXk5UWz5vX-oQbH-Yjy0Ql7Mn_OEV_b_qDyBYgyrb7unXIthK-lehqig2yh0Nd0PV85jl3TZYOTtcA3YycoWhilLGW2wcCjY31r1QDkEgP"
+      },
+      "饿了么红包": {
+        "url": "eleme://web?url=https://m.tb.cn/h.fHjEo2X"
+      },
+      "8月2-15支付宝天天领红包": {
+        "url": "alipays://platformapi/startapp?appId=68687715&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F180020180000047875%2Fpages%2Findex%2Findex.html%3FuserId%3D2088802913327612&userId=2088802913327612&titlePenetrate=YES&chInfo=ch_share__chsub_CopyLink"
+      },
+      "淘特-天天领红包 09-07": {
+        "url": "taobao://m.tb.cn/h.fcElrTQ"
+      },
+      "美食币活动入口": {
+        "url": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=1000473"
+      },
+      "交流群": {
+        "list": {
+          "qq": ""
+        }
+      },
+      "薅羊毛群": {
+        "url": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=650072280&card_type=group&source=qrcode"
+      },
+      "❤️开始淘金币任务❤️": {
+        "type": "task",
+        "key": [
+          "淘金币浏览"
+        ]
+      },
+      "❤️开始支付宝任务❤️": {
+        "type": "task",
+        "key": [
+          "支付宝系"
+        ]
+      },
+      "❤️一键全跑❤️": {
+        "type": "task",
+        "key": [
+          "赚话费",
+          "淘金币浏览"
+        ]
+      }
+    },
+    "taskList": [
+      "赚话费",
+      "淘金币浏览"
+    ]
+  },
+  "taskData": {
+    "tag": "zhuanhuafei",
+    "common": {
+      "url": "https://aa563977885-web.github.io/rixianbao/tb/tb.txt"
+    },
+    "赚话费": {
+      "type": "task1",
+      "endpage": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.taobao.com",
+      "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.taobao.com",
+      "endMessage": "种树任务结束",
+      "task": {
+        "tag": "zhuanhuafei",
+        "scheme": "taobao://m.taobao.com/tbopen/index.html?h5Url=",
+        "baseurl": "://pages.tmall.com/wow/go/mx-growth/undertake/3d47a29c22504699886d09f9b7a5a067?disableNav=YES&deliveryId=占位参数1&sceneId=5365&hd_from_id=100089&implId=占位参数2",
+        "wait": 22,
+        "wait2": "",
+        "param": {
+          "商品定位": [
+            "nike",
+            "anta",
+            "adidas",
+            "chanel",
+            "dior",
+            "biotherm",
+            "oppo"
+          ]
+        },
+        "before": [],
+        "item": [
+          "85202 count_0_2617007_85202_0",
+          "91112 count_0_2851003_91112_0",
+          "94055 other_1248_0_94055_0",
+          "94055 other_1248_0_94055_1",
+          "94055 other_1248_0_94055_2",
+          "59800 other_0_1815002_59800_0",
+          "82177 other_0_2503009_82177_0",
+          "65214 count_0_2039003_65214_0",
+          "81835 other_1248_2489034_81835_0",
+          "94049 other_0_0_94049_0",
+          "94049 other_0_0_94049_1",
+          "94049 other_0_0_94049_2",
+          "94049 other_0_0_94049_3",
+          "94049 other_0_0_94049_4",
+          "94049 other_0_0_94049_5",
+          "94049 other_0_0_94049_6",
+          "94049 other_0_0_94049_7",
+          "94049 other_0_0_94049_8",
+          "94049 other_0_0_94049_9",
+          "94046 other_0_0_94046_0",
+          "94046 other_0_0_94046_1",
+          "94046 other_0_0_94046_2",
+          "94046 other_0_0_94046_3",
+          "94046 other_0_0_94046_4",
+          "92801 other_0_0_92801_0",
+          "92801 other_0_0_92801_1",
+          "92801 other_0_0_92801_2",
+          "92801 other_0_0_92801_3",
+          "92801 other_0_0_92801_4",
+          "94052 other_1248_0_94052_0",
+          "94052 other_1248_0_94052_1",
+          "94052 other_1248_0_94052_2",
+          "94052 other_1248_0_94052_3",
+          "94052 other_1248_0_94052_4",
+          "93698 other_0_2925035_93698_0",
+          "44733 other_1686_752018_44733_0",
+          "67396 other_1248_2017005_67396_0",
+          "95830 other_1248_2978002_95830_0",
+          "94970 count_1248_2987013_94970_0",
+          "95180 other_1248_0_95180_0",
+          "95180 other_1248_0_95180_1",
+          "95180 other_1248_0_95180_2",
+          "95180 other_1248_0_95180_3",
+          "95180 other_1248_0_95180_4",
+          "89443 count_1248_2747001_89443_0",
+          "94053 other_1248_0_94053_0",
+          "94053 other_1248_0_94053_1",
+          "94053 other_1248_0_94053_2",
+          "94053 other_1248_0_94053_3",
+          "94053 other_1248_0_94053_4",
+          "94053 other_1248_0_94053_5",
+          "94053 other_1248_0_94053_6",
+          "94053 other_1248_0_94053_7",
+          "94053 other_1248_0_94053_8",
+          "94053 other_1248_0_94053_9",
+          "95175 count_1248_3019002_95175_0",
+          "97999 count_1248_2902003_97999_0",
+          "88134 other_1248_2330018_88134_0",
+          "44755 other_1349_1156001_44755_0",
+          "94054 other_1248_0_94054_0",
+          "94054 other_1248_0_94054_1",
+          "94054 other_1248_0_94054_2",
+          "98168 other_1248_3071015_98168_0",
+          "76019 other_1248_1944004_76019_0",
+          "98429 other_1270_3097002_98429_0",
+          "80330 other_1270_2487017_80330_0",
+          "68042 other_1270_2004036_68042_0",
+          "89609 other_1308_2732004_89609_0",
+          "44744 other_1464_1662003_44744_0"
+        ]
+      }
+    },
+    "淘金币浏览": {
+      "type": "task1",
+      "main": "taobao://m.taobao.com",
+      "endpage": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
+      "endMessage": "淘金币浏览任务结束",
+      "task": {
+        "tag": "taojinbi",
+        "scheme": "taobao://m.taobao.com/tbopen/index.html?h5Url=",
+        "baseurl": "https%3A%2F%2Fs.taobao.com%2Fsearch%3Fq%3D",
+        "wait": 16,
+        "wait2": "",
+        "param": {},
+        "before": [],
+        "item": [
+          "双十一红包",
+          "保温杯",
+          "蓝牙耳机"
+        ]
+      }
+    },
+    "支付宝系": {
+      "type": "task1",
+      "main": "taobao://m.taobao.com",
+      "endpage": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
+      "endMessage": "支付宝任务结束",
+      "task": {
+        "tag": "alipay",
+        "scheme": "",
+        "baseurl": "",
+        "wait": 14,
+        "wait2": "",
+        "param": {},
+        "before": [],
+        "item": [
+          "alipays://platformapi/startapp?appId=10000009",
+          "alipays://platformapi/startapp?appId=10012345"
+        ]
+      }
+    }
+  }
+}
