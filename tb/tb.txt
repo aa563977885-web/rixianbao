@@ -1,14 +1,14 @@
 function run () {
-    var pvStr = 'jex2zTH';
-    var endStr = 'jc2hRWO';
+    var pvStr = '';// 作者追踪链已移除（ut_sk=21380790），待替换为用户自有助力链
+    var endStr = '';// 同上
     var data = [];
     var More = configValue ? configValue : 1;
 
     var taobaoScheme = {
       scheme:"taobao",
       main:"taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-      start: "taobao://m.tb.cn/h." + pvStr,
-      end:"taobao://m.tb.cn/h." + endStr,
+      start: pvStr ? ("taobao://m.tb.cn/h." + pvStr) : "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
+      end: endStr ? ("taobao://m.tb.cn/h." + endStr) : "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
       
     }
     var tmScheme = {
