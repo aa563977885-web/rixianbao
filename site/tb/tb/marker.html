@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>执行进度</title>
+<!-- v3 announcer redeploy -->
+<style>
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:#101418; font-family:-apple-system,"PingFang SC",sans-serif; }
+  .card { text-align:center; padding:40px 24px; }
+  .num  { font-size:88px; font-weight:700; color:#ffd60a; line-height:1; }
+  .of   { font-size:22px; color:#8e9399; margin:8px 0 28px; }
+  .name { font-size:26px; color:#fff; max-width:640px; margin:0 auto 30px; word-break:break-all; }
+  .hint { font-size:16px; color:#5c6670; }
+  .bar  { width:240px; height:6px; background:#22282e; margin:0 auto; border-radius:3px; overflow:hidden; }
+  .bar i{ display:block; height:100%; background:#ffd60a; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="num" id="n">–</div>
+  <div class="of" id="m"></div>
+  <div class="name" id="t">准备中…</div>
+  <div class="bar"><i id="p" style="width:0%"></i></div>
+  <p class="hint">若下一页显示“任务异常”，请记录本页编号</p>
+</div>
+<script>
+  var q = new URLSearchParams(location.search);
+  var n = q.get('n') || '?', m = q.get('m') || '?', t = q.get('t') || '';
+  document.getElementById('n').textContent = n;
+  document.getElementById('m').textContent = '共 ' + m + ' 个任务';
+  document.getElementById('t').textContent = t;
+  var pct = (parseInt(n)||0) / (parseInt(m)||1) * 100;
+  document.getElementById('p').style.width = pct + '%';
+  if (navigator.vibrate) navigator.vibrate(120);
+</script>
+</body>
+</html>
