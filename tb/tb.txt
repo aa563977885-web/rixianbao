@@ -105,9 +105,11 @@ function run () {
             }
           });
 
-          var isAlipay = /^alipay(s)?:\/\//.test(url);
+          var isAlipay = /^(alipay(s)?|https?):\/\//.test(url);
           var w = wait + Math.floor(Math.random()*7) - 3;
           if (w < 8) { w = 8; }
+          var mk = 'https://aa563977885-web.github.io/rixianbao/tb/marker.html?n=' + (i+1) + '&m=' + itme.length + '&t=' + encodeURIComponent(str.slice(0,40));
+          data.push({ url: mk, wait: 2 });
           data.push({
             url: isAlipay ? url : (s.type ? s.scheme + encodeURIComponent('https' + url):s.scheme + url),
             wait:w
