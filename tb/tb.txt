@@ -1,14 +1,14 @@
 function run () {
-    var pvStr = 'j4SVLRp';// 用户自己的淘金币助力链
-    var endStr = '';// 同上
+    var pvStr = 'j4SVLRp';// 用户自己的淘金币助力链（原版此处为作者链接，已替换）
+    var endStr = 'jc2hRWO';
     var data = [];
     var More = configValue ? configValue : 1;
 
     var taobaoScheme = {
       scheme:"taobao",
       main:"taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-      start: pvStr ? ("taobao://m.tb.cn/h." + pvStr) : "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
-      end: endStr ? ("taobao://m.tb.cn/h." + endStr) : "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fhuodong.m.taobao.com%2Ftbcoin%2Fpages%2Findex.html",
+      start: "taobao://m.tb.cn/h." + pvStr,
+      end:"taobao://m.tb.cn/h." + endStr,
       
     }
     var tmScheme = {
@@ -57,7 +57,7 @@ function run () {
         if (s && s.start){
           data.push({
             url:s.start,
-            wait:10
+            wait:5
           })
         }
         
@@ -105,17 +105,12 @@ function run () {
             }
           });
 
-          var isAlipay = /^(alipay(s)?|https?):\/\//.test(url);
-          var w = wait + Math.floor(Math.random()*7) - 3;
-          if (w < 8) { w = 8; }
-          var mk = 'https://aa563977885-web.github.io/rixianbao/tb/marker.html?n=' + (i+1) + '&m=' + itme.length + '&t=' + encodeURIComponent(str.slice(0,40));
-          data.push({ url: mk, wait: 2 });
           data.push({
-            url: isAlipay ? url : (s.type ? s.scheme + encodeURIComponent('https' + url):s.scheme + url),
-            wait:w
+            url:s.type ? s.scheme + encodeURIComponent('https' + url):s.scheme + url,
+            wait:wait
           })
 
-          if (!isAlipay && i%2 === 0){
+          if (i%2 === 0){
             data.push({
               url:s.main,
               wait:5
