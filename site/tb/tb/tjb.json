@@ -69,12 +69,14 @@
       "❤️一键全跑❤️": {
         "type": "task",
         "key": [
-          "赚话费"
+          "赚话费",
+          "淘金币浏览"
         ]
       }
     },
     "taskList": [
-      "赚话费"
+      "赚话费",
+      "淘金币浏览"
     ]
   },
   "taskData": {
@@ -91,7 +93,7 @@
         "tag": "zhuanhuafei",
         "scheme": "taobao://m.taobao.com/tbopen/index.html?h5Url=",
         "baseurl": "://pages.tmall.com/wow/go/mx-growth/undertake/3d47a29c22504699886d09f9b7a5a067?disableNav=YES&deliveryId=占位参数1&sceneId=5365&hd_from_id=100089&implId=占位参数2",
-        "wait": 22,
+        "wait": 45,
         "wait2": "",
         "param": {
           "商品定位": [
@@ -186,7 +188,7 @@
       "task": {
         "tag": "taojinbi",
         "scheme": "taobao://m.taobao.com/tbopen/index.html?h5Url=",
-        "baseurl": "https%3A%2F%2Fs.taobao.com%2Fsearch%3Fq%3D",
+        "baseurl": "https%3A%2F%2Fs.taobao.com%2Fsearch%3Fq%3D占位参数1",
         "wait": 16,
         "wait2": "",
         "param": {},
