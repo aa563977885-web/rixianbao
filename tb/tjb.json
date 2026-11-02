@@ -69,12 +69,14 @@
       "❤️一键全跑❤️": {
         "type": "task",
         "key": [
-          "赚话费"
+          "赚话费",
+          "淘金币浏览"
         ]
       }
     },
     "taskList": [
-      "赚话费"
+      "赚话费",
+      "淘金币浏览"
     ]
   },
   "taskData": {
@@ -186,7 +188,7 @@
       "task": {
         "tag": "taojinbi",
         "scheme": "taobao://m.taobao.com/tbopen/index.html?h5Url=",
-        "baseurl": "https%3A%2F%2Fs.taobao.com%2Fsearch%3Fq%3D",
+        "baseurl": "https%3A%2F%2Fs.taobao.com%2Fsearch%3Fq%3D占位参数1",
         "wait": 16,
         "wait2": "",
         "param": {},
